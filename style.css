@@ -52,25 +52,19 @@ a:hover,.active{
     color: #97bcdc !important;
 }
 section{
-    margin: 10% 10% 0 10%;
+    margin: 10%;
 }
-.card-right{
-    position: absolute;
-    width: 60%;
-    height: 500px;
-    background-color: #11162a;
-    border-radius: 50px 0 0 50px;
-    margin-left: 100%;
+.slides{
+    display: flex;
 }
-.card-left{
-    width: 60%;
-    height: 500px;
-    background-color: #11162a;
-    border-radius: 50px 0 0 50px;
-    margin-right: 100%;
+.sld{
+    width: 75%;
 }
-.card-right p {
-    margin: 50px;
+.sld:hover{
+   filter: drop-shadow(10px 10px 30px #2a3568);
+}
+.separator{
+    height: 200px;
 }
 #name{
     color: #018ABD;
