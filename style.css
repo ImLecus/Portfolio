@@ -12,26 +12,99 @@
 }
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #090f22;
+        background: linear-gradient(45deg,#090f22,#1a213b) no-repeat fixed;
         color: white;
     }
     nav{
         background-color: #151b30;
+        box-shadow: 0 0 50px #090f22;
+    }
+    h1{
+        text-shadow: 0 2px 50px #45b8e178;
+        animation: title 1s;
     }
 }
+header{
+    width: 100%;
+}
 h1{
-    font: 500 98px Bebas Neue;
+    font: 500 108px Bebas Neue;
     color: #018ABD;
     text-transform: uppercase;
 }
-h3{
-    font: normal 28px Varela Round;
-    color: #49719e;
+h2{
+    font: 500 60px Kanit;
+    color: #97bcdc;
 }
-nav a{
+h3,p{
+    font: normal 28px Varela Round;
+    color: #527eb0;
+}
+p{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
     margin: 0 14px;
     color: #018ABD !important;
 }
-nav a:hover,.active{
+a:hover,.active{
     color: #97bcdc !important;
+}
+section{
+    margin: 10% 10% 0 10%;
+}
+.card-right{
+    position: absolute;
+    width: 60%;
+    height: 500px;
+    background-color: #11162a;
+    border-radius: 50px 0 0 50px;
+    margin-left: 100%;
+}
+.card-left{
+    width: 60%;
+    height: 500px;
+    background-color: #11162a;
+    border-radius: 50px 0 0 50px;
+    margin-right: 100%;
+}
+.card-right p {
+    margin: 50px;
+}
+#name{
+    color: #018ABD;
+    margin-left: 25px;
+    font-size: 30px;
+    animation: appear-left 1s;
+}
+::-webkit-scrollbar{
+    background: #11162a;
+}
+::-webkit-scrollbar-thumb{
+    background: #1a213b;
+    border-radius: 10px;
+}
+@keyframes appear-left {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+@keyframes title{
+    0%{
+        transform: scaleY(-1);
+        text-shadow: none;
+    }
+    50%{
+        transform: scaleY(1);
+        text-shadow: none;
+    }
+    100%{
+        text-shadow: 0 2px 50px #45b8e178;
+    }
 }
