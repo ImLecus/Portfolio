@@ -54,8 +54,28 @@ a:hover,.active{
 section{
     margin: 10%;
 }
-.slides{
-    display: flex;
+input[type=text], input[type=email]{
+    width: 30%;
+    height: 50px;
+    margin: 0 2px 3px 0;
+}
+textarea{
+    width: 60%;
+    height: 250px;
+    resize: none;
+    justify-self: center;
+    
+}
+.text{
+    background-color: #1a213b;
+    border: none;
+    border-radius: 10px;
+}
+.text::placeholder {
+    padding: 20px;
+}
+.text:hover{
+    border: solid 2px #018ABD;
 }
 .sld{
     width: 75%;
@@ -78,6 +98,7 @@ section{
 ::-webkit-scrollbar-thumb{
     background: #1a213b;
     border-radius: 10px;
+    box-shadow: 0 20px 20px #090f22;
 }
 @keyframes appear-left {
     from{

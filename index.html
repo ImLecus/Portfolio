@@ -27,13 +27,13 @@
                     </a>
                     <ul class="nav navbar">
                         <li class="nav-item">
-                            <a class="nav-link active">Inicio</a>
+                            <a class="nav-link active" id="home">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Sobre mí</a>
+                            <a class="nav-link" id="about">Sobre mí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Contacto</a>
+                            <a class="nav-link" id="contact">Contacto</a>
                         </li>
                     </ul>
                 </header>
@@ -69,7 +69,7 @@
                 <h3 class="mb-5">Tecnologías que manejo:</h3>
             </div>
             <div class="slider">
-                <div class="slides">
+                <div class="slides d-flex">
                     <div class="slide">
                         <img src="/img/html.webp" class="sld">
                     </div>
@@ -95,9 +95,29 @@
             </div>
         </section>
         <div class="separator"></div>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form class="d-flex align-items-center justify-content-center" style="width: 100%;">
+                <input 
+                    type="text"
+                    placeholder="Nombre"
+                    autocomplete="off"
+                    class="text">
+                <input 
+                    type="email" 
+                    placeholder="Correo electrónico" 
+                    autocomplete="off"
+                    class="text">
+            </form>
+            <div class="d-flex justify-content-center">
+                <textarea placeholder="Escribe aquí tu mensaje..." class="text"></textarea>
+            </div>
+            
+        </section>
     </main>
     <footer>
         <a href="https://www.vecteezy.com/free-vector/isometric-computer">Isometric Computer Vectors by Vecteezy</a>
     </footer>
+    <script src="/script.js"></script>
 </body>
 </html>
