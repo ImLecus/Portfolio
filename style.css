@@ -1,0 +1,37 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url(font/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Kanit;
+    src: url(font/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: Varela Round;
+    src: url(font/VarelaRound-Regular.ttf);
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #090f22;
+        color: white;
+    }
+    nav{
+        background-color: #151b30;
+    }
+}
+h1{
+    font: 500 98px Bebas Neue;
+    color: #018ABD;
+    text-transform: uppercase;
+}
+h3{
+    font: normal 28px Varela Round;
+    color: #49719e;
+}
+nav a{
+    margin: 0 14px;
+    color: #018ABD !important;
+}
+nav a:hover,.active{
+    color: #97bcdc !important;
+}
