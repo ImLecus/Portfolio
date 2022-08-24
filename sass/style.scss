@@ -4,6 +4,7 @@ $secondary1: #2a3568;
 $bg: #090f22;
 $bg2: #1a213b;
 $bg3: #151b30;
+$lightbg: #e5ebf0;
 @font-face {
     font-family: Bebas Neue;
     src: url(../font/BebasNeue-Regular.ttf);
@@ -21,16 +22,46 @@ $bg3: #151b30;
         background: linear-gradient(45deg,$bg,$bg2) no-repeat fixed;
         color: white;
     }
-    nav{
+    h2{
+        color: $primary2;
+    }
+    nav,footer{
         background-color: $bg3;
         box-shadow: 0 0 50px $bg;
     }
-    h1{
-        text-shadow: 0 2px 50px #45b8e178;
-        animation: title 1s;
+    .sld{
+        filter: drop-shadow(0 5px 15px $bg);
     }
-    footer {
-        background-color: $bg3;
+    ::-webkit-scrollbar{
+        background: #11162a;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: $bg2;
+        border-radius: 10px;
+        box-shadow: 0 20px 20px $bg;
+    }
+}
+@media(prefers-color-scheme: light){
+    body{
+        background-color: #fff;
+    }
+    h2{
+        color: $secondary1;
+    }
+    nav,footer{
+        background-color: $lightbg;
+        box-shadow: 0 0 50px $primary2;
+    }
+    .sld{
+        filter: drop-shadow(0 5px 15px $primary2);
+    }
+    ::-webkit-scrollbar{
+        background: $lightbg;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 20px 20px $primary2;
     }
 }
 header{
@@ -40,10 +71,11 @@ h1{
     font: 500 108px Bebas Neue;
     color: $primary1;
     text-transform: uppercase;
+    text-shadow: 0 2px 50px #45b8e178;
+    animation: title 1s;
 }
 h2{
     font: 500 60px Kanit;
-    color: $primary2;
 }
 h3,p{
     font: normal 28px Varela Round;
@@ -99,7 +131,6 @@ textarea{
 .sld{
     width: 75%;
     transition: ease-in-out, .5s;
-    filter: drop-shadow(0 5px 15px #000);
 }
 .sld:hover{
     filter: drop-shadow(10px 10px 30px $secondary1);
@@ -131,14 +162,6 @@ textarea{
     margin-left: 25px;
     font-size: 30px;
     animation: appear-left 1s;
-}
-::-webkit-scrollbar{
-    background: #11162a;
-}
-::-webkit-scrollbar-thumb{
-    background: $bg2;
-    border-radius: 10px;
-    box-shadow: 0 20px 20px $bg;
 }
 @keyframes appear-left {
     from{
