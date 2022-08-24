@@ -6,15 +6,15 @@ $bg2: #1a213b;
 $bg3: #151b30;
 @font-face {
     font-family: Bebas Neue;
-    src: url(font/BebasNeue-Regular.ttf);
+    src: url(../font/BebasNeue-Regular.ttf);
 }
 @font-face {
     font-family: Kanit;
-    src: url(font/Kanit-Regular.ttf);
+    src: url(../font/Kanit-Regular.ttf);
 }
 @font-face {
     font-family: Varela Round;
-    src: url(font/VarelaRound-Regular.ttf);
+    src: url(../font/VarelaRound-Regular.ttf);
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -67,14 +67,17 @@ input[type=text], input[type=email]{
     width: 30%;
     height: 50px;
     margin: 0 2px 3px 0;
+    box-sizing: border-box;
+    color: $primary2;
 }
 textarea{
     width: 60%;
     height: 250px;
     resize: none;
     justify-self: center;
-    
+    color: $primary2;
 }
+
 .name span{
    position: relative;
    bottom: 25%;
@@ -84,19 +87,22 @@ textarea{
     border: none;
     border-radius: 10px;
     transition: ease-in, .5s;
-}
-.text::placeholder {
     padding: 20px;
 }
 .text:hover{
     border: solid 2px $primary1;
 }
+.text:focus{
+    outline: none;
+    border: solid 2px $primary2;
+}
 .sld{
     width: 75%;
     transition: ease-in-out, .5s;
+    filter: drop-shadow(0 5px 15px #000);
 }
 .sld:hover{
-   filter: drop-shadow(10px 10px 30px $secondary1);
+    filter: drop-shadow(10px 10px 30px $secondary1);
 }
 
 .separator{
