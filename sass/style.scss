@@ -40,10 +40,30 @@ $lightbg: #e5ebf0;
         border-radius: 10px;
         box-shadow: 0 20px 20px $bg;
     }
+    .text{
+        background-color: $bg2;
+        border: none;
+    }
+    .text:hover, .text:focus{
+        outline: none;
+        border: solid 2px $primary1;
+    }
+    input[type=text], input[type=email]{
+        color: $primary2;
+    }
+    .name{
+        background-color: $secondary1;
+        .square{
+            background-color: $secondary1;
+        }
+        span{
+            color: white;
+        }
+    }
 }
 @media(prefers-color-scheme: light){
     body{
-        background-color: #fff;
+        background: linear-gradient(45deg,#fff,$lightbg) no-repeat fixed;
     }
     h2{
         color: $secondary1;
@@ -59,9 +79,27 @@ $lightbg: #e5ebf0;
         background: $lightbg;
     }
     ::-webkit-scrollbar-thumb{
-        background: #fff;
+        background: rgb(244, 247, 246);
         border-radius: 10px;
         box-shadow: 0 20px 20px $primary2;
+    }
+    .text{
+        background-color: $lightbg;
+        border: solid 2px $primary1;
+        color: $secondary1;
+    }
+    .text:hover, .text:focus{
+        outline: none;
+        border: solid 2px $secondary1;
+    }
+    .name{
+        background-color: $primary2;
+        .square{
+            background-color: $primary2;
+        }
+        span{
+            color: $secondary1;
+        }
     }
 }
 header{
@@ -100,7 +138,6 @@ input[type=text], input[type=email]{
     height: 50px;
     margin: 0 2px 3px 0;
     box-sizing: border-box;
-    color: $primary2;
 }
 textarea{
     width: 60%;
@@ -109,54 +146,51 @@ textarea{
     justify-self: center;
     color: $primary2;
 }
-
-.name span{
-   position: relative;
-   bottom: 25%;
-}
 .text{
-    background-color: $bg2;
-    border: none;
     border-radius: 10px;
     transition: ease-in, .5s;
     padding: 20px;
 }
-.text:hover{
-    border: solid 2px $primary1;
-}
-.text:focus{
-    outline: none;
-    border: solid 2px $primary2;
-}
-.sld{
-    width: 75%;
-    transition: ease-in-out, .5s;
-}
-.sld:hover{
-    filter: drop-shadow(10px 10px 30px $secondary1);
-}
 
+.text-container{
+    img{
+        width: 75%;
+        transition: ease-in-out, .5s;
+    }
+    .name{
+        border-radius: 20px;
+        text-align: center;
+        margin: 10px 0;
+        width: 120px;
+        opacity: 0;
+        transition: ease-in, .3s;
+        span{
+            position: relative;
+            bottom: 25%;
+        }
+        .square{
+            display: box;
+            width: 20px;
+            height: 20px;
+            background-color: $secondary1;
+            position: relative;
+            transform: translateX(50px) translateY(30px) rotateZ(45deg);
+            z-index: -1;
+        }
+    }
+}
+.text-container:hover{
+    img{
+        filter: drop-shadow(10px 10px 30px $secondary1); 
+    }
+    .name{
+        opacity: 1;
+    }
+}
 .separator{
     height: 200px;
 }
-.name{
-    background-color: $secondary1;
-    border-radius: 20px;
-    text-align: center;
-    margin: 10px 0;
-    width: 120px;
-    opacity:1;
-}
-.square{
-    display: box;
-    width: 20px;
-    height: 20px;
-    background-color: $secondary1;
-    position: relative;
-    transform: translateX(50px) translateY(30px) rotateZ(45deg);
-    z-index: -1;
-    
-}
+
 #name{
     color: $primary1;
     margin-left: 25px;
