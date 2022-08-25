@@ -60,6 +60,9 @@ $lightbg: #e5ebf0;
             color: white;
         }
     }
+    button{
+        background-color: $bg2;
+    }
 }
 @media(prefers-color-scheme: light){
     body{
@@ -71,9 +74,6 @@ $lightbg: #e5ebf0;
     nav,footer{
         background-color: $lightbg;
         box-shadow: 0 0 50px $primary2;
-    }
-    .sld{
-        filter: drop-shadow(0 5px 15px $primary2);
     }
     ::-webkit-scrollbar{
         background: $lightbg;
@@ -92,7 +92,8 @@ $lightbg: #e5ebf0;
         outline: none;
         border: solid 2px $secondary1;
     }
-    .name{
+    .text-container{
+      .name{
         background-color: $primary2;
         .square{
             background-color: $primary2;
@@ -100,6 +101,10 @@ $lightbg: #e5ebf0;
         span{
             color: $secondary1;
         }
+        }
+        img{
+            filter: drop-shadow(0 5px 15px $primary2);
+        }  
     }
 }
 header{
@@ -151,7 +156,17 @@ textarea{
     transition: ease-in, .5s;
     padding: 20px;
 }
-
+button{
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 20%;
+    margin: 1%;
+    transition: ease-in, .5s;
+}
+button:hover{
+    background-color: $primary2;
+}
 .text-container{
     img{
         width: 75%;
@@ -172,7 +187,6 @@ textarea{
             display: box;
             width: 20px;
             height: 20px;
-            background-color: $secondary1;
             position: relative;
             transform: translateX(50px) translateY(30px) rotateZ(45deg);
             z-index: -1;
@@ -190,12 +204,36 @@ textarea{
 .separator{
     height: 200px;
 }
-
 #name{
     color: $primary1;
     margin-left: 25px;
     font-size: 30px;
     animation: appear-left 1s;
+}
+#contact{
+    a{
+        margin: 10px 50px !important;
+        font-size: 18px;
+    }
+}
+footer{
+    *{
+        margin: 5px 0;
+    }
+    p{
+        text-align: center;
+        padding: 30px;
+        width: 33%;
+        margin-left: 33%;
+    }
+}
+.primary{
+    background-color: $primary1;
+    color: $lightbg;
+}
+.secondary{
+    border: 3px solid $primary1;
+    color: $primary1;
 }
 @keyframes appear-left {
     from{

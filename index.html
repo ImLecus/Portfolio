@@ -125,26 +125,37 @@
         <section id="contact">
             <h2>Contacto</h2>
             <div class="separator" style="height: 100px;"></div>
-            <form class="d-flex align-items-center justify-content-center" style="width: 100%;">
-                <input 
-                    type="text"
-                    placeholder="Nombre"
-                    autocomplete="off"
-                    class="text">
-                <input 
-                    type="email" 
-                    placeholder="Correo electrónico" 
-                    autocomplete="off"
-                    class="text">
+            <form>
+                <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
+                    <input 
+                        type="text"
+                        placeholder="Nombre"
+                        autocomplete="off"
+                        class="text">
+                    <input 
+                        type="email" 
+                        placeholder="Correo electrónico" 
+                        autocomplete="off"
+                        class="text">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <textarea placeholder="Escribe aquí tu mensaje..." class="text"></textarea>
+                </div>
+                <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
+                    <button class="primary">Enviar</button>
+                    <button class="secondary">Descargar CV</button>
+                </div>
             </form>
+            <p style="text-align: center;" class="m-4">También puedes contactar conmigo mediante los siguientes métodos:</p>
             <div class="d-flex justify-content-center">
-                <textarea placeholder="Escribe aquí tu mensaje..." class="text"></textarea>
+                <a>Twitter</a>
+                <a>GitHub</a>
+                <a>LinkedIn</a> 
             </div>
-            
         </section>
     </main>
-    <footer>
-        <p style="text-align: center; padding: 30px;">© Marcos González 2022 All rights reserved. <br><br> Marcos González <br> Frontend Developer</p>
+    <footer class="d-flex">
+        <p>© Marcos González 2022 All rights reserved. <br><br> Marcos González <br> Frontend Developer</p>
         <a href="https://www.vecteezy.com/free-vector/isometric-computer">Isometric Computer Vectors by Vecteezy</a>
     </footer>
     <script src="/script.js"></script>

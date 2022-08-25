@@ -53,6 +53,9 @@
   .name span {
     color: white;
   }
+  button {
+    background-color: #1a213b;
+  }
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -64,9 +67,6 @@
   nav, footer {
     background-color: #e5ebf0;
     box-shadow: 0 0 50px #97bcdc;
-  }
-  .sld {
-    filter: drop-shadow(0 5px 15px #97bcdc);
   }
   ::-webkit-scrollbar {
     background: #e5ebf0;
@@ -85,14 +85,17 @@
     outline: none;
     border: solid 2px #2a3568;
   }
-  .name {
+  .text-container .name {
     background-color: #97bcdc;
   }
-  .name .square {
+  .text-container .name .square {
     background-color: #97bcdc;
   }
-  .name span {
+  .text-container .name span {
     color: #2a3568;
+  }
+  .text-container img {
+    filter: drop-shadow(0 5px 15px #97bcdc);
   }
 }
 header {
@@ -156,6 +159,19 @@ textarea {
   padding: 20px;
 }
 
+button {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 20%;
+  margin: 1%;
+  transition: ease-in, 0.5s;
+}
+
+button:hover {
+  background-color: #97bcdc;
+}
+
 .text-container img {
   width: 75%;
   transition: ease-in-out, 0.5s;
@@ -176,7 +192,6 @@ textarea {
   display: box;
   width: 20px;
   height: 20px;
-  background-color: #2a3568;
   position: relative;
   transform: translateX(50px) translateY(30px) rotateZ(45deg);
   z-index: -1;
@@ -199,6 +214,31 @@ textarea {
   font-size: 30px;
   -webkit-animation: appear-left 1s;
           animation: appear-left 1s;
+}
+
+#contact a {
+  margin: 10px 50px !important;
+  font-size: 18px;
+}
+
+footer * {
+  margin: 5px 0;
+}
+footer p {
+  text-align: center;
+  padding: 30px;
+  width: 33%;
+  margin-left: 33%;
+}
+
+.primary {
+  background-color: #018ABD;
+  color: #e5ebf0;
+}
+
+.secondary {
+  border: 3px solid #018ABD;
+  color: #018ABD;
 }
 
 @-webkit-keyframes appear-left {
