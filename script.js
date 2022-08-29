@@ -1,14 +1,8 @@
-var setPos = (obj) =>  {
-    return obj.getBoundingClientRect();
-}
-const scroll = (id) => {
-    var pos = document.getElementById(id).getBoundingClientRect();
+const goTo = (pos) => {
+    //var pos = document.getElementById(id).getBoundingClientRect();
+    //console.log(id, pos);
     window.scrollTo({
-        top: pos.bottom - (pos.bottom - pos.top),
+        top: pos,
         behavior: "smooth"
-    });
-    console.log(pos.bottom);
+       });
 }
-let home = document.getElementById("home");
-let about = document.getElementById("about");
-let contact = document.getElementById("contact");

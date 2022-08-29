@@ -22,9 +22,6 @@
     background-color: #151b30;
     box-shadow: 0 0 50px #090f22;
   }
-  .sld {
-    filter: drop-shadow(0 5px 15px #090f22);
-  }
   ::-webkit-scrollbar {
     background: #11162a;
   }
@@ -52,6 +49,9 @@
   }
   .name span {
     color: white;
+  }
+  img {
+    filter: drop-shadow(0 5px 15px #090f22);
   }
   button {
     background-color: #1a213b;
@@ -96,6 +96,18 @@
   }
   .text-container img {
     filter: drop-shadow(0 5px 15px #97bcdc);
+  }
+}
+@media only screen and (max-width: 768px) {
+  #name {
+    display: none;
+  }
+  .center {
+    position: absolute;
+    left: 10%;
+  }
+  #img {
+    opacity: 0;
   }
 }
 header {
@@ -206,6 +218,12 @@ button:hover {
 
 .separator {
   height: 200px;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #name {
