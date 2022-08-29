@@ -129,26 +129,29 @@
             <section id="contact">
                 <h2>Contacto</h2>
                 <div class="separator" style="height: 100px;"></div>
-                <form method="POST" action="/actions.php">
+                <form method="POST" action="/actions.php" id="form">
                     <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
                         <input 
                             type="text"
                             placeholder="Nombre"
                             name = "name"
                             autocomplete="off"
-                            class="text">
+                            class="text"
+                            required>
                         <input 
                             type="email" 
                             placeholder="Correo electrónico" 
                             name = "mail"
                             autocomplete="off"
-                            class="text">
+                            class="text"
+                            required>
                     </div>
                     <div class="d-flex justify-content-center">
                         <textarea 
                             placeholder="Escribe aquí tu mensaje..." 
                             name = "message"
-                            class="text"></textarea>
+                            class="text"
+                            required></textarea>
                     </div>
                     <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
                         <button class="primary" type="submit">Enviar</button>

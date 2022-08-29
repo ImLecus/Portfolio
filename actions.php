@@ -1,9 +1,17 @@
 <?php
+    $myMail = "marcosgf2005@gmail.com";
     $name = $_POST["name"];
     $mail = $_POST["mail"];
-    $message = "Nombre: "+ $name + "\n Email: " + $mail + "\n\n" + $_POST["message"];
-
-    if(mail("marcosgf2005@gmail.com","Mensaje del portafolio",$message)){
-        echo "Mensaje enviado con éxito";
+    $message = $_POST["message"];
+    if(empty($name) || empty($mail) || empty($message)){
+        return;
     }
+    else{
+        $to = $mail;
+        $subject = "Contacto del portafolio ($name)";
+        $body = "Nuevo mensaje recibido desde el portafolio: \n
+                Email: \n $mail, mensaje: \n $message";
+        mail($to, $subject, $body);
+    }
+    
 ?>
