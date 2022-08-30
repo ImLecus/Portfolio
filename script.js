@@ -1,5 +1,5 @@
 var positions = [];
-window.addEventListener("load", () => {
+window.addEventListener("resize", () => {
     positions = [
         0,
         document.getElementById("about-h").offsetTop - document.getElementById("about-h").offsetHeight,

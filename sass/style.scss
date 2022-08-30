@@ -45,7 +45,7 @@ $lightbg: #e5ebf0;
         outline: none;
         border: solid 2px $primary1;
     }
-    input[type=text], input[type=email]{
+    form input{
         color: $primary2;
     }
     .name{
@@ -112,16 +112,44 @@ $lightbg: #e5ebf0;
     .nav{
         display: none;
     }
+    #name{
+        display: none;
+    }
+    .slides{
+        flex-wrap: wrap;
+        .slide{
+            width: 25%;
+        }
+    }
+    form{
+        div{
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+        input,textarea{
+            margin: 5px;
+            width: 80%;
+        }
+        input{
+            transform: translateX(-5px);
+        }
+        button{
+            width: 50%;
+            margin: 10px;
+        }
+    }
 }
-@media (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
+    nav{
+        display: block;
+    }
     #name{
         display: none;
     }
     .center{
-        position: absolute;
         left: 10%;
     }
-    #img{
+    .wrapper{
         opacity: 0;
     }
     .slides{
@@ -144,15 +172,48 @@ $lightbg: #e5ebf0;
         }
     }
 }
-@media (min-width: 768px) and (max-width: 1980px){
+@media (min-width: 768px) and (max-width: 1140px){
     form input{
-        width: 30%;
+        width: 40%;
         margin: 0 2px 3px 0;
     }
+    .slides{
+        flex-wrap: wrap;
+        .slide{
+            width: 25%;
+        }
+    }
+    textarea{
+        width: 80%;
+    }
+    button{
+        width: 30%;
+    }
 }
-
-header{
-    width: 100%;
+@media(min-width: 1140px){
+    form{
+        input{
+            width: 30%;
+            height: 50px;
+            box-sizing: border-box;
+            margin: 5px 2.5px;
+        }
+        div{
+            flex-wrap: wrap;
+        }
+        button{
+            width: 20%;
+        }
+    }
+    textarea{
+        width: 60%;
+    }
+}
+textarea{
+    height: 250px;
+    resize: none;
+    justify-self: center;
+    color: $primary2;
 }
 h1{
     font: 500 108px Bebas Neue;
@@ -181,17 +242,7 @@ a:hover,.active{
 }
 section{
     margin: 10%;
-}
-form input{
-    height: 50px;
-    box-sizing: border-box;
-}
-textarea{
-    width: 60%;
-    height: 250px;
-    resize: none;
-    justify-self: center;
-    color: $primary2;
+    height: fit-content;
 }
 .text{
     border-radius: 10px;
@@ -202,12 +253,12 @@ button{
     border: none;
     border-radius: 5px;
     height: 50px;
-    width: 20%;
     margin: 1%;
     transition: ease-in, .5s;
 }
 button:hover{
     background-color: $primary2;
+    transform: translateY(-5px);
 }
 .text-container{
     img{
@@ -250,6 +301,10 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: ease-in, .5s;
+}
+.slide:hover{
+    transform: translateY(-5px);
 }
 #name{
     color: $primary1;
@@ -257,21 +312,15 @@ button:hover{
     font-size: 30px;
     animation: appear-left 1s;
 }
-#contact{
-    a{
-        margin: 10px 50px !important;
-        font-size: 18px;
-    }
+#contact a{
+    margin: 10px 50px !important;
+    font-size: 18px;
 }
-footer{
-    *{
-        margin: 5px 0;
-    }
-    p{
-        text-align: center;
-        padding: 30px;
-        width: 100%;
-    }
+footer p{
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    margin: 5px 0; 
 }
 .primary{
     background-color: $primary1;
