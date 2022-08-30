@@ -2,10 +2,9 @@ var positions = [];
 window.addEventListener("load", () => {
     positions = [
         0,
-        document.getElementById("about-h").getBoundingClientRect().top + window.scrollY,
-        document.getElementById("contact-h").getBoundingClientRect().top + window.scrollY
+        document.getElementById("about-h").offsetTop - document.getElementById("about-h").offsetHeight,
+        document.getElementById("contact-h").offsetTop - document.getElementById("contact-h").offsetHeight
     ];
-    console.log(positions);
 })
 const goTo = (id) => {
     window.scrollTo({
@@ -15,10 +14,11 @@ const goTo = (id) => {
     Active(id);   
 }
 window.addEventListener("scroll", () => {
-    if(window.scrollY < positions[1]){
+    let posY = window.scrollY;
+    if(posY + 90 < positions[1]){
         Active(0);
     }
-    else if(window.scrollY < positions[2]){
+    else if(window.scrollY + 90 < positions[2]){
         Active(1);
     }
     else{
