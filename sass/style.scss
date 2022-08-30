@@ -115,9 +115,6 @@ $lightbg: #e5ebf0;
     #name{
         display: none;
     }
-    #mobile-nav{
-        display: block;
-    }
     .slides{
         flex-wrap: wrap;
         .slide{
@@ -158,9 +155,6 @@ $lightbg: #e5ebf0;
     #name{
         display: none;
     }
-    #mobile-nav{
-        display: none;
-    }
     .center{
         left: 10%;
     }
@@ -192,9 +186,6 @@ $lightbg: #e5ebf0;
         width: 40%;
         margin: 0 2px 3px 0;
     }
-    #mobile-nav{
-        display: none;
-    }
     .slides{
         flex-wrap: wrap;
     }
@@ -203,9 +194,6 @@ $lightbg: #e5ebf0;
     }
 }
 @media(min-width: 1140px){
-    #mobile-nav{
-        display: none;
-    }
     form{
         input{
             width: 30%;
@@ -328,10 +316,6 @@ button:hover{
 }
 .slide:hover{
     transform: translateY(-5px);
-}
-#mobile-nav{
-    width: 60px;
-    height: 60px;
 }
 #name{
     color: $primary1;

@@ -105,9 +105,6 @@
   #name {
     display: none;
   }
-  #mobile-nav {
-    display: block;
-  }
   .slides {
     flex-wrap: wrap;
   }
@@ -146,9 +143,6 @@
   #name {
     display: none;
   }
-  #mobile-nav {
-    display: none;
-  }
   .center {
     left: 10%;
   }
@@ -178,9 +172,6 @@
     width: 40%;
     margin: 0 2px 3px 0;
   }
-  #mobile-nav {
-    display: none;
-  }
   .slides {
     flex-wrap: wrap;
   }
@@ -189,9 +180,6 @@
   }
 }
 @media (min-width: 1140px) {
-  #mobile-nav {
-    display: none;
-  }
   form input {
     width: 30%;
     height: 50px;
@@ -326,11 +314,6 @@ button:hover {
 
 .slide:hover {
   transform: translateY(-5px);
-}
-
-#mobile-nav {
-  width: 60px;
-  height: 60px;
 }
 
 #name {
