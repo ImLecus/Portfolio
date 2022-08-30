@@ -64,6 +64,9 @@ $lightbg: #e5ebf0;
     button{
         background-color: $bg2;
     }
+    #navBottom{
+        background-color: $bg;
+    }
 }
 @media(prefers-color-scheme: light){
     body{
@@ -106,6 +109,12 @@ $lightbg: #e5ebf0;
         img{
             filter: drop-shadow(0 5px 15px $primary2);
         }  
+    }
+    #navBottom{
+        background-color: $lightbg;
+    }
+    #navDropdown{
+        background-color: $primary2;
     }
 }
 @media (max-width: 500px){
@@ -351,7 +360,6 @@ footer p{
 #navBottom{
     width: 100%;
     height: 200px;
-    background-color: #090f22;
     position: sticky;
     top: 75px;
     display: flex;

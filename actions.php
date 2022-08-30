@@ -13,5 +13,4 @@
                 Email: \n $mail, mensaje: \n $message";
         mail($to, $subject, $body);
     }
-    
 ?>
