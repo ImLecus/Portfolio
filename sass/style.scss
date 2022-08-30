@@ -115,10 +115,13 @@ $lightbg: #e5ebf0;
     #name{
         display: none;
     }
+    #mobile-nav{
+        display: block;
+    }
     .slides{
         flex-wrap: wrap;
         .slide{
-            width: 25%;
+            width: 33% !important;
         }
     }
     form{
@@ -138,12 +141,24 @@ $lightbg: #e5ebf0;
             margin: 10px;
         }
     }
+    #contact a{
+        margin: 5px auto;
+    }
+    .separator{
+        height: 100px !important;
+    }
+    h1{
+        font-size: 76px !important;
+    }
 }
 @media (min-width: 500px) and (max-width: 768px) {
     nav{
         display: block;
     }
     #name{
+        display: none;
+    }
+    #mobile-nav{
         display: none;
     }
     .center{
@@ -154,9 +169,6 @@ $lightbg: #e5ebf0;
     }
     .slides{
         flex-wrap: wrap;
-        .slide{
-            width: 25%;
-        }
     }
     form{
         div{
@@ -166,6 +178,9 @@ $lightbg: #e5ebf0;
         input,textarea{
             margin: 5px;
             width: 80%;
+        }
+        input{
+            transform: translateX(-5px);
         }
         button{
             width: 50%;
@@ -177,20 +192,20 @@ $lightbg: #e5ebf0;
         width: 40%;
         margin: 0 2px 3px 0;
     }
+    #mobile-nav{
+        display: none;
+    }
     .slides{
         flex-wrap: wrap;
-        .slide{
-            width: 25%;
-        }
-    }
-    textarea{
-        width: 80%;
     }
     button{
         width: 30%;
     }
 }
 @media(min-width: 1140px){
+    #mobile-nav{
+        display: none;
+    }
     form{
         input{
             width: 30%;
@@ -206,10 +221,20 @@ $lightbg: #e5ebf0;
         }
     }
     textarea{
-        width: 60%;
+        width: 60% !important;
+    }
+    #contact a{    
+        margin: 10px 50px;
+    }
+    .slides.slide{
+        width: auto;
     }
 }
+.separator{
+     height: 200px;
+}
 textarea{
+    width: 80%;
     height: 250px;
     resize: none;
     justify-self: center;
@@ -294,10 +319,8 @@ button:hover{
         opacity: 1;
     }
 }
-.separator{
-    height: 200px;
-}
 .slide{
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,6 +329,10 @@ button:hover{
 .slide:hover{
     transform: translateY(-5px);
 }
+#mobile-nav{
+    width: 60px;
+    height: 60px;
+}
 #name{
     color: $primary1;
     margin-left: 25px;
@@ -313,7 +340,6 @@ button:hover{
     animation: appear-left 1s;
 }
 #contact a{
-    margin: 10px 50px !important;
     font-size: 18px;
 }
 footer p{
