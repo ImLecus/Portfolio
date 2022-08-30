@@ -1,11 +1,13 @@
 var positions = [];
-window.addEventListener("resize", () => {
+const setPositions = () => {
     positions = [
         0,
         document.getElementById("about-h").offsetTop - document.getElementById("about-h").offsetHeight,
         document.getElementById("contact-h").offsetTop - document.getElementById("contact-h").offsetHeight
     ];
-})
+}
+window.addEventListener("resize", setPositions());
+window.addEventListener("load", setPositions());
 const goTo = (id) => {
     window.scrollTo({
         top: positions[id],
@@ -30,4 +32,7 @@ const Active = (id) => {
         document.getElementsByClassName("nav-link")[i].classList.remove("active");
     }
     document.getElementsByClassName("nav-link")[id].classList.add("active");
+}
+const setNavBottom = (pos) => {
+    document.getElementById("navBottom").style.transform = `translateY(${pos}%)`
 }

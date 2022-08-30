@@ -17,7 +17,7 @@
         <link href="/sass/style.css" rel="stylesheet">
     </head>
     <body style="overflow-x:hidden; width: 100%;">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <header class="d-flex flex-wrap align-items-center justify-content-center" style="width:100%;">
                     <a href="/" class="d-flex align-items-center text-decoration-none me-auto"id="logo">
@@ -40,13 +40,27 @@
                                 class="nav-link" 
                                 onclick="goTo('2')">Contacto</a>
                         </li>
+                        
                     </ul>
+                    <button id="navDropdown" onclick="setNavBottom(0)">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </header>
-            </div>
-        </nav>
+            </div>      
+        </nav> 
         <main>
+            <div id="navBottom">
+                <a 
+                    class="nav-link active bottom" 
+                    onclick="goTo('0'); setNavBottom(-100)">Inicio</a>
+                <a 
+                    class="nav-link bottom" 
+                    onclick="goTo('1'); setNavBottom(-100)">Sobre mí</a>
+                <a
+                    class="nav-link bottom" 
+                    onclick="goTo('2'); setNavBottom(-100)">Contacto</a>
+            </div>
             <section id="main">
-                <div class="separator"></div>
                 <h3>Hola, mi nombre es</h3>
                 <h1>Marcos González</h1>
                 <h3>Frontend Developer</h3>
@@ -160,7 +174,7 @@
                 </form>
                 <p style="text-align: center;" class="m-4" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
                 <div class="d-flex justify-content-center">
-                    <a href="https://www.twiter.com/ImLecus">Twitter</a>
+                    <a href="https://www.twitter.com/ImLecus">Twitter</a>
                     <a href="https://github.com/ImLecus">GitHub</a>
                     <a href="https://www.linkedin.com/in/marcos-gonz%C3%A1lez-93696a219/">LinkedIn</a> 
                 </div>
