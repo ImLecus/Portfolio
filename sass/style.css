@@ -57,7 +57,14 @@
     background-color: #1a213b;
   }
   #navBottom {
-    background-color: #090f22;
+    background-color: #151b30;
+  }
+  .bottom {
+    border-bottom: 1px solid #1a213b;
+  }
+  #navDropdown:active {
+    background-color: #1a213b !important;
+    transform: translateY(-10px);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -104,7 +111,13 @@
     background-color: #e5ebf0;
   }
   #navDropdown {
-    background-color: #97bcdc;
+    background-color: transparent;
+  }
+  .bottom {
+    border-bottom: 1px solid #018ABD;
+  }
+  .navbar-toggler-icon {
+    filter: invert(100%);
   }
 }
 @media (max-width: 500px) {
@@ -279,7 +292,7 @@ button {
   transition: ease-in, 0.5s;
 }
 
-button:hover {
+form button:hover {
   background-color: #97bcdc;
   transform: translateY(-5px);
 }
@@ -374,14 +387,17 @@ footer p {
   z-index: 2;
   transform: translateY(-100%);
   transition: 0.5s ease-in-out;
+  border-bottom: 3px solid #018ABD;
 }
 
 .bottom {
+  display: flex;
+  flex-direction: column;
   height: 30%;
   margin: 5px;
   text-align: center;
   font-size: 18px;
-  transform: translateY(25%);
+  justify-content: center;
 }
 
 @-webkit-keyframes appear-left {

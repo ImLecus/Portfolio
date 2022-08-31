@@ -1,4 +1,5 @@
 var positions = [];
+const navBottom = document.getElementById("navBottom");
 const setPositions = () => {
     positions = [
         0,
@@ -34,5 +35,13 @@ const Active = (id) => {
     document.getElementsByClassName("nav-link")[id].classList.add("active");
 }
 const setNavBottom = (pos) => {
-    document.getElementById("navBottom").style.transform = `translateY(${pos}%)`
+    navBottom.style.transform = `translateY(${pos}%)`
 }
+document.getElementById("navDropdown").addEventListener("click", () => {
+    if(navBottom.style.transform == "translateY(0%)"){
+        setNavBottom(-100);
+    }
+    else{
+        setNavBottom(0);
+    }
+});

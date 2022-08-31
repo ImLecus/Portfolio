@@ -42,7 +42,7 @@
                         </li>
                         
                     </ul>
-                    <button id="navDropdown" onclick="setNavBottom(0)" type="button">
+                    <button id="navDropdown" type="button">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </header>
@@ -58,7 +58,8 @@
                     onclick="goTo('1'); setNavBottom(-100)">Sobre mí</a>
                 <a
                     class="nav-link bottom" 
-                    onclick="goTo('2'); setNavBottom(-100)">Contacto</a>
+                    onclick="goTo('2'); setNavBottom(-100)"
+                    style="border-bottom: none !important;">Contacto</a>
             </div>
             <section id="main">
                 <h3>Hola, mi nombre es</h3>
@@ -87,7 +88,7 @@
                 </div>
                 <h3 class="mt-5">Tecnologías que manejo:</h3>
                 <div class="slider">
-                    <div class="slides d-flex no-wrap">
+                    <div class="slides d-flex wrap">
                         <div class="slide text-container">
                             <div class="name"><div class="square"></div>
                                 <span>HTML</span>
@@ -135,6 +136,13 @@
                                 <span>GitHub</span>
                             </div>
                             <img src="/img/github.webp">
+                        </div>
+                        <div class="slide text-container">
+                            <div class="name">
+                                <div class="square"></div>
+                                <span>Sass</span>
+                            </div>
+                            <img src="/img/sass.webp">
                         </div>
                     </div>
                 </div>
