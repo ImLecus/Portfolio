@@ -71,9 +71,9 @@ $lightbg: #e5ebf0;
         border-bottom: 1px solid $bg2;
     }
     #navDropdown:active{
-    background-color: $bg2 !important;
-    transform: translateY(-10px);
-}
+        background-color: $bg2 !important;
+        transform: translateY(-10px);
+    }
 }
 @media(prefers-color-scheme: light){
     body{
@@ -128,6 +128,9 @@ $lightbg: #e5ebf0;
     }
     .navbar-toggler-icon{
         filter: invert(100%)
+    }
+    #navDropdown:active{
+        transform: translateY(-10px);
     }
 }
 @media (max-width: 500px){
