@@ -1,0 +1,13 @@
+{
+    "name":"Marcos González  |  Portafolio",
+    "short_name":"Portafolio",
+    "icons":[
+        {
+            "src":"./img/logo.png",
+            "type":"image/png",
+            "sizes":"500x500"
+        }
+    ],
+    "background_color":"#ffffff",
+    "display":"standalone"
+}
