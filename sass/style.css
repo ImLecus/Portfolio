@@ -28,6 +28,8 @@
   ::-webkit-scrollbar-thumb {
     background: #1a213b;
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     box-shadow: 0 20px 20px #090f22;
   }
   .text {
@@ -84,6 +86,8 @@
   ::-webkit-scrollbar-thumb {
     background: rgb(244, 247, 246);
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     box-shadow: 0 20px 20px #97bcdc;
   }
   .text {
@@ -113,30 +117,24 @@
   #navDropdown {
     background-color: transparent;
   }
+  #navDropdown:active {
+    transform: translateY(-10px);
+  }
   .bottom {
     border-bottom: 1px solid #018ABD;
   }
   .navbar-toggler-icon {
     filter: invert(100%);
   }
-  #navDropdown:active {
-    transform: translateY(-10px);
-  }
 }
 @media (max-width: 500px) {
-  .nav {
-    display: none;
-  }
-  #name {
+  .nav, #name {
     display: none;
   }
   #navDropdown {
     display: block !important;
   }
-  .slides {
-    flex-wrap: wrap;
-  }
-  .slides .slide {
+  .slide {
     width: 33% !important;
   }
   form div {
@@ -177,9 +175,6 @@
   .wrapper {
     opacity: 0;
   }
-  .slides {
-    flex-wrap: wrap;
-  }
   form div {
     flex-wrap: wrap;
     margin: 5px;
@@ -199,9 +194,6 @@
   form input {
     width: 40%;
     margin: 0 2px 3px 0;
-  }
-  .slides {
-    flex-wrap: wrap;
   }
   button {
     width: 30%;
@@ -226,8 +218,8 @@
   #contact a {
     margin: 10px 50px;
   }
-  .slides.slide {
-    width: auto;
+  .slide {
+    width: 14% !important;
   }
 }
 .separator {
@@ -283,6 +275,8 @@ section {
 
 .text {
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   transition: ease-in, 0.5s;
   padding: 20px;
 }
@@ -306,6 +300,8 @@ form button:hover {
 }
 .text-container .name {
   border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
   text-align: center;
   margin: 10px 0;
   width: 120px;
@@ -332,6 +328,10 @@ form button:hover {
   opacity: 1;
 }
 
+.slides {
+  flex-wrap: wrap;
+}
+
 .slide {
   width: 25%;
   display: flex;
@@ -339,7 +339,6 @@ form button:hover {
   align-items: center;
   transition: ease-in, 0.5s;
 }
-
 .slide:hover {
   transform: translateY(-5px);
 }

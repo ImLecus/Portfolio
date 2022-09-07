@@ -35,15 +35,17 @@ $lightbg: #e5ebf0;
     ::-webkit-scrollbar-thumb{
         background: $bg2;
         border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
         box-shadow: 0 20px 20px $bg;
     }
     .text{
         background-color: $bg2;
         border: none;
-    }
-    .text:hover, .text:focus{
-        outline: none;
-        border: solid 2px $primary1;
+        &:hover, &:focus{
+            outline: none;
+            border: solid 2px $primary1;
+        }
     }
     form input{
         color: $primary2;
@@ -92,26 +94,28 @@ $lightbg: #e5ebf0;
     ::-webkit-scrollbar-thumb{
         background: rgb(244, 247, 246);
         border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
         box-shadow: 0 20px 20px $primary2;
     }
     .text{
         background-color: $lightbg;
         border: solid 2px $primary1;
         color: $secondary1;
-    }
-    .text:hover, .text:focus{
-        outline: none;
-        border: solid 2px $secondary1;
+        &:hover, &:focus{
+            outline: none;
+            border: solid 2px $secondary1;
+        }
     }
     .text-container{
-      .name{
-        background-color: $primary2;
-        .square{
+        .name{
             background-color: $primary2;
-        }
-        span{
-            color: $secondary1;
-        }
+            .square{
+                background-color: $primary2;
+            }
+            span{
+                color: $secondary1;
+            }
         }
         img{
             filter: drop-shadow(0 5px 15px $primary2);
@@ -122,6 +126,9 @@ $lightbg: #e5ebf0;
     }
     #navDropdown{
         background-color: transparent;
+        &:active{
+            transform: translateY(-10px);
+        }
     }
     .bottom{
         border-bottom: 1px solid $primary1;
@@ -129,25 +136,17 @@ $lightbg: #e5ebf0;
     .navbar-toggler-icon{
         filter: invert(100%)
     }
-    #navDropdown:active{
-        transform: translateY(-10px);
-    }
+
 }
 @media (max-width: 500px){
-    .nav{
-        display: none;
-    }
-    #name{
+    .nav,#name{
         display: none;
     }
     #navDropdown{
         display: block !important;
     }
-    .slides{
-        flex-wrap: wrap;
-        .slide{
-            width: 33% !important;
-        }
+    .slide{
+        width: 33% !important;
     }
     form{
         div{
@@ -189,9 +188,6 @@ $lightbg: #e5ebf0;
     .wrapper{
         opacity: 0;
     }
-    .slides{
-        flex-wrap: wrap;
-    }
     form{
         div{
             flex-wrap: wrap;
@@ -213,9 +209,6 @@ $lightbg: #e5ebf0;
     form input{
         width: 40%;
         margin: 0 2px 3px 0;
-    }
-    .slides{
-        flex-wrap: wrap;
     }
     button{
         width: 30%;
@@ -242,12 +235,12 @@ $lightbg: #e5ebf0;
     #contact a{    
         margin: 10px 50px;
     }
-    .slides.slide{
-        width: auto;
+    .slide{
+        width: 14% !important;
     }
 }
 .separator{
-     height: 200px;
+    height: 200px;
 }
 textarea{
     width: 80%;
@@ -287,6 +280,8 @@ section{
 }
 .text{
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     transition: ease-in, .5s;
     padding: 20px;
 }
@@ -308,6 +303,8 @@ form button:hover{
     }
     .name{
         border-radius: 20px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
         text-align: center;
         margin: 10px 0;
         width: 120px;
@@ -335,15 +332,18 @@ form button:hover{
         opacity: 1;
     }
 }
+.slides{
+    flex-wrap: wrap;
+}
 .slide{
     width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: ease-in, .5s;
-}
-.slide:hover{
-    transform: translateY(-5px);
+    &:hover{
+        transform: translateY(-5px);
+    }
 }
 #name{
     color: $primary1;
