@@ -328,10 +328,6 @@ form button:hover {
   opacity: 1;
 }
 
-.slides {
-  flex-wrap: wrap;
-}
-
 .slide {
   width: 25%;
   display: flex;
