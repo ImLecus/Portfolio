@@ -7,25 +7,23 @@
         <meta 
             name="description" 
             content="¡Hola! Soy Marcos González, Frontend Developer, y este es mi portafolio.">
-        <link rel="icon" href="../img/logo.png">
+        <link rel="icon" href="./img/logo.png">
         <title>Marcos González</title>
         <link 
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
             rel="stylesheet"
             integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
             crossorigin="anonymous">
-        <link href="../sass/style.css" rel="stylesheet">
-        <link rel="manifest" href="../src/manifest.json">
-        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link href="./sass/normalize.css" rel="stylesheet">
+        <link href="./sass/style.css" rel="stylesheet">
+        <link rel="manifest" href="./src/manifest.json">
     </head>
     <body style="overflow-x:hidden; width: 100%;">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <header class="d-flex flex-wrap align-items-center justify-content-center" style="width:100%;">
                     <a href="/" class="d-flex align-items-center text-decoration-none me-auto"id="logo">
-                        <img src="../img/logo.png" width="60" >
+                        <img src="./img/logo.png" width="60" >
                         <h2 id="name">Marcos González</h2>
                     </a>
                     <ul class="nav navbar">
@@ -87,61 +85,61 @@
                     </div>
                 </div>
                 <h3 class="mt-5">Tecnologías que manejo:</h3>
-                    <div class="slides d-flex wrap" id="slider-container">
+                <div id="root" class="slides d-flex wrap">
                         <div class="slide text-container">
                             <div class="name"><div class="square"></div>
                                 <span>HTML</span>
                             </div>
-                            <img src="../img/html.webp">
+                            <img src="./img/html.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>CSS</span>
                             </div>
-                            <img src="../img/css.webp">
+                            <img src="./img/css.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>JavaScript</span>
                             </div>
-                            <img src="../img/js.webp">
+                            <img src="./img/javascript.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>React JS</span>
                             </div>
-                            <img src="../img/react.webp">
+                            <img src="./img/react.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Bootstrap</span>
                             </div>
-                            <img src="../img/bootstrap.webp">
+                            <img src="./img/bootstrap.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Git</span>
                             </div>
-                            <img src="../img/git.webp">
+                            <img src="./img/git.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>GitHub</span>
                             </div>
-                            <img src="../img/github.webp">
+                            <img src="./img/github.webp">
                         </div>
                         <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Sass</span>
                             </div>
-                            <img src="../img/sass.webp">
+                            <img src="./img/sass.webp">
                         </div>
                     </div>
             </section>
@@ -149,7 +147,7 @@
             <section id="contact">
                 <h2 id="contact-h">Contacto</h2>
                 <div class="separator" style="height: 100px;"></div>
-                <form method="POST" action="/actions.php" id="form">
+                <form method="POST" action="../src/actions.php" id="form">
                     <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
                         <input 
                             type="text"
@@ -189,6 +187,6 @@
         <footer class="d-flex justify-content-center" style="width: 100%;">
             <p>© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
         </footer>
-        <script src="../src/scroll.js"></script>
+        <script src="./src/index.js"></script>
     </body>
 </html>

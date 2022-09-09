@@ -38,10 +38,20 @@ const setNavBottom = (pos) => {
     navBottom.style.transform = `translateY(${pos}%)`
 }
 document.getElementById("navDropdown").addEventListener("click", () => {
-    if(navBottom.style.transform == "translateY(0%)"){
+    if(navBottom.style.transform === "translateY(0%)"){
         setNavBottom(-100);
     }
     else{
         setNavBottom(0);
     }
 });
+let tech = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Bootstrap",
+    "Sass",
+    "Git",
+    "GitHub",
+]

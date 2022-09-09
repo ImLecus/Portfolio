@@ -323,13 +323,13 @@ form button:hover{
             z-index: -1;
         }
     }
-}
-.text-container:hover{
-    img{
-        filter: drop-shadow(10px 10px 30px $secondary1); 
-    }
-    .name{
-        opacity: 1;
+    &:hover{
+        img{
+            filter: drop-shadow(10px 10px 30px $secondary1); 
+        }
+        .name{
+            opacity: 1;
+        }
     }
 }
 .slide{
