@@ -12,7 +12,6 @@ Para este proyecto he utilizado las siguientes tecnologías:
 * **SASS**
 * **Bootstrap**
 * **JavaScript**
-* **PHP**
 
 ## ¿Quieres mandarme un mensaje?
 Te dejo estos enlaces por si quieres contactar conmigo sin acceder desde el portafolio:
