@@ -45,13 +45,6 @@ document.getElementById("navDropdown").addEventListener("click", () => {
         setNavBottom(0);
     }
 });
-let tech = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Bootstrap",
-    "Sass",
-    "Git",
-    "GitHub",
-]
+document.getElementById("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+});
