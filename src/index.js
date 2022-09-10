@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
     else{
         Active(2);
     }
-})
+});
 const Active = (id) => {
     for(let i = 0; i < document.getElementsByClassName("nav-link").length; i++){
         document.getElementsByClassName("nav-link")[i].classList.remove("active");
@@ -35,7 +35,7 @@ const Active = (id) => {
     document.getElementsByClassName("nav-link")[id].classList.add("active");
 }
 const setNavBottom = (pos) => {
-    navBottom.style.transform = `translateY(${pos}%)`
+    navBottom.style.transform = `translateY(${pos}%)`;
 }
 document.getElementById("navDropdown").addEventListener("click", () => {
     if(navBottom.style.transform === "translateY(0%)"){
@@ -44,7 +44,4 @@ document.getElementById("navDropdown").addEventListener("click", () => {
     else{
         setNavBottom(0);
     }
-});
-document.getElementById("form").addEventListener("submit", (e) => {
-    e.preventDefault();
 });
