@@ -320,7 +320,6 @@ form button:hover {
   transform: translateX(50px) translateY(30px) rotateZ(45deg);
   z-index: -1;
 }
-
 .text-container:hover img {
   filter: drop-shadow(10px 10px 30px #2a3568);
 }
@@ -444,4 +443,7 @@ footer p {
   100% {
     text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
   }
+}
+#root {
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
