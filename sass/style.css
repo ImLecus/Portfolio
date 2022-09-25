@@ -374,6 +374,9 @@ footer p {
 .secondary {
   border: 3px solid #018ABD;
   color: #018ABD;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 #navDropdown {
