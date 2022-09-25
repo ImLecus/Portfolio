@@ -5,6 +5,7 @@ $bg: #090f22;
 $bg2: #1a213b;
 $bg3: #151b30;
 $lightbg: #e5ebf0;
+@import url(https://github.com/ImLecus/Astra/blob/main/scss/astra.scss);
 @font-face {
     font-family: Bebas Neue;
     src: url(../font/BebasNeue-Regular.ttf);
@@ -58,7 +59,6 @@ $lightbg: #e5ebf0;
         span{
             color: white;
         }
-
     }        
     img{
         filter: drop-shadow(0 5px 15px $bg);
@@ -139,7 +139,7 @@ $lightbg: #e5ebf0;
 
 }
 @media (max-width: 500px){
-    .nav,#name{
+    #name,.navbar{
         display: none;
     }
     #navDropdown{
@@ -167,9 +167,6 @@ $lightbg: #e5ebf0;
     }
     #contact a{
         margin: 5px auto;
-    }
-    .separator{
-        height: 100px !important;
     }
     h1{
         font-size: 76px !important;
@@ -342,6 +339,16 @@ form button:hover{
         transform: translateY(-5px);
     }
 }
+#icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
 #name{
     color: $primary1;
     margin-left: 25px;
@@ -369,6 +376,8 @@ footer p{
     display: none;
     width: 50px;
     height: 50px;
+    margin: 5px 20px 0 0;
+    padding: 0;
 }
 #navBottom{
     width: 100%;
@@ -378,7 +387,7 @@ footer p{
     display: flex;
     flex-direction: column;
     z-index: 2;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     transition: 0.5s ease-in-out;
     border-bottom: 3px solid $primary1;
 }
@@ -413,7 +422,4 @@ footer p{
     100%{
         text-shadow: 0 2px 50px #45b8e178;
     }
-}
-#root{
-    flex-wrap: wrap;
 }

@@ -29,17 +29,17 @@ window.addEventListener("scroll", () => {
     }
 });
 const Active = (id) => {
-    for(let i = 0; i < document.getElementsByClassName("nav-link").length; i++){
-        document.getElementsByClassName("nav-link")[i].classList.remove("active");
+    for(let i = 0; i < document.getElementsByClassName("navLink").length; i++){
+        document.getElementsByClassName("navLink")[i].classList.remove("active");
     }
-    document.getElementsByClassName("nav-link")[id].classList.add("active");
+    document.getElementsByClassName("navLink")[id].classList.add("active");
 }
 const setNavBottom = (pos) => {
     navBottom.style.transform = `translateY(${pos}%)`;
 }
 document.getElementById("navDropdown").addEventListener("click", () => {
     if(navBottom.style.transform === "translateY(0%)"){
-        setNavBottom(-100);
+        setNavBottom(-200);
     }
     else{
         setNavBottom(0);

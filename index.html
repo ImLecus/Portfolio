@@ -9,70 +9,56 @@
             content="¡Hola! Soy Marcos González, Frontend Developer, y este es mi portafolio.">
         <link rel="icon" href="./img/logo.png">
         <title>Marcos González</title>
-        <link 
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
-            rel="stylesheet"
-            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
-            crossorigin="anonymous">
-        <link href="./sass/normalize.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/dist/astra.min.css">
         <link href="./sass/style.css" rel="stylesheet">
         <link rel="manifest" href="./src/manifest.json">
     </head>
     <body style="overflow-x:hidden; width: 100%;">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
-            <div class="container-fluid">
-                <header class="d-flex flex-wrap align-items-center justify-content-center" style="width:100%;">
-                    <a href="/" class="d-flex align-items-center text-decoration-none me-auto"id="logo">
-                        <img src="./img/logo.png" width="60" >
-                        <h2 id="name">Marcos González</h2>
-                    </a>
-                    <ul class="nav navbar">
-                        <li class="nav-item">
-                            <a 
-                                class="nav-link active" 
-                                onclick="goTo('0')">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a 
-                                class="nav-link" 
-                                onclick="goTo('1')">Sobre mí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link" 
-                                onclick="goTo('2')">Contacto</a>
-                        </li>   
-                    </ul>
-                    <button id="navDropdown" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </header>
-            </div>      
+        <nav class="flex stickyTop between paddingY-2" id="nav" style="z-index: 3;">
+            <a href="/" class="flex centerY marginLeft-3"id="logo">
+                <img src="./img/logo.png" width="60" class="brand">
+                <h2 id="name">Marcos González</h2>
+            </a>
+            <div class="navbar between marginRight-3">
+                    <a 
+                        class="navLink active marginX-5" 
+                        onclick="goTo('0')">Inicio</a>
+                    <a 
+                        class="navLink marginX-5" 
+                        onclick="goTo('1')">Sobre mí</a>
+                    <a
+                        class="navLink marginX-5" 
+                        onclick="goTo('2')">Contacto</a>
+            </div>
+            <button id="navDropdown" type="button">
+                <span id="icon"></span>
+            </button>  
         </nav> 
         <main>
             <div id="navBottom">
                 <a 
-                    class="nav-link active bottom" 
-                    onclick="goTo('0'); setNavBottom(-100);">Inicio</a>
+                    class="navLink active bottom" 
+                    onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
                 <a 
-                    class="nav-link bottom" 
-                    onclick="goTo('1'); setNavBottom(-100)">Sobre mí</a>
+                    class="navLink bottom" 
+                    onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
                 <a
-                    class="nav-link bottom" 
-                    onclick="goTo('2'); setNavBottom(-100)"
+                    class="navLink bottom" 
+                    onclick="goTo('2'); setNavBottom(-200)"
                     style="border-bottom: none !important;">Contacto</a>
             </div>
+            <div class="spaceM"></div>
             <section id="main">
                 <h3>Hola, mi nombre es</h3>
-                <h1>Marcos González</h1>
+                <h1 class="marginY-5">Marcos González</h1>
                 <h3>Frontend Developer</h3>
             </section>
-            <div class="separator"></div>
+            <div class="spaceXL"></div>
             <section id="about">    
-                <div class="d-flex justify-content-center">
+                <div class="flex centerX">
                     <div class="center">
                         <h2 id="about-h">Sobre mí</h2>
-                        <p class="align-self-center">
+                        <p class="centerY">
                             <br><br>
                             Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de
                             otros lenguajes no tan relacionados con este ámbito.
@@ -84,8 +70,8 @@
                         </p>
                     </div>
                 </div>
-                <h3 class="mt-5">Tecnologías que manejo:</h3>
-                <div id="root" class="slides d-flex wrap">
+                <h3 class="marginTop-5">Tecnologías que manejo:</h3>
+                <div id="root" class="slides flex wrap">
                         <div class="slide text-container">
                             <div class="name"><div class="square"></div>
                                 <span>HTML</span>
@@ -143,17 +129,17 @@
                         </div>
                     </div>
             </section>
-            <div class="separator"></div>
+            <div class="spaceXL"></div>
             <section id="contact">
                 <h2 id="contact-h">Contacto</h2>
-                <div class="separator" style="height: 100px;"></div>
+                <div class="spaceL"></div>
                 <form 
                     method="POST" 
                     id="form" 
                     name="contactForm" 
                     action="/success"
-                    netlify>
-                    <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
+                    netlify>                
+                    <div class="flex center" style="width: 100%;">
                         <input 
                             type="text"
                             placeholder="Nombre"
@@ -169,27 +155,27 @@
                             class="text"
                             required>
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="flex centerX">
                         <textarea 
                             placeholder="Escribe aquí tu mensaje..." 
                             name = "message"
                             class="text"
                             required></textarea>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
+                    <div class="flex center" style="width: 100%;">
                         <button class="primary" type="submit">Enviar</button>
                         <button class="secondary" onclick="window.location.href='/docs/cv.pdf'">Descargar CV</button>
                     </div>
                 </form>
-                <p style="text-align: center;" class="m-4" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
-                <div class="d-flex justify-content-center">
+                <p class="margin-4 textCenter" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
+                <div class="flex centerX">
                     <a href="https://www.twitter.com/ImLecus">Twitter</a>
                     <a href="https://github.com/ImLecus">GitHub</a>
                     <a href="https://www.linkedin.com/in/marcosgf">LinkedIn</a> 
                 </div>
             </section>
         </main>
-        <footer class="d-flex justify-content-center" style="width: 100%;">
+        <footer class="flex centerX" style="width: 100%;">
             <p>© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
         </footer>
         <script src="./src/index.js"></script>
