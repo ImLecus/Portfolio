@@ -9,15 +9,15 @@
             content="¡Hola! Soy Marcos González, Frontend Developer, y este es mi portafolio.">
         <link rel="icon" href="./img/logo.png">
         <title>Marcos González</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.3-alpha/src/astra.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4-alpha/src/astra.min.css" integrity="sha384-8UEvBiKAUlXzDIrxwNQDl5ethunGmSumypLnHdE/CIIJLFYlhZqBy4IDAQPmFUdA" crossorigin="anonymous">
         <link href="./sass/style.css" rel="stylesheet">
         <link rel="manifest" href="./src/manifest.json">
     </head>
-    <body style="overflow-x:hidden; width: 100%;">
+    <body class="width(100%)" style="overflow-x:hidden;">
         <nav class="flex stickyTop between paddingY-2" id="nav" style="z-index: 3;">
             <a href="/" class="flex centerY marginLeft-3"id="logo">
                 <img src="./img/logo.png" width="60" class="brand">
-                <h2 id="name">Marcos González</h2>
+                <h2 id="name" class="marginLeft-4">Marcos González</h2>
             </a>
             <div class="navbar between marginRight-3">
                     <a 
@@ -35,15 +35,15 @@
             </button>  
         </nav> 
         <main>
-            <div id="navBottom">
+            <div id="navBottom" class="width(100%) flexColumn stickyTop">
                 <a 
-                    class="navLink active bottom" 
+                    class="navLink active bottom flexColumn center" 
                     onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
                 <a 
-                    class="navLink bottom" 
+                    class="navLink bottom flexColumn center" 
                     onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
                 <a
-                    class="navLink bottom" 
+                    class="navLink bottom flexColumn center" 
                     onclick="goTo('2'); setNavBottom(-200)"
                     style="border-bottom: none !important;">Contacto</a>
             </div>
@@ -139,7 +139,7 @@
                     name="contactForm" 
                     action="/success"
                     netlify>                
-                    <div class="flex center" style="width: 100%;">
+                    <div class="flex center width(100%)">
                         <input 
                             type="text"
                             placeholder="Nombre"
@@ -159,12 +159,12 @@
                         <textarea 
                             placeholder="Escribe aquí tu mensaje..." 
                             name = "message"
-                            class="text"
+                            class="text width(80%)"
                             required></textarea>
                     </div>
-                    <div class="flex center" style="width: 100%;">
+                    <div class="flex center width(100%)">
                         <button class="primary" type="submit">Enviar</button>
-                        <button class="secondary" onclick="window.location.href='/docs/cv.pdf'">Descargar CV</button>
+                        <button class="secondary" onclick="redirect('/docs/cv.pdf')">Descargar CV</button>
                     </div>
                 </form>
                 <p class="margin-4 textCenter" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
@@ -175,9 +175,10 @@
                 </div>
             </section>
         </main>
-        <footer class="flex centerX" style="width: 100%;">
-            <p>© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
+        <footer class="flex centerX width(100%)">
+            <p class="textCenter padding-5 width(100%) margin-Y-1">© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
         </footer>
         <script src="./src/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4-alpha/src/astra.min.js" integrity="sha384-HD2Xu22h5ehB497TWxi5p/SS3hX8Bh2Dr2DEEFiml+9NaypC+AldjZRI1nus6O2o" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -5,7 +5,6 @@ $bg: #090f22;
 $bg2: #1a213b;
 $bg3: #151b30;
 $lightbg: #e5ebf0;
-@import url(https://github.com/ImLecus/Astra/blob/main/scss/astra.scss);
 @font-face {
     font-family: Bebas Neue;
     src: url(../font/BebasNeue-Regular.ttf);
@@ -236,14 +235,9 @@ $lightbg: #e5ebf0;
         width: 14% !important;
     }
 }
-.separator{
-    height: 200px;
-}
 textarea{
-    width: 80%;
     height: 250px;
     resize: none;
-    justify-self: center;
     color: $primary2;
 }
 h1{
@@ -264,7 +258,6 @@ p{
     font-size: 20px;
 }
 a{
-    text-decoration: none;
     margin: 0 14px;
     color: $primary1 !important;
 }
@@ -351,18 +344,11 @@ form button:hover{
 }
 #name{
     color: $primary1;
-    margin-left: 25px;
     font-size: 30px;
     animation: appear-left 1s;
 }
 #contact a{
     font-size: 18px;
-}
-footer p{
-    text-align: center;
-    padding: 30px;
-    width: 100%;
-    margin: 5px 0; 
 }
 .primary{
     background-color: $primary1;
@@ -381,25 +367,17 @@ footer p{
     padding: 0;
 }
 #navBottom{
-    width: 100%;
     height: 200px;
-    position: sticky;
     top: 75px;
-    display: flex;
-    flex-direction: column;
     z-index: 2;
     transform: translateY(-200%);
     transition: 0.5s ease-in-out;
     border-bottom: 3px solid $primary1;
 }
 .bottom{
-    display: flex;
-    flex-direction: column;
     height: 30%;
     margin: 5px;
-    text-align: center;
     font-size: 18px;
-    justify-content: center;
 }
 @keyframes appear-left {
     from{
