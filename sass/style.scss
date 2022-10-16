@@ -108,7 +108,11 @@ h3,p,.bold,span{
 }
 .slider{
     min-width: 500px;
-}   
+}
+.mobile{
+    display: block;
+    height: 500px;
+}
 @media(max-width: 600px) {
     #navDropdown{
         display: block;
@@ -126,6 +130,7 @@ h3,p,.bold,span{
         min-width: 80vw;
     }   
     .slide{width: 30%;}
+    .mobile{display: none;}
 }
 .input.column{
     min-width: 240px;
