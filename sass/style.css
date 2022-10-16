@@ -46,10 +46,6 @@ h3, p, .bold, span {
   outline: none;
 }
 
-.slider {
-  min-width: 500px;
-}
-
 .slide {
   width: 20%;
   display: flex;
@@ -113,6 +109,10 @@ h3, p, .bold, span {
   filter: invert(62%) sepia(60%) saturate(7251%) hue-rotate(180deg) brightness(95%) contrast(101%);
 }
 
+.slider {
+  min-width: 500px;
+}
+
 @media (max-width: 600px) {
   #navDropdown {
     display: block;
@@ -123,15 +123,17 @@ h3, p, .bold, span {
   .navbar {
     display: none;
   }
-  body {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  .slider {
+    min-width: 80vw;
   }
   .slide {
-    width: 20.01%;
+    width: 30%;
   }
 }
+.input.column {
+  min-width: 240px;
+}
+
 #navBottom {
   height: 400px;
   top: 150px;

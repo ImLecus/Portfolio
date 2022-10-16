@@ -11,32 +11,30 @@
 </head>
 <body class="bg(#1b263b)" style="overflow-x: hidden;">
     <header class="padding-3 paddingX-5 flex stickyTop bg(#0d1b2a88)">
-        <img src="./img/logo.png" alt="logo.png" class="brand left" width="70">
+        <img src="./img/logo.png" alt="logo.png" class="brand left" width="60" height="60px">
         <nav class="navbar alignRight">
             <a class="navbarLink marginX-3" onclick="goTo('0');">INICIO</a>
             <a class="navbarLink marginX-3" onclick="goTo('1');">SOBRE MÍ</a>
             <a class="navbarLink marginX-3" onclick="goTo('2');">CONTACTO</a>
         </nav>
-        <button id="navDropdown" class="alignRight" type="button">
+        <button id="navDropdown" class="alignRight height(60px)" type="button">
             <div class="navbarToggler"></div>
         </button>   
     </header>
-            <div id="navBottom" class="width(100%) flexColumn stickyTop">
-            <div class="spaceXL"></div>
-                <a 
-                    class="navLink active bottom flexColumn center" 
-                    onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
-                <a 
-                    class="navLink bottom flexColumn center" 
-                    onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
-                <a
-                    class="navLink bottom flexColumn center" 
-                    onclick="goTo('2'); setNavBottom(-200)"
-                    style="border-bottom: none !important;">Contacto</a>
-            </div>
+    <div id="navBottom" class="width(100%) flexColumn stickyTop">
+        <div class="spaceXL"></div>
+            <a 
+                class="navLink active bottom flexColumn center" 
+                onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
+            <a 
+                class="navLink bottom flexColumn center" 
+                onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
+            <a
+                class="navLink bottom flexColumn center" 
+                onclick="goTo('2'); setNavBottom(-200)"
+                style="border-bottom: none !important;">Contacto</a>
+    </div>
     <main>
-        
-
         <div class="root">
         <h3>Hola, mi nombre es</h3>
         <h1 class="display-1 bold p">Marcos González</h1>
@@ -122,8 +120,8 @@
         <h2 class="semiBold display-4" id="contact-h">Contacto</h2>
         <form action="">
             <div class="row flex wrap">
-                <div class="column padding-5">
-                    <div class="row">
+                <div class="column">
+                    <div class="row flex wrap">
                         <input type="text" class="input margin-2 column" placeholder="Nombre" autocomplete="off">
                         <input type="mail" class="input margin-2 column" placeholder="Correo electrónico" autocomplete="off">
                     </div>
@@ -137,7 +135,7 @@
                     </div>
                 </div>
                 <div class="column flexColumn center">
-                    <p class="textCenter lead width(80%)">También puedes contactar conmigo a través de:</p>
+                    <p class="textCenter lead width(80%) marginTop-5">También puedes contactar conmigo a través de:</p>
                     <p class="textCenter marginTop-5 flex around">
                         <a href="https://github.com/ImLecus" class="lead marginX-3">GitHub</a>
                         <a href="https://www.linkedin.com/in/marcosgf" class="lead marginX-3">LinkedIn</a>
