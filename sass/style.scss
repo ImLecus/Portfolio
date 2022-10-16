@@ -90,6 +90,9 @@ h3,p,.bold,span{
 .active{
     color:$text;
 }
+#navBottom{
+    display: none;
+}
 #navDropdown{
     display: none;
     width: 50px;
@@ -112,6 +115,9 @@ h3,p,.bold,span{
         &:active{
             transform: translateY(10px);
         }
+    }
+    #navBottom{
+        display: block;
     }
     .navbar{
         display: none;
