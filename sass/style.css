@@ -123,6 +123,14 @@ h3, p, .bold, span {
   .navbar {
     display: none;
   }
+  body {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .slide {
+    width: 20.01%;
+  }
 }
 #navBottom {
   height: 400px;
