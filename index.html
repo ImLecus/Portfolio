@@ -36,10 +36,12 @@
     </div>
     <main>
         <div class="root">
-        <h3>Hola, mi nombre es</h3>
-        <h1 class="display-1 bold p">Marcos González</h1>
-        <h3>Frontend Developer</h3>
-        <div class="spaceXL"></div><div class="spaceL"></div><div class="spaceL" id="about-h"></div>
+            <div style="transform: translateY(-200px);">
+                <h3>Hola, mi nombre es</h3>
+                <h1 class="display-1 bold p">Marcos González</h1>
+                <h3>Frontend Developer</h3>
+            </div>
+        <div class="spaceXL"></div><div class="spaceL" id="about-h"></div>
         <h2 class="semiBold display-4">Sobre mí</h2>
         <div class="spaceM"></div>
         <div class="row flex wrap">
@@ -131,12 +133,12 @@
                     <div class="spaceS"></div>
                     <div class="row center">
                         <button class="primaryBtn rounded-5 paddingX-5 marginX-2" type="submit">Enviar</button>
-                        <button class="secondaryBtn rounded-5 paddingX-5 marginX-2"onclick="redirect('/docs/cv.pdf')">Descargar CV</button>
+                        <button class="secondaryBtn rounded-5 paddingX-5 marginX-2"onclick="redirect('/docs/cv.pdf')" style="min-width: 150px;"> Descargar CV</button>
                     </div>
                 </div>
                 <div class="column flexColumn center">
                     <p class="textCenter lead width(80%) marginTop-5">También puedes contactar conmigo a través de:</p>
-                    <p class="textCenter marginTop-5 flex around">
+                    <p class="textCenter marginTop-5 flex around" style="max-width: 200px;">
                         <a href="https://github.com/ImLecus" class="lead marginX-3">GitHub</a>
                         <a href="https://www.linkedin.com/in/marcosgf" class="lead marginX-3">LinkedIn</a>
                         <a href="https://www.twitter.com/ImLecus" class="lead marginX-3">Twitter</a>
