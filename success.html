@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gracias por contactar conmigo</title>
-    <link 
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
-            rel="stylesheet"
-            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
-            crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.css" integrity="sha384-Wcc4EpFfg8VGPJD9r5d7BX80jVLWuKwwgqko91NsP5dAC46tR5ZmvzC5XNfQPEqc" crossorigin="anonymous">
     <link rel="stylesheet" href="./sass/style.css"></link>
     <link rel="icon" href="img/logo.png">
     <link rel="manifest" href="./src/manifest.json">
@@ -22,13 +18,14 @@
         }
     </style>
 </head>
-<body class="d-flex column justify-content-center">
-    <div style="position: absolute; top:25%; left: 25%;">
-        <h2>Gracias por contactar conmigo</h2>
-        <p>El mensaje ha sido enviado con éxito</p>
-        <div class="d-flex align-items-center justify-content-center" style="width: 100%;">
-            <button onclick="window.location.href = './index.html'" class="primary">Inicio</button> 
+<body class="flexColumn center bg(#1b263b) textCenter height(100vh)">
+    <div>
+        <h1>Gracias por contactar conmigo</h1>
+        <p class="lead">El mensaje ha sido enviado con éxito</p>
+        <div class="flex center width(100%)">
+            <button onclick="redirect('./index.html')" class="primaryBtn">Inicio</button> 
         </div> 
     </div> 
+    <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
 </body>
 </html>
