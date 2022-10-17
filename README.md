@@ -10,14 +10,15 @@ Para este proyecto he utilizado las siguientes tecnologías:
 * **HTML**
 * **CSS**
 * **SASS**
-* **Bootstrap**
 * **JavaScript**
+
+Como curiosidad, este portafolio estaba hecho usando Bootstrap, pero posteriormente decidí usar [Astra](https://github.com/ImLecus/Astra), mi propio framework de CSS.
 
 ## ¿Quieres mandarme un mensaje?
 Te dejo estos enlaces por si quieres contactar conmigo sin acceder desde el portafolio:
 
 [Twitter](https://twitter.com/ImLecus) 
 
-[LinkedIn](https://www.linkedin.com/in/marcos-gonz%C3%A1lez-93696a219/) 
+[LinkedIn](https://www.linkedin.com/in/marcosgf) 
 
 [Correo electrónico](mailto:marcosgf2005@gmail.com)
