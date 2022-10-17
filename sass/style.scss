@@ -115,7 +115,6 @@ h3,p,.bold,span{
     display: block;
     height: 500px;
 }
-
 @media(max-width: 600px) {
     p,a{
         font-size: 120% !important;
@@ -128,15 +127,9 @@ h3,p,.bold,span{
             transform: translateY(10px);
         }
     }
-    #navBottom{
-        display: block;
-    }
-    .navbar{
-        display: none;
-    }
-    .slider{
-        min-width: 80vw;
-    }   
+    #navBottom{display: block;}
+    .navbar{display: none;}
+    .slider{min-width: 80vw;}   
     .slide{width: 30%;}
     .mobile{display: none;}
     header{
