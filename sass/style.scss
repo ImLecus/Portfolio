@@ -52,8 +52,10 @@ h3,p,.bold,span{
     img{
         width: 75%;
         transition: ease-in-out, .5s;
+        filter: drop-shadow(0 0 10px #00000055); 
     }
     .name{
+        z-index: 10;
         background-color: $dark;
         border-radius: 10px;
         -moz-border-radius: 10px;
@@ -74,13 +76,13 @@ h3,p,.bold,span{
             height: 20px;
             position: relative;
             transform: translateX(50px) translateY(30px) rotateZ(45deg);
-            z-index: -1;
+            z-index: 9;
         }
     }
     &:hover{
         transform: translateY(-5px);
         img{
-            filter: drop-shadow(10px 10px 30px #ffffff11); 
+            filter: drop-shadow(10px 10px 30px #ffffff22); 
         }
         .name{
             opacity: 1;
@@ -113,9 +115,15 @@ h3,p,.bold,span{
     display: block;
     height: 500px;
 }
+
 @media(max-width: 600px) {
+    p,a{
+        font-size: 120% !important;
+    }
     #navDropdown{
         display: block;
+        height: 40px !important;
+        width: 40px !important;
         &:active{
             transform: translateY(10px);
         }
@@ -131,6 +139,15 @@ h3,p,.bold,span{
     }   
     .slide{width: 30%;}
     .mobile{display: none;}
+    header{
+        height: 70px;
+        padding-bottom: 5px;
+        padding-top: 0;
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
 }
 .input.column{
     min-width: 240px;
