@@ -4,6 +4,7 @@ const setPositions = () => {
     positions = [
         0,
         document.getElementById("about-h").offsetTop - document.getElementById("about-h").offsetHeight,
+        document.getElementById("projects-h").offsetTop - document.getElementById("projects-h").offsetHeight,
         document.getElementById("contact-h").offsetTop - document.getElementById("contact-h").offsetHeight
     ];
 }
@@ -29,10 +30,10 @@ window.addEventListener("scroll", () => {
     }
 });
 const Active = (id) => {
-    for(let i = 0; i < document.getElementsByClassName("navbarLink").length; i++){
-        document.getElementsByClassName("navbarLink")[i].classList.remove("active");
+    for(let i = 0; i < document.querySelectorAll("header div a").length; i++){
+        document.querySelectorAll("header div a")[i].classList.remove("active");
     }
-    document.getElementsByClassName("navbarLink")[id].classList.add("active");
+    document.querySelectorAll("header div a")[id].classList.add("active");
 }
 const setNavBottom = (pos) => {
     navBottom.style.transform = `translateY(${pos}%)`;

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos González | Portafolio</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./dist/extra.css">
+</head>
+<body class="bg-bg-light"> 
+    <header class="bg-bg-dark h-24 flex justify-between items-center px-12 shadow-xl sticky top-0 z-50">
+        <img src="./img/logo.png" alt="logo" width="80">
+        <div class="flex">
+            <a class="text-primary px-8 uppercase hover:text-light hover:-translate-y-1 transition-all"
+               onclick="goTo(0)">Inicio</a>
+            <a class="text-primary px-8 uppercase hover:text-light hover:-translate-y-1 transition-all"
+                onclick="goTo(1)">Sobre mí</a>
+            <a class="text-primary px-8 uppercase hover:text-light hover:-translate-y-1 transition-all"
+                onclick="goTo(2)">Proyectos</a>
+            <a class="text-primary px-8 uppercase hover:text-light hover:-translate-y-1 transition-all"
+                onclick="goTo(3)">Contacto</a>
+        </div>
+        
+    </header><div id="navDropdown"></div>
+    <main class="mx-40">
+        <section class="mt-40 flex justify-between">
+            <div>
+                <h3 class="text-blue-300">Hola, mi nombre es</h3>
+                <h1 class="text-primary uppercase">Marcos González</h1>
+                <h3 class="text-blue-300">Frontend Developer</h3>
+            </div>
+            <img src="">
+        </section>
+        <div class="h-60"></div>
+        <section>
+            <h2 class="text-primary" id="about-h">Sobre mí</h2>
+            <p class="text-blue-300 opacity-75 text-xl">
+                Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de otros lenguajes no tan relacionados con este ámbito. <br> <br>  Me encanta curiosear nuevas tecnologías y pulir las que ya conozco, estar en constante crecimiento y poner en práctica todo lo que aprendo. Mi objetivo actual es seguir expandiendo mis conocimientos y perfeccionar los que estoy aprendiendo.
+            </p>
+            <hr class="bg-primary opacity-50 my-20">
+            <h2 class="text-primary mb-10">Tecnologías que manejo</h2>
+            <div class="flex flex-wrap">
+                <div class="slide">
+                    <div class="name"><div class="square"></div>
+                        <span class="text-blue-300">HTML</span>
+                    </div>
+                    <img src="./img/html.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">CSS</span>
+                    </div>
+                    <img src="./img/css.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">JavaScript</span>
+                    </div>
+                    <img src="./img/javascript.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">TypeScript</span>
+                    </div>
+                <img src="./img/typescript.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">Tailwind</span>
+                    </div>
+                    <img src="./img/tailwind.webp">
+                </div>
+                        
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">Bootstrap</span>
+                    </div>
+                    <img src="./img/bootstrap.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">Git</span>
+                    </div>
+                    <img src="./img/git.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">GitHub</span>
+                    </div>
+                    <img src="./img/github.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">Sass</span>
+                    </div>
+                    <img src="./img/sass.webp">
+                </div>
+
+                <div class="slide">
+                    <div class="name">
+                        <div class="square"></div>
+                        <span class="text-blue-300">Pug</span>
+                    </div>
+                    <img src="./img/pug.webp">
+                </div>
+            </div>
+        </section>
+        <div class="h-60"></div>
+        <section>
+            <h2 class="text-primary" id="projects-h">Mis proyectos personales</h2>
+            <div class="flex">
+                <div class="card bg-slate-800">
+                    <div class="flex">
+                        <img src="https://cdn.jsdelivr.net/gh/Powerbyte7/HyAssets@1.1/Logo.png" alt="card-image" class="self-center">
+                        <div>
+                            <h3 class="text-blue-300 opacity-75 p-3 text-3xl">Hyassets Web</h3>  
+                            <button class="mb-1 mx-4 bg-primary text-slate-800" onclick='window.location.href = "https://hyassets.netlify.app"'>Visitar sitio</button>
+                            <button class="mx-4 border border-primary text-primary" onclick='window.location.href = "https://github.com/ImLecus/HyassetsWeb"'>Ver repositorio</button>
+                        </div>
+                    </div>
+                    <p class="text-blue-300 opacity-75 mt-6">
+                        Hice esta página como regalo al creador de los Hyassets, una colección de modelos 3D del videojuego Hytale.
+                    </p>
+                </div>
+                <div class="card bg-slate-800">
+                    <div class="flex">
+                        <img src="https://cdn.jsdelivr.net/gh/ImLecus/Astra/site/assets/images/logo.png" alt="card-image" class="self-center">
+                        <div>
+                            <h3 class="text-blue-300 opacity-75 p-3 text-3xl">AstraCSS</h3>  
+                            <button class="mb-1 mx-4 bg-primary text-slate-800" onclick='window.location.href = ""' disabled>Visitar sitio</button>
+                            <button class="mx-4 border border-primary text-primary" onclick='window.location.href = "https://github.com/ImLecus/Astra"'>Ver repositorio</button>
+                        </div>
+                    </div>
+                    <p class="text-blue-300 opacity-75 mt-6">
+                        AstraCSS es un framework de CSS desarrollado por mí que combina elementos de Bootstrap y de Tailwind.
+                    </p>
+                </div>  
+            </div>
+        </section>
+        <div class="h-60"></div>
+        <section>
+            <h2 class="text-primary" id="contact-h">Contacto</h2>
+            <form name="contact" data-netlify="true" action="./success.html">
+                <div class="flex">
+                    <div>
+                        <label for="1">Nombre</label>
+                        <input type="text" id="1"> 
+                    </div>
+                    <div>
+                        <label for="2">Correo electrónico</label>
+                        <input type="mail" id="2"> 
+                    </div>
+                </div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </form>
+        </section>
+    </main>
+    <script src="./src/index.js"></script>
+</body>
+</html>
