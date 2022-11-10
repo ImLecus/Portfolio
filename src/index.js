@@ -25,8 +25,11 @@ window.addEventListener("scroll", () => {
     else if(window.scrollY + 90 < positions[2]){
         Active(1);
     }
+    else if(window.scrollY + 90 < positions[3]){
+        Active(2)
+    }
     else{
-        Active(2);
+        Active(3);
     }
 });
 const Active = (id) => {
@@ -43,6 +46,6 @@ document.getElementById("navDropdown").addEventListener("click", () => {
          setNavBottom(-200);
      }
      else{
-         setNavBottom(-50);
+         setNavBottom(0);
      }
 });

@@ -18,36 +18,25 @@
     src: url(../font/Anton-Regular.ttf);
 }
 
+:root{
+    --primary: #008ee6
+}
+
 .navLink{
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
 }
 
     ::-webkit-scrollbar {
-        background: #11162a;
+        background: #242427;
     }
     ::-webkit-scrollbar-thumb {
-        background: #008ee6;
+        background: var(--primary);
         border-radius: 2px;
         -moz-border-radius: 2px;
         -webkit-border-radius: 2px;
-        box-shadow: 0 20px 20px #090f22;
+        box-shadow: 0 20px 20px #151515;
         width: 12px;
-    }
-
-    .text {
-        background-color: #1a213b;
-        border: none;
-    }
-
-    .text:hover,
-    .text:focus {
-        outline: none;
-        border: solid 2px #018ABD;
-    }
-
-    form input {
-        color: #97bcdc;
     }
 
     .name {
@@ -63,15 +52,11 @@
     }
 
     img {
-        filter: drop-shadow(0 5px 15px #090f22);
+        filter: drop-shadow(0 5px 15px #121212);
     }
 
     button {
         background-color: #1a213b;
-    }
-
-    #navBottom {
-        background-color: #151b30;
     }
 
     .bottom {
@@ -84,17 +69,25 @@
     }
 
 
+@media (min-width: 700px){
+    #navBottom{
+        display: none;
+    }
+    .nav{
+        display: flex;
+    }
+   
+}
 
 @media (max-width: 500px) {
-
-    #name,
-    .navbar {
+#navDropdown {
+        display: block !important;
+    }
+    .nav {
         display: none;
     }
 
-    #navDropdown {
-        display: block !important;
-    }
+    
 
     .slide {
         width: 33% !important;
@@ -127,21 +120,18 @@
     h1 {
         font-size: 76px !important;
     }
+    .card {
+        width: 75% !important;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
-    nav {
-        display: block;
-    }
-
-    #name {
-        display: none;
-    }
-
-    .center {
-        left: 10%;
-    }
-
+    #navDropdown {
+            display: block !important;
+        }
+    .nav {
+            display: none;
+        }
     .wrapper {
         opacity: 0;
     }
@@ -164,6 +154,9 @@
     form button {
         width: 50%;
     }
+    .card {
+        width: 75% !important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1140px) {
@@ -174,6 +167,12 @@
 
     button {
         width: 30%;
+    }
+    .card{
+        width: 45% !important;
+    }
+    textarea{
+        width: 80%;
     }
 }
 
@@ -208,13 +207,11 @@
 
 textarea {
     height: 250px;
-    resize: none;
-    color: #97bcdc;
 }
 
 h1 {
-    font: 500 108px Bebas Neue;
-    color: #018ABD;
+    font: 500 120px Bebas Neue;
+    color: var(--primary);
     text-transform: uppercase;
     text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
     -webkit-animation: title 1s;
@@ -228,7 +225,6 @@ h2 {
 h3,
 p {
     font: normal 28px Varela Round;
-    color: #527eb0;
 }
 
 p {
@@ -237,10 +233,9 @@ p {
 
 a {
     margin: 0 14px;
-    color: #018ABD !important;
+    color: var(--primary) !important;
 }
 
-a:hover,
 .active {
     color: #97bcdc !important;
 }
@@ -266,11 +261,6 @@ button {
     height: 50px;
     margin: 1%;
     transition: ease-in, 0.5s;
-}
-
-form button:hover {
-    background-color: #97bcdc;
-    transform: translateY(-5px);
 }
 
 .text-container img {
@@ -304,7 +294,7 @@ form button:hover {
 }
 
 .text-container:hover img {
-    filter: drop-shadow(10px 10px 30px #2a3568);
+    filter: drop-shadow(10px 10px 30px #202020);
 }
 
 .text-container:hover .name {
@@ -334,25 +324,15 @@ form button:hover {
     background-size: 100%;
 }
 
-#name {
-    color: #018ABD;
-    font-size: 30px;
-    -webkit-animation: appear-left 1s;
-    animation: appear-left 1s;
-}
-
-#contact a {
-    font-size: 18px;
-}
-
 .primary {
-    background-color: #018ABD;
+    background-color: var(--primary);
     color: #e5ebf0;
 }
 
 .secondary {
-    border: 3px solid #018ABD;
-    color: #018ABD;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
 }
 
 #navDropdown {
@@ -364,43 +344,20 @@ form button:hover {
 }
 
 #navBottom {
-    height: 200px;
+    height: 250px;
     top: 75px;
     z-index: 2;
     transform: translateY(-200%);
     transition: 0.5s ease-in-out;
-    border-bottom: 3px solid #018ABD;
+    border-bottom: 3px solid var(--primary);
 }
 
 .bottom {
-    height: 30%;
-    margin: 5px;
+    height: 25%;
     font-size: 18px;
+    margin-top: 25px;
 }
 
-@-webkit-keyframes appear-left {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 100%;
-    }
-}
-
-@keyframes appear-left {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 100%;
-    }
-}
 
 @-webkit-keyframes title {
     0% {
@@ -432,4 +389,31 @@ form button:hover {
     100% {
         text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
     }
+}
+.card{
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    width: 30%;
+    background-size: cover;
+}
+.card:hover{
+    transform: scale(105%);
+    filter: grayscale(45%) ;
+}
+.card a{
+    padding: 5px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    display: none;
+    opacity: 0;
+}
+.card:hover a{
+    display: block;
+    opacity: 1;
+}
+.card1{
+    background-image: url("../img/hyassets.png");
+}
+.card2{
+    background-image: url("../img/astra.png");
 }
