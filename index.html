@@ -1,166 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos González | Portafolio</title>
-    <link rel="stylesheet" href="./dist/output.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./sass/style.css">
-</head>
-<body class="bg(#1b263b)" style="overflow-x: hidden;">
-    <header class="py-3 px-5 flex stickyTop bg(#0d1b2a88)">
-        <img src="./img/logo.png" alt="logo.png" class="brand left" width="60" height="60px">
-        <nav class="navbar">
-            <a class="navbarLink mx-3" onclick="goTo('0');">INICIO</a>
-            <a class="navbarLink mx-3" onclick="goTo('1');">SOBRE MÍ</a>
-            <a class="navbarLink mx-3" onclick="goTo('2');">CONTACTO</a>
-        </nav>
-        <button id="navDropdown" class="alignRight height(60px)" type="button">
-            <div class="navbarToggler"></div>
-        </button>   
-    </header>
-    <div id="navBottom" class="width(100%) flexColumn stickyTop">
-        <div class="spaceXL"></div>
-            <a 
-                class="navLink active bottom flexColumn center" 
-                onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
-            <a 
-                class="navLink bottom flexColumn center" 
-                onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
-            <a
-                class="navLink bottom flexColumn center" 
-                onclick="goTo('2'); setNavBottom(-200)"
-                style="border-bottom: none !important;">Contacto</a>
-    </div>
-    <main>
-        <div class="root">
-            <div class="mobile"></div>
-            <div style="transform: translateY(-200px);">
-                <h3>Hola, mi nombre es</h3>
-                <h1 class="display-1 bold p">Marcos González</h1>
-                <h3>Frontend Developer</h3>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta 
+            name="description" 
+            content="¡Hola! Soy Marcos González, Frontend Developer, y este es mi portafolio.">
+        <link rel="icon" href="./img/logo.png">
+        <title>Marcos González</title>
+        <link rel="stylesheet" href="./dist/style.css">
+        <link rel="stylesheet" href="./dist/output.css">
+        <link rel="manifest" href="./src/manifest.json">
+    </head>
+    <body class="bg-bg-light">
+        <header class="flex sticky top-0 justify-between py-2 z-30 bg-bg-dark shadow-xl" id="nav">
+            <a href="/" class="flex items-center ml-6" id="logo">
+                <img src="./img/logo.png" width="60">
+                <h2 id="name" class="ml-8">Marcos González</h2>
+            </a>
+            <div class="flex justify-between mr-5 items-center">
+                    <a 
+                        class="navLink active mx-8 transition-all hover:-translate-y-1 hover:text-light" 
+                        onclick="goTo('0')">Inicio</a>
+                    <a 
+                        class="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
+                        onclick="goTo('1')">Sobre mí</a>
+                    <a 
+                        class="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
+                        onclick="goTo('2')">Proyectos</a>
+                    <a
+                        class="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
+                        onclick="goTo('3')">Contacto</a>
             </div>
-        <div class="spaceXL"></div><div class="spaceL" id="about-h"></div>
-        <h2 class="semiBold display-4">Sobre mí</h2>
-        <div class="spaceM"></div>
-        <div class="row flex wrap">
-            <p class="lead column margin-2" style="min-width: 50%;">
-                Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de otros lenguajes no tan relacionados con este ámbito.<br><br>Me encanta curiosear nuevas tecnologías y pulir las que ya conozco, estar en constante crecimiento y poner en práctica todo lo que aprendo.<br><br>Mi objetivo actual es seguir expandiendo mis conocimientos y perfeccionar los que estoy aprendiendo.<br><br>
-            </p>
-            <div class="column flexColumn width(50%) margin-2">
-                <p class="lead semiBold marginX-auto">Tecnologías que manejo</p>
-                <div class="flex slider wrap around">   
-                    <div class="flex wrap">
-                        <div class="slide">
+            <button id="navDropdown" type="button">
+                <span id="icon"></span>
+            </button>  
+        </header> 
+        <main>
+            <div id="navBottom" class="w-full flex-col sticky top-0">
+                <a 
+                    class="navLink active bottom flexColumn center" 
+                    onclick="goTo('0'); setNavBottom(-200);">Inicio</a>
+                <a 
+                    class="navLink bottom flexColumn center" 
+                    onclick="goTo('1'); setNavBottom(-200)">Sobre mí</a>
+                <a
+                    class="navLink bottom flexColumn center" 
+                    onclick="goTo('2'); setNavBottom(-200)"
+                    style="border-bottom: none !important;">Contacto</a>
+            </div>
+            <div class="h-60"></div>
+            <section id="main">
+                <h3>Hola, mi nombre es</h3>
+                <h1 class="my-5">Marcos González</h1>
+                <h3>Frontend Developer</h3>
+            </section>
+            <div class="spaceXL"></div>
+            <section id="about">    
+                <div class="flex justify-center">
+                    <div class="justify-center items-center">
+                        <h2 id="about-h">Sobre mí</h2>
+                        <p class="items-center">
+                            <br><br>
+                            Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de
+                            otros lenguajes no tan relacionados con este ámbito.
+                            <br><br>
+                            Me encanta curiosear nuevas tecnologías y pulir las que ya conozco, estar en constante crecimiento y poner en práctica
+                            todo lo que aprendo.
+                            <br><br>
+                            Mi objetivo actual es seguir expandiendo mis conocimientos y perfeccionar los que estoy aprendiendo.
+                        </p>
+                    </div>
+                </div>
+                <h3 class="mt-9">Tecnologías que manejo:</h3>
+                <div id="root" class="slides flex flex-wrap">
+                        <div class="slide text-container">
                             <div class="name"><div class="square"></div>
                                 <span>HTML</span>
                             </div>
                             <img src="./img/html.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>CSS</span>
                             </div>
                             <img src="./img/css.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>JavaScript</span>
                             </div>
                             <img src="./img/javascript.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
-                                <span>TypeScript</span>
+                                <span>Tailwind</span>
                             </div>
-                            <img src="./img/typescript.webp">
+                            <img src="./img/tailwind.webp">
                         </div>
-                        <div class="slide">
-                            <div class="name">
-                                <div class="square"></div>
-                                <span>React JS</span>
-                            </div>
-                            <img src="./img/react.webp">
-                        </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Bootstrap</span>
                             </div>
                             <img src="./img/bootstrap.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Git</span>
                             </div>
                             <img src="./img/git.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>GitHub</span>
                             </div>
                             <img src="./img/github.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Sass</span>
                             </div>
                             <img src="./img/sass.webp">
                         </div>
-                        <div class="slide">
+                        <div class="slide text-container">
                             <div class="name">
                                 <div class="square"></div>
                                 <span>Pug</span>
                             </div>
                             <img src="./img/pug.webp">
                         </div>
-                    </div>      
+                    </div>
+            </section>
+            <div class="h-96"></div>
+            <section id="contact">
+                <h2 id="contact-h">Contacto</h2>
+                <div class="h-80"></div>
+                <form 
+                    method="POST" 
+                    id="form" 
+                    name="contactForm" 
+                    action="/success"
+                    netlify>                
+                    <div class="flex justify-center items-center w-full">
+                        <input 
+                            type="text"
+                            placeholder="Nombre"
+                            name = "name"
+                            autocomplete="off"
+                            class="text"
+                            required>
+                        <input 
+                            type="email" 
+                            placeholder="Correo electrónico" 
+                            name = "mail"
+                            autocomplete="off"
+                            class="text"
+                            required>
+                    </div>
+                    <div class="flex justify-center">
+                        <textarea 
+                            placeholder="Escribe aquí tu mensaje..." 
+                            name = "message"
+                            class="text"
+                            required></textarea>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                        <button class="primary" type="submit">Enviar</button>
+                        <button class="secondary" onclick="redirect('/docs/cv.pdf')">Descargar CV</button>
+                    </div>
+                </form>
+                <p class="m-8 text-center" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
+                <div class="flex justify-center">
+                    <a href="https://www.twitter.com/ImLecus">Twitter</a>
+                    <a href="https://github.com/ImLecus">GitHub</a>
+                    <a href="https://www.linkedin.com/in/marcosgf">LinkedIn</a> 
                 </div>
-            </div>
-        </div>
-        <div class="spaceXL"></div>
-        <h2 class="semiBold display-4" id="contact-h">Contacto</h2>
-        <form name="contact" data-netlify="true" action="./success.html">
-            <div class="row flex wrap">
-                <div class="column">
-                    <div class="row flex wrap">
-                        <input type="text" class="input margin-2 column" placeholder="Nombre" autocomplete="off">
-                        <input type="mail" class="input margin-2 column" placeholder="Correo electrónico" autocomplete="off">
-                    </div>
-                    <div class="row">
-                        <textarea placeholder="Mensaje..." class="input column padding-4 height(100px)" autocomplete="off"></textarea>
-                    </div>
-                    <div class="spaceS"></div>
-                    <div class="row center flex wrap">
-                        <button class="primaryBtn rounded-5 paddingX-5 marginX-2" type="submit">Enviar</button>
-                        <button class="secondaryBtn rounded-5 paddingX-5 marginX-2"onclick="redirect('/docs/cv.pdf')" style="min-width: 150px;">Descargar CV</button>
-                    </div>
-                </div>
-                <div class="column flexColumn center">
-                    <p class="textCenter lead width(80%) marginTop-5">También puedes contactar conmigo a través de:</p>
-                    <p class="textCenter marginTop-5 flex around" style="max-width: 200px;">
-                        <a href="https://github.com/ImLecus" class="lead marginX-3">GitHub</a>
-                        <a href="https://www.linkedin.com/in/marcosgf" class="lead marginX-3">LinkedIn</a>
-                        <a href="https://www.twitter.com/ImLecus" class="lead marginX-3">Twitter</a>
-                    </p>
-                </div>       
-            </div>  
-        </form>
-        <div class="spaceXL"></div>
-    </div>
-    </main>
-    <footer class="bg(#0d1b2a88)">
-        <p class="footerText textCenter">© Marcos González 2022-2023 All rights reserved. <br><br>Frontend Developer</p>
-    </footer>
-<script src="./src/index.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
-</body>
+            </section>
+        </main>
+        <footer class="flex justify-center w-full bg-bg-dark border-t border-blue-300">
+            <p class="text-center p-9 w-full my-2">© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
+        </footer>
+        <script src="./src/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4-alpha/src/astra.min.js" integrity="sha384-HD2Xu22h5ehB497TWxi5p/SS3hX8Bh2Dr2DEEFiml+9NaypC+AldjZRI1nus6O2o" crossorigin="anonymous"></script>
+    </body>
 </html>
