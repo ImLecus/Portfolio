@@ -9,8 +9,9 @@
             content="¡Hola! Soy Marcos González, Frontend Developer, y este es mi portafolio.">
         <link rel="icon" href="./img/logo.png">
         <title>Marcos González</title>
-        <link rel="stylesheet" href="./dist/style.css">
         <link rel="stylesheet" href="./dist/output.css">
+        <link rel="stylesheet" href="./dist/style.css">
+        
         <link rel="manifest" href="./src/manifest.json">
     </head>
     <body class="bg-bg-light">
@@ -50,7 +51,6 @@
                     onclick="goTo('2'); setNavBottom(-200)"
                     style="border-bottom: none !important;">Contacto</a>
             </div>
-            <div class="h-60"></div>
             <section id="main">
                 <h3>Hola, mi nombre es</h3>
                 <h1 class="my-5">Marcos González</h1>
@@ -60,7 +60,7 @@
             <section id="about">    
                 <div class="flex justify-center">
                     <div class="justify-center items-center">
-                        <h2 id="about-h">Sobre mí</h2>
+                        <h2 id="about-h" class="text-light">Sobre mí</h2>
                         <p class="items-center">
                             <br><br>
                             Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de
@@ -141,8 +141,8 @@
             </section>
             <div class="h-96"></div>
             <section id="contact">
-                <h2 id="contact-h">Contacto</h2>
-                <div class="h-80"></div>
+                <h2 id="contact-h" class="text-light">Contacto</h2>
+                <div class="h-16"></div>
                 <form 
                     method="POST" 
                     id="form" 
@@ -173,8 +173,8 @@
                             required></textarea>
                     </div>
                     <div class="flex justify-center items-center w-full">
-                        <button class="primary" type="submit">Enviar</button>
-                        <button class="secondary" onclick="redirect('/docs/cv.pdf')">Descargar CV</button>
+                        <button class="primary h-12" type="submit">Enviar</button>
+                        <button class="secondary h-12" onclick="redirect('/docs/cv.pdf')">Descargar CV</button>
                     </div>
                 </form>
                 <p class="m-8 text-center" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
@@ -189,6 +189,5 @@
             <p class="text-center p-9 w-full my-2">© Marcos González 2022 All rights reserved. <br><br>Frontend Developer</p>
         </footer>
         <script src="./src/index.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4-alpha/src/astra.min.js" integrity="sha384-HD2Xu22h5ehB497TWxi5p/SS3hX8Bh2Dr2DEEFiml+9NaypC+AldjZRI1nus6O2o" crossorigin="anonymous"></script>
     </body>
 </html>

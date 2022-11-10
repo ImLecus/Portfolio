@@ -13,25 +13,26 @@
     src: url(../font/VarelaRound-Regular.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white;
-    }
+@font-face {
+    font-family: Anton;
+    src: url(../font/Anton-Regular.ttf);
+}
 
-    h2 {
-        color: #97bcdc;
-    }
+.navLink{
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+}
 
     ::-webkit-scrollbar {
         background: #11162a;
     }
-
     ::-webkit-scrollbar-thumb {
-        background: #1a213b;
-        border-radius: 10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
+        background: #008ee6;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
         box-shadow: 0 20px 20px #090f22;
+        width: 12px;
     }
 
     .text {
@@ -81,7 +82,7 @@
         background-color: #1a213b !important;
         transform: translateY(-10px);
     }
-}
+
 
 
 @media (max-width: 500px) {
@@ -352,9 +353,6 @@ form button:hover {
 .secondary {
     border: 3px solid #018ABD;
     color: #018ABD;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
 }
 
 #navDropdown {
