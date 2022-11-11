@@ -513,12 +513,24 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: sticky;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-0\.5 {
+  top: 0.125rem;
+}
+
+.top-full {
+  top: 100%;
 }
 
 .z-30 {
@@ -568,8 +580,8 @@ video {
   display: flex;
 }
 
-.h-60 {
-  height: 15rem;
+.h-28 {
+  height: 7rem;
 }
 
 .h-16 {
@@ -580,24 +592,24 @@ video {
   height: 3rem;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-28 {
-  height: 7rem;
+.h-screen {
+  height: 100vh;
 }
 
 .w-full {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .resize-none {
   resize: none;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {

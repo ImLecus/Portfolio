@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gracias por contactar conmigo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.css" integrity="sha384-Wcc4EpFfg8VGPJD9r5d7BX80jVLWuKwwgqko91NsP5dAC46tR5ZmvzC5XNfQPEqc" crossorigin="anonymous">
-    <link rel="stylesheet" href="./sass/style.min.css"></link>
     <link rel="icon" href="img/logo.png">
     <link rel="manifest" href="./src/manifest.json">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./dist/style.css">
     <style>
         h2,p{
             text-align: center;
@@ -16,16 +16,19 @@
         button{
             width: 200px !important;
         }
+        body{
+            top: 40vh;
+
+        }
     </style>
 </head>
-<body class="flexColumn center bg(#1b263b) textCenter height(100vh)">
+<body class="flex justify-center bg-zinc-800 text-center w-screen fixed">
     <div>
-        <h1>Gracias por contactar conmigo</h1>
-        <p class="lead">El mensaje ha sido enviado con éxito</p>
-        <div class="flex center width(100%)">
-            <button onclick="redirect('./index.html')" class="primaryBtn">Inicio</button> 
+        <h2 class="text-primary">Gracias por contactar conmigo</h2>
+        <p class="text-zinc-300">El mensaje ha sido enviado con éxito</p>
+        <div class="flex justify-center items-center w-full">
+            <button onclick="window.location.href = './index.html'" class="primary h-12 transition-all hover:-translate-y-1">Inicio</button> 
         </div> 
     </div> 
-    <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
 </body>
 </html>
