@@ -10,7 +10,10 @@ Para este proyecto he utilizado las siguientes tecnologías:
 * **HTML**
 * **CSS**
 * **SASS**
-* **JavaScript**
+* **Tailwind**
+* **Typescript**
+* **React**
+* **Vite**
 
 Como curiosidad, este portafolio estaba hecho usando Bootstrap, pero posteriormente decidí usar [Astra](https://github.com/ImLecus/Astra), mi propio framework de CSS.
 
