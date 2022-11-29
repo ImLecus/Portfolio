@@ -1,4 +1,5 @@
 class Script{
+    lang = "es"
     goTo(pos:string){
         window.scrollTo({
             //top: positions[id],
@@ -11,5 +12,9 @@ class Script{
         let navBottom:any = document.getElementById("navBottom")
         navBottom.style.transform = `translateY(${pos}%)`;
     }  
+    getLang(actualLanguage:string){
+        if(actualLanguage == "es"){ return "es"}
+        else{ return "en"}
+    }
 }
 export default Script;

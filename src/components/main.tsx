@@ -1,6 +1,8 @@
 import Script from "../script";
 var script = new Script();
 import Slide from "./slide";
+import language from "../data/languages.json";
+var lang = script.lang;
 function Main(){
     return(
         <main>
@@ -28,7 +30,7 @@ function Main(){
                 
             </div>
             <section id="main">
-                <h3 className="text-zinc-400">Hola, mi nombre es</h3>
+                <h3 className="text-zinc-400">{language.presentation[script.getLang(lang)][0]}</h3>
                 <h1 className="my-5">Marcos González</h1>
                 <h3 className="text-zinc-400">Frontend Developer</h3>
             </section>
@@ -36,20 +38,18 @@ function Main(){
             <section id="about">    
                 <div className="flex justify-center">
                     <div className="justify-center items-center">
-                        <h2 id="about-h" className="text-light">Sobre mí</h2>
+                        <h2 id="about-h" className="text-light">{language.header[script.getLang(lang)][1]}</h2>
                         <p className="items-center text-zinc-300">
                             <br /><br />
-                            Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de
-                            otros lenguajes no tan relacionados con este ámbito.
+                            {language.about[script.getLang(lang)][0]}
                             <br /><br />
-                            Me encanta curiosear nuevas tecnologías y pulir las que ya conozco, estar en constante crecimiento y poner en práctica
-                            todo lo que aprendo.
+                            {language.about[script.getLang(lang)][1]}
                             <br /><br />
-                            Mi objetivo actual es seguir expandiendo mis conocimientos y perfeccionar los que estoy aprendiendo.
+                            {language.about[script.getLang(lang)][2]}
                         </p>
                     </div>
                 </div>
-                <h3 className="mt-9 text-zinc-400">Tecnologías que manejo:</h3>
+                <h3 className="mt-9 text-zinc-400">{language.tech[script.getLang(lang)][0]}</h3>
                 <div id="root" className="slides flex flex-wrap">
                         <Slide name="HTML"/>
                         <Slide name="CSS"/>
@@ -66,7 +66,7 @@ function Main(){
                     </div>
             </section>
             <section id="projects">
-                <h2 id="projects-h" className="text-light">Proyectos</h2>
+                <h2 id="projects-h" className="text-light">{language.header[script.getLang(lang)][2]}</h2>
                 <div className="flex w-full justify-center">
                     <div className="card p-5 m-2 card1 transition-all flex justify-center items-center">
                         <a href="https://hyassets.netlify.app" className="transition-all">Visitar sitio</a>
@@ -75,7 +75,7 @@ function Main(){
                 </div>
             </section>
             <section id="contact">
-                <h2 id="contact-h" className="text-light">Contacto</h2>
+                <h2 id="contact-h" className="text-light">{language.header[script.getLang(lang)][3]}</h2>
                 <div className="h-16"></div>
                 <form 
                     method="POST" 
@@ -86,14 +86,14 @@ function Main(){
                     <div className="flex justify-center items-center w-full">
                         <input 
                             type="text"
-                            placeholder="Nombre"
+                            placeholder={language.form[script.getLang(lang)][0]}
                             name = "name"
                             autoComplete="off"
                             className="text bg-zinc-900 text-primary"
                             required />
                         <input 
                             type="email" 
-                            placeholder="Correo electrónico" 
+                            placeholder={language.form[script.getLang(lang)][1]}
                             name = "mail"
                             autoComplete="off"
                             className="text bg-zinc-900 text-primary"
@@ -101,17 +101,17 @@ function Main(){
                     </div>
                     <div className="flex justify-center">
                         <textarea 
-                            placeholder="Escribe aquí tu mensaje..." 
+                            placeholder={language.form[script.getLang(lang)][2]}
                             name = "message"
                             className="text bg-zinc-900 text-primary resize-none"
                             required></textarea>
                     </div>
                     <div className="flex justify-center items-center w-full my-5">
-                        <button className="primary h-12 transition-all hover:-translate-y-1 mx-8" type="submit">Enviar</button>
-                        <button className="secondary h-12 transition-all hover:-translate-y-1 mx-8" onClick={()=>(window.location.href = '/docs/cv.pdf')}>Descargar CV</button>
+                        <button className="primary h-12 transition-all hover:-translate-y-1 mx-8" type="submit">{language.form[script.getLang(lang)][3]}</button>
+                        <button className="secondary h-12 transition-all hover:-translate-y-1 mx-8" onClick={()=>(window.location.href = '/docs/cv.pdf')}>{language.form[script.getLang(lang)][4]}</button>
                     </div>
                 </form>
-                <p className="m-8 text-center text-zinc-300" id="cont">También puedes contactar conmigo mediante los siguientes métodos:</p>
+                <p className="m-8 text-center text-zinc-300" id="cont">{language.form[script.getLang(lang)][5]}</p>
                 <div className="flex justify-center">
                     <a href="https://www.twitter.com/ImLecus" className="text-xl transition-all hover:text-blue-300">Twitter</a>
                     <a href="https://github.com/ImLecus" className="text-xl transition-all hover:text-blue-300">GitHub</a>

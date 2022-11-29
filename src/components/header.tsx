@@ -1,5 +1,7 @@
 import Script from "../script";
 var script = new Script();
+import language from "../data/languages.json";
+var lang = script.lang
 function Header(){
     return(
         <header className="flex sticky top-0 justify-between py-2 z-30 bg-zinc-900 shadow-xl" id="nav">
@@ -9,24 +11,22 @@ function Header(){
             <div className="flex justify-between mr-5 items-center nav">
                     <a 
                         className="navLink active mx-8 transition-all hover:-translate-y-1 hover:text-light" 
-                        onClick={() => script.goTo('0')}>Inicio</a>
+                        onClick={() => script.goTo('0')}>{language.header[script.getLang(lang)][0]}</a>
                     <a 
                         className="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
-                        onClick={() => script.goTo('1')}>Sobre mí</a>
+                        onClick={() => script.goTo('1')}>{language.header[script.getLang(lang)][1]}</a>
                     <a 
                         className="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
-                        onClick={() => script.goTo('2')}>Proyectos</a>
+                        onClick={() => script.goTo('2')}>{language.header[script.getLang(lang)][2]}</a>
                     <a
                         className="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
-                        onClick={() => script.goTo('3')}>Contacto</a>
+                        onClick={() => script.goTo('3')}>{language.header[script.getLang(lang)][3]}</a>
             </div>
-            <button id="navDropdown" type="button">
+            <button id="navDropdown" type="button"> 
                 <span id="icon"></span>
             </button>  
         </header>
     );
 }
-
-
 
 export default Header;

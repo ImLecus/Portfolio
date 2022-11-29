@@ -1,0 +1,27 @@
+{
+    "header":{
+        "es":["Inicio","Sobre mí","Proyectos","Contacto"],
+        "en":["Home","About","Portfolio","Contact"]
+    },
+    "presentation":{
+        "es":["Hola, mi nombre es"],
+        "en":["Hello, my name is"]
+    },
+    "about":{
+        "es":["Durante prácticamente toda mi vida me he interesado por la programación, y antes de decidirme por el desarrollo web adquirí conocimientos de otros lenguajes no tan relacionados con este ámbito.",
+              "Me encanta curiosear nuevas tecnologías y pulir las que ya conozco, estar en constante crecimiento y poner en práctica todo lo que aprendo.",
+              "Mi objetivo actual es seguir expandiendo mis conocimientos y perfeccionar los que estoy aprendiendo."],
+        "en":["I have been interested by coding since i was a child, and before to pick the web developement i learned knowledge about other programming languages that aren't relacionated to web developement at all,",
+            "I love to pry new technologies and master the ones that i know, being in constant growing and put in practice all that i learn.",
+            "My actual objective is to continue expanding my knowledge and pulish the technologies that i'm learning."
+        ]
+    },
+    "tech":{
+        "es":["Tecnologías que manejo:"],
+        "en":["Technologies that i know:"]
+    },
+    "form":{
+        "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV","También puedes contactar conmigo mediante los siguientes métodos:"],
+        "en":["Name","Email","Write here your message...","Submit","Download CV","You can also contact me through the following methods:"]
+    }
+}
