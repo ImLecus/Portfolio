@@ -21,7 +21,6 @@
 :root{
     --primary: #008ee6
 }
-
 .navLink{
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
@@ -67,6 +66,7 @@
         background-color: #1a213b !important;
         transform: translateY(-10px);
     }
+
 
 
 @media (min-width: 700px){
@@ -210,7 +210,7 @@ textarea {
 }
 
 h1 {
-    font: 500 120px Bebas Neue;
+    font: 500 120px Bebas Neue !important;
     color: var(--primary);
     text-transform: uppercase;
     text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
@@ -219,12 +219,12 @@ h1 {
 }
 
 h2 {
-    font: 500 60px Kanit;
+    font: 500 60px Kanit !important;
 }
 
 h3,
 p {
-    font: normal 28px Varela Round;
+    font: normal 28px Varela Round !important;
 }
 
 p {
@@ -325,13 +325,13 @@ button {
 }
 
 .primary {
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
     color: #e5ebf0;
 }
 
 .secondary {
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--primary) !important;
+    color: var(--primary) !important;
     background-color: transparent;
 }
 
