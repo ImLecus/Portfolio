@@ -12,4 +12,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Main />
     <Footer />
   </React.StrictMode>
-)
+);

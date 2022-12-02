@@ -1,5 +1,5 @@
 class Script{
-    lang = "es"
+    lang = "es";
     goTo(pos:string){
         window.scrollTo({
             //top: positions[id],
@@ -13,8 +13,13 @@ class Script{
         navBottom.style.transform = `translateY(${pos}%)`;
     }  
     getLang(actualLanguage:string){
-        if(actualLanguage == "es"){ return "es"}
-        else{ return "en"}
+        switch(actualLanguage){
+            case "es": return "es";
+            case "en": return "en";
+            case "ca": return "ca";
+            case "fr": return "fr";
+            default: return "es";
+        }
     }
 }
 export default Script;

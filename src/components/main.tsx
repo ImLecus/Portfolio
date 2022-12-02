@@ -3,6 +3,7 @@ var script = new Script();
 import Slide from "./slide";
 import language from "../data/languages.json";
 var lang = script.lang;
+
 function Main(){
     return(
         <main>

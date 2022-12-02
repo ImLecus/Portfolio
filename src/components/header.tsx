@@ -1,10 +1,10 @@
 import Script from "../script";
 var script = new Script();
 import language from "../data/languages.json";
-var lang = script.lang
+var lang = script.lang;
 function Header(){
     return(
-        <header className="flex sticky top-0 justify-between py-2 z-30 bg-zinc-900 shadow-xl" id="nav">
+        <header className="flex sticky top-0 justify-between py-1 z-30 bg-zinc-900 shadow-xl" id="nav">
             <a href="/" className="flex items-center ml-6" id="logo">
                 <img src="./img/logo.png" width="60" className="ml-5" />
             </a>
@@ -21,6 +21,12 @@ function Header(){
                     <a
                         className="navLink mx-8 transition-all hover:-translate-y-1 hover:text-light" 
                         onClick={() => script.goTo('3')}>{language.header[script.getLang(lang)][3]}</a>
+                    <select name="" id="">
+                        <option value="">Español</option>
+                        <option value="">English</option>
+                        <option value="">Català</option>
+                        <option value="">Français</option>
+                    </select>
             </div>
             <button id="navDropdown" type="button"> 
                 <span id="icon"></span>

@@ -417,3 +417,17 @@ button {
 .card2{
     background-image: url("../img/astra.png");
 }
+select{
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    outline: none;
+    border-radius: 5px;
+}
+select:focus{
+    outline: none;
+}
+option{
+    color: var(--primary);
+    background-color: #121212;
+}
