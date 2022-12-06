@@ -34,12 +34,13 @@ function Main(){
                 <h3 className="text-zinc-400">{language.presentation[script.getLang(lang)][0]}</h3>
                 <h1 className="my-5">Marcos González</h1>
                 <h3 className="text-zinc-400">Frontend Developer</h3>
+                <img id="pfp"/>
             </section>
             <div className="h-28"></div>
             <section id="about">    
                 <div className="flex justify-center">
                     <div className="justify-center items-center">
-                        <h2 id="about-h" className="text-light">{language.header[script.getLang(lang)][1]}</h2>
+                        <h2 id="about-h">{language.header[script.getLang(lang)][1]}</h2>
                         <p className="items-center text-zinc-300">
                             <br /><br />
                             {language.about[script.getLang(lang)][0]}
@@ -67,7 +68,7 @@ function Main(){
                     </div>
             </section>
             <section id="projects">
-                <h2 id="projects-h" className="text-light">{language.header[script.getLang(lang)][2]}</h2>
+                <h2 id="projects-h">{language.header[script.getLang(lang)][2]}</h2>
                 <div className="flex w-full justify-center">
                     <div className="card p-5 m-2 card1 transition-all flex justify-center items-center">
                         <a href="https://hyassets.netlify.app" className="transition-all">Visitar sitio</a>
@@ -76,7 +77,7 @@ function Main(){
                 </div>
             </section>
             <section id="contact">
-                <h2 id="contact-h" className="text-light">{language.header[script.getLang(lang)][3]}</h2>
+                <h2 id="contact-h">{language.header[script.getLang(lang)][3]}</h2>
                 <div className="h-16"></div>
                 <form 
                     method="POST" 
