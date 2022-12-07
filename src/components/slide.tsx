@@ -1,5 +1,6 @@
+import "./slide.css"
 function Slide(props:any){
-    let dir = `./img/${props.name}.webp`
+    let dir = `./img/${props.name}.jpg`
     return(
         <div className="slide text-container">
             <div className="name"><div className="square"></div>

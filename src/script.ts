@@ -1,5 +1,6 @@
 class Script{
     lang = "es";
+    positions = [];
     goTo(pos:string){
         window.scrollTo({
             //top: positions[id],

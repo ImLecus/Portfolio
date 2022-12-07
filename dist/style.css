@@ -2,54 +2,34 @@
     font-family: Bebas Neue;
     src: url(../font/BebasNeue-Regular.ttf);
 }
-
+@font-face {
+    font-family: Anton;
+    src: url(../font/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../font/Nunito-VariableFont_wght.ttf);
+}
 @font-face {
     font-family: Kanit;
     src: url(../font/Kanit-Regular.ttf);
 }
 
-@font-face {
-    font-family: Varela Round;
-    src: url(../font/VarelaRound-Regular.ttf);
-}
-
-@font-face {
-    font-family: Anton;
-    src: url(../font/Anton-Regular.ttf);
-}
 
 :root{
     --primary: #008ee6
 }
-.navLink{
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
+::-webkit-scrollbar {
+    background: #242427;
 }
-
-    ::-webkit-scrollbar {
-        background: #242427;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--primary);
-        border-radius: 2px;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        box-shadow: 0 20px 20px #151515;
-        width: 12px;
-    }
-
-    .name {
-        background-color: #2a3568;
-    }
-
-    .name .square {
-        background-color: #2a3568;
-    }
-
-    .name span {
-        color: white;
-    }
-
+::-webkit-scrollbar-thumb {
+     background: var(--primary);
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0 20px 20px #151515;
+    width: 12px;
+}
     img {
         filter: drop-shadow(0 5px 15px #121212);
     }
@@ -61,38 +41,13 @@
     .bottom {
         border-bottom: 1px solid #1a213b;
     }
-
-    #navDropdown:active {
-        background-color: #1a213b !important;
-        transform: translateY(-10px);
-    }
-
-
-
 @media (min-width: 700px){
     #navBottom{
         display: none;
     }
-    .nav{
-        display: flex;
-    }
-   
 }
 
 @media (max-width: 500px) {
-#navDropdown {
-        display: block !important;
-    }
-    .nav {
-        display: none !important;
-    }
-
-    
-
-    .slide {
-        width: 33% !important;
-    }
-
     form div {
         flex-wrap: wrap;
         margin: 5px;
@@ -126,12 +81,6 @@
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
-    #navDropdown {
-            display: block !important;
-        }
-    .nav {
-            display: none !important;
-        }
     .wrapper {
         opacity: 0;
     }
@@ -199,35 +148,22 @@
     #contact a {
         margin: 10px 50px;
     }
-
-    .slide {
-        width: 14% !important;
-    }
 }
 
 textarea {
     height: 250px;
 }
 
-h1 {
-    font: 500 120px Bebas Neue !important;
-    color: var(--primary);
-    text-transform: uppercase;
-    text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353), 0 5px 15px rgba(0,0,0);
-    -webkit-animation: title 1s;
-    animation: title 1s;
-}
+
 
 h2 {
     font: 500 60px Kanit !important;
     color: var(--primary);
 }
 
-h3,
-p {
-    font: normal 28px Varela Round !important;
+h3{
+    font-size: 28px !important;
 }
-
 p {
     font-size: 20px;
 }
@@ -236,11 +172,6 @@ a {
     margin: 0 14px;
     color: var(--primary) !important;
 }
-
-.active {
-    color: #97bcdc !important;
-}
-
 section {
     margin: 10%;
     height: -webkit-fit-content;
@@ -264,67 +195,6 @@ button {
     transition: ease-in, 0.5s;
 }
 
-.text-container img {
-    width: 75%;
-    transition: ease-in-out, 0.5s;
-}
-
-.text-container .name {
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    text-align: center;
-    margin: 10px 0;
-    width: 120px;
-    opacity: 0;
-    transition: ease-in, 0.3s;
-}
-
-.text-container .name span {
-    position: relative;
-    bottom: 25%;
-}
-
-.text-container .name .square {
-    display: box;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transform: translateX(50px) translateY(30px) rotateZ(45deg);
-    z-index: -1;
-}
-
-.text-container:hover img {
-    filter: drop-shadow(10px 10px 30px #202020);
-}
-
-.text-container:hover .name {
-    opacity: 1;
-}
-
-.slide {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: ease-in, 0.5s;
-}
-
-.slide:hover {
-    transform: translateY(-5px);
-}
-
-#icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-}
-
 .primary {
     background-color: var(--primary) !important;
     color: #e5ebf0;
@@ -336,22 +206,9 @@ button {
     background-color: transparent;
 }
 
-#navDropdown {
-    display: none;
-    width: 50px;
-    height: 50px;
-    margin: 5px 20px 0 0 !important;
-    padding: 0;
-}
 
-#navBottom {
-    height: 250px;
-    top: 75px;
-    z-index: 2;
-    transform: translateY(-200%);
-    transition: 0.5s ease-in-out;
-    border-bottom: 3px solid var(--primary);
-}
+
+
 
 .bottom {
     height: 25%;
@@ -413,25 +270,12 @@ button {
     opacity: 1;
 }
 .card1{
-    background-image: url("../img/hyassets.png");
+    background-image: url("../img/hyassets.jpg");
 }
 .card2{
-    background-image: url("../img/astra.png");
+    background-image: url("../img/astra.jpg");
 }
-select{
-    background-color: transparent;
-    border: none;
-    color: var(--primary);
-    outline: none;
-    border-radius: 5px;
-}
-select:focus{
-    outline: none;
-}
-option{
-    color: var(--primary);
-    background-color: #121212;
-}
+
 #pfp{
     background-color: red;
     width: 50%;
