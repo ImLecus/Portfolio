@@ -8,7 +8,7 @@ function Header(){
             <a href="/" className="flex items-center ml-6" id="logo">
                 <img src="./img/logo.png" width="60" className="ml-5" />
             </a>
-            <div className="flex justify-between mr-5 items-center nav">
+            <div className="flex justify-between mr-5 items-center nav" id="navbar">
                     <a 
                         className="navLink active mx-8 transition-all hover:-translate-y-1 hover:text-light" 
                         onClick={() => script.goTo('0')}>{language.header[script.getLang(lang)][0]}</a>
