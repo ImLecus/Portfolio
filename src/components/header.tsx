@@ -15,7 +15,7 @@ class Header extends React.Component{
         return(
         <header className="bg-zinc-900 shadow-xl" id="nav">
             <a href="/" id="logo">
-                <img src="./img/logo.jpg"/>
+                <img src="./img/logo.png"/>
             </a>
             <nav className="nav">
                     <a 
