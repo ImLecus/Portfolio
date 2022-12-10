@@ -6,6 +6,7 @@ import Slide from "./slide";
 import Script from "../script";
 var script = new Script();
 import language from "../data/languages.json";
+import NavBottom from "./navbottom";
 var lang = script.lang;
 
 class Main extends React.Component{
@@ -18,29 +19,7 @@ class Main extends React.Component{
     render(){
         return(
             <main>
-                <div id="navBottom" className="w-full sticky top-0 bg-zinc-900">
-                    <div className="flex justify-center">
-                        <a 
-                        className="navLink active bottom" 
-                        onClick={ () => {script.goTo('0'); script.setNavBottom(-200);}}>Inicio</a>
-                    </div>
-                    <div className="flex justify-center">
-                        <a 
-                        className="navLink bottom" 
-                        onClick={ () => {script.goTo('1'); script.setNavBottom(-200);}}>Sobre mí</a>
-                    </div>
-                    <div className="flex justify-center">
-                        <a 
-                        className="navLink bottom" 
-                        onClick={ () => {script.goTo('2'); script.setNavBottom(-200);}}>Proyectos</a>
-                    </div>
-                    <div className="flex justify-center">
-                        <a
-                        className="navLink bottom" 
-                        onClick={ () => {script.goTo('3'); script.setNavBottom(-200);}}>Contacto</a>
-                    </div>
-                    
-                </div>
+                <NavBottom />
                 <section id="main">
                     <h3 className="text-zinc-400">{language.presentation[script.getLang(lang)][0]}</h3>
                     <h1 className="my-5">Marcos González</h1>

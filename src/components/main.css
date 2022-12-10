@@ -1,11 +1,4 @@
-#navBottom {
-    height: 250px;
-    top: 75px;
-    z-index: 2;
-    transform: translateY(-200%);
-    transition: 0.5s ease-in-out;
-    border-bottom: 3px solid var(--primary);
-}
+
 h1 {
     font: 500 120px Bebas Neue !important;
     color: var(--primary);
