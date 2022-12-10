@@ -1,6 +1,6 @@
 import "./slide.css"
 function Slide(props:any){
-    let dir = `./img/${props.name}.jpg`
+    let dir = `./img/${props.name.toString().toLowerCase()}.jpg`
     return(
         <div className="slide text-container">
             <div className="name"><div className="square"></div>
