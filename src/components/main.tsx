@@ -9,28 +9,25 @@ import language from "../data/languages.json";
 import NavBottom from "./navbottom";
 var lang = script.lang;
 
-class Main extends React.Component{
-    waypoints : any = [];
-    componentDidUpdate(): void {
-        this.waypoints = [0,document.getElementById("about-h")?.getBoundingClientRect().y, document.getElementById("projects-h")?.getBoundingClientRect().y, document.getElementById("contact-h")?.getBoundingClientRect().y];
+const slides = ["HTML","CSS","Javascript","Tailwind","Bootstrap","Git","GitHub","Sass","Pug","NodeJS","Typescript","React"];
 
-        console.log(this.waypoints)
-    }
+class Main extends React.Component{
+
     render(){
         return(
             <main>
                 <NavBottom />
-                <section id="main">
+                <section id={language.header[script.getLang(lang)][0]}>
                     <h3 className="text-zinc-400">{language.presentation[script.getLang(lang)][0]}</h3>
                     <h1 className="my-5">Marcos González</h1>
                     <h3 className="text-zinc-400">Frontend Developer</h3>
                     <img id="pfp"/>
                 </section>
                 <div className="h-28"></div>
-                <section id="about">    
+                <section id={language.header[script.getLang(lang)][1]}>    
                     <div className="flex justify-center">
                         <div className="justify-center items-center">
-                            <h2 id="about-h">{language.header[script.getLang(lang)][1]}</h2>
+                            <h2>{language.header[script.getLang(lang)][1]}</h2>
                             <p className="items-center text-zinc-300">
                                 <br /><br />
                                 {language.about[script.getLang(lang)][0]}
@@ -43,22 +40,13 @@ class Main extends React.Component{
                     </div>
                     <h3 className="mt-9 text-zinc-400">{language.tech[script.getLang(lang)][0]}</h3>
                     <div id="root" className="slides flex flex-wrap">
-                            <Slide name="HTML"/>
-                            <Slide name="CSS"/>
-                            <Slide name="JavaScript"/>
-                            <Slide name="Tailwind"/>
-                            <Slide name="Bootstrap"/>
-                            <Slide name="Git"/>
-                            <Slide name="GitHub"/>
-                            <Slide name="Sass"/>
-                            <Slide name="Pug"/>
-                            <Slide name="NodeJS"/>
-                            <Slide name="Typescript"/>
-                            <Slide name="React"/>
-                        </div>
+                        {slides.map(slide => (
+                            <Slide name={slide} key={slides.indexOf(slide)}/>
+                        ))}
+                    </div>
                 </section>
-                <section id="projects">
-                    <h2 id="projects-h">{language.header[script.getLang(lang)][2]}</h2>
+                <section id={language.header[script.getLang(lang)][2]}>
+                    <h2>{language.header[script.getLang(lang)][2]}</h2>
                     <div className="flex w-full justify-center">
                         <div className="card p-5 m-2 card1 transition-all flex justify-center items-center">
                             <a href="https://hyassets.netlify.app" className="transition-all">Visitar sitio</a>
@@ -66,8 +54,8 @@ class Main extends React.Component{
                         </div>
                     </div>
                 </section>
-                <section id="contact">
-                    <h2 id="contact-h">{language.header[script.getLang(lang)][3]}</h2>
+                <section id={language.header[script.getLang(lang)][3]}>
+                    <h2>{language.header[script.getLang(lang)][3]}</h2>
                     <div className="h-16"></div>
                     <form 
                         method="POST" 

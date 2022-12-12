@@ -23,6 +23,7 @@ header nav{
     transition: linear 0.1s;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .navLink:hover{
     transform: translateY(-3px);
