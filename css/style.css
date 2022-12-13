@@ -14,8 +14,6 @@
     font-family: Kanit;
     src: url(../font/Kanit-Regular.ttf);
 }
-
-
 :root{
     --primary: #008ee6
 }
@@ -33,45 +31,42 @@
     img {
         filter: drop-shadow(0 5px 15px #121212);
     }
-
     button {
         background-color: #1a213b;
     }
-
     .bottom {
         border-bottom: 1px solid #1a213b;
     }
+@media (max-width: 700px){
+    #navBottom{
+        display: block;
+    }
+}    
 @media (min-width: 700px){
     #navBottom{
         display: none;
     }
 }
-
 @media (max-width: 500px) {
     form div {
         flex-wrap: wrap;
         margin: 5px;
     }
-
     form input,
     form textarea {
         margin: 5px;
         width: 80%;
     }
-
     form input {
         transform: translateX(-5px);
     }
-
     form button {
         width: 50%;
         margin: 10px;
     }
-
     #contact a {
         margin: 5px auto;
     }
-
     h1 {
         font-size: 76px !important;
     }
@@ -79,27 +74,22 @@
         width: 75% !important;
     }
 }
-
 @media (min-width: 500px) and (max-width: 768px) {
     .wrapper {
         opacity: 0;
     }
-
     form div {
         flex-wrap: wrap;
         margin: 5px;
     }
-
     form input,
     form textarea {
         margin: 5px;
         width: 80%;
     }
-
     form input {
         transform: translateX(-5px);
     }
-
     form button {
         width: 50%;
     }
@@ -107,7 +97,6 @@
         width: 75% !important;
     }
 }
-
 @media (min-width: 768px) and (max-width: 1140px) {
     form input {
         width: 40%;
@@ -124,7 +113,6 @@
         width: 80%;
     }
 }
-
 @media (min-width: 1140px) {
     form input {
         width: 30%;
@@ -149,13 +137,9 @@
         margin: 10px 50px;
     }
 }
-
 textarea {
     height: 250px;
 }
-
-
-
 h2 {
     font: 500 60px Kanit !important;
     color: var(--primary);
@@ -205,18 +189,11 @@ button {
     color: var(--primary) !important;
     background-color: transparent;
 }
-
-
-
-
-
 .bottom {
     height: 25%;
     font-size: 18px;
     margin-top: 25px;
 }
-
-
 @-webkit-keyframes title {
     0% {
         transform: scaleY(-1);

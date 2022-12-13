@@ -2,7 +2,6 @@ import {useContext} from "react";
 import "./main.css"
 import Slide from "./slide";
 import language from "../data/languages.json";
-import NavBottom from "./navbottom";
 import { userContext } from "./app";
 
 
@@ -22,7 +21,7 @@ function Main(){
     const lang = useContext(userContext);
         return(
             <main>
-                <NavBottom />
+                <div className="h-28"></div>
                 <section id={language.header[getLang(lang)][0]}>
                     <h3 className="text-zinc-400">{language.presentation[getLang(lang)][0]}</h3>
                     <h1 className="my-5">Marcos González</h1>
