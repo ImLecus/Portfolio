@@ -3,14 +3,14 @@ header{
     position: sticky; 
     top: 0;
     z-index: 30;
-    padding: 2px 0;
+    padding: 6px 0;
     justify-content: space-between;
 }
 #logo{
     display: flex;
     align-items: center;
     margin-left: 40px;
-    width: 60px;
+    width: 50px;
 }
 header nav{
     display: inherit;

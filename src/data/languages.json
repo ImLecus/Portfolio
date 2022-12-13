@@ -22,7 +22,10 @@
         "ca":["Durant pràcticamente tota la meua vida m'he interessat per la programació, i abans de decidir-me pel desenvolupament web vaig obtindre coneixements d'altres tecnologíes no tan relacionades amb aquest àmbit.",
             "M'encanta provar noves tecnologíes i millorar en les que ja coneix, estar en constant creixement i posar en pràctica tot el que sé.",
             "El meu objectiu actual és continuar ampliant el meu coneixement i perfeccionar les tecnologíes que ja coneix."],
-        "fr":[]
+        "fr":["Pendant pratiquement toute ma vie, je me suis intéressé à la programmation, et avant de me décider pour le développement Web, j'ai acquis des connaissances dans d'autres langages qui ne sont pas si liés à ce domaine.",
+        "J'adore explorer de nouvelles technologies et peaufiner celles que je connais déjà, évoluer constamment et mettre en pratique tout ce que j'apprends.",
+        "Mon objectif actuel est de continuer à élargir mes connaissances et à perfectionner ce que j'apprends."
+    ]   
     },
     "tech":{
         "es":["Tecnologías que manejo:"],

@@ -1,29 +1,37 @@
-import Script from "../script";
 import "./header.css"
-var script = new Script();
 import language from "../data/languages.json";
-import { useState } from "react";
-var lang = script.lang;
-import {Link} from "react-scroll";
+import { useContext } from "react";
+import { Link } from "react-scroll";
+import { userContext } from "./app";
 
-const menuItems = [
-    {
-        id:1, content: language.header[script.getLang(lang)][0]
-    },
-    {
-        id:2, content: language.header[script.getLang(lang)][1]
-    },
-    {
-        id:3, content: language.header[script.getLang(lang)][2]
-    },
-    {
-        id:4, content: language.header[script.getLang(lang)][3]
+function getLang(actualLanguage:string){
+    switch(actualLanguage){
+        case "es": return "es";
+        case "en": return "en";
+        case "ca": return "ca";
+        case "fr": return "fr";
+        default: return "es";
     }
-];
+}
+function Header(props:any){
+    
+    const lang = useContext(userContext);
 
-function Header(){
-    const [actualLang,setLang] = useState("es");
-    console.log(actualLang);
+    const menuItems = [
+    {
+        id:1, content: language.header[getLang(lang)][0]
+    },
+    {
+        id:2, content: language.header[getLang(lang)][1]
+    },
+    {
+        id:3, content: language.header[getLang(lang)][2]
+    },
+    {
+        id:4, content: language.header[getLang(lang)][3]
+    }
+    ];
+    
     return(
         <header className="bg-zinc-900 shadow-xl" id="nav">
             <a href="/" id="logo">
@@ -39,7 +47,7 @@ function Header(){
                           key={item.id}>{item.content}</Link>
                 ))}
             </nav>
-            <select onChange={(e) => {setLang(e.target.value);}}>
+            <select onChange={(e) => {props.event(e.target.value)}}>
                 <option value="es">Español</option>
                 <option value="en">English</option>
                 <option value="ca">Català</option>
