@@ -41,6 +41,9 @@
     #navBottom{
         display: block;
     }
+    #pfp{
+        display: none;
+    }
 }    
 @media (min-width: 700px){
     #navBottom{
@@ -254,7 +257,7 @@ button {
 }
 
 #pfp{
-    background-color: red;
+    opacity: 0;
     width: 50%;
     height: 60%;
     position: absolute;

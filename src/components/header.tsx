@@ -19,21 +19,21 @@ export const navbarContext = createContext(true);
 
 function Header(props:any){
     
-    const lang = useContext(userContext);
+    const lang = getLang(useContext(userContext));
     const [isBottomActive, setBottomActive] = useState(false);
     const toggleActive = () => {setBottomActive(!isBottomActive);}
     const menuItems = [
     {
-        id:1, content: language.header[getLang(lang)][0]
+        id:1, content: language.header[lang][0]
     },
     {
-        id:2, content: language.header[getLang(lang)][1]
+        id:2, content: language.header[lang][1]
     },
     {
-        id:3, content: language.header[getLang(lang)][2]
+        id:3, content: language.header[lang][2]
     },
     {
-        id:4, content: language.header[getLang(lang)][3]
+        id:4, content: language.header[lang][3]
     }
     ];
     
