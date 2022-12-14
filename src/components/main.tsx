@@ -1,6 +1,7 @@
 import {useContext} from "react";
 import "./main.css"
 import Slide from "./slide";
+import Card from "./card";
 import language from "../data/languages.json";
 import { userContext } from "./app";
 
@@ -52,12 +53,7 @@ function Main(){
                 </section>
                 <section id={language.header[getLang(lang)][2]}>
                     <h2>{language.header[getLang(lang)][2]}</h2>
-                    <div className="flex w-full justify-center">
-                        <div className="card p-5 m-2 card1 transition-all flex justify-center items-center">
-                            <a href="https://hyassets.netlify.app" className="transition-all">Visitar sitio</a>
-                            <a href="https://github.com/ImLecus/HyassetsWeb" className="transition-all">Ver repositorio</a>
-                        </div>
-                    </div>
+                    <Card src="hyassets" site="hyassets.netlify.app" repo="HyAssetsWeb" cardId={1}/>
                 </section>
                 <section id={language.header[getLang(lang)][3]}>
                     <h2>{language.header[getLang(lang)][3]}</h2>

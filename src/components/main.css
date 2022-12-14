@@ -10,3 +10,16 @@ h1 {
 p,textarea::placeholder,input::placeholder{
     font-family: Nunito, sans-serif;
 }
+@media(max-width: 500px){
+    h1{
+        font-size: 90px !important;
+        text-align: center;
+    }
+    h3,h2{
+        text-align: center;
+    }
+    #cont{
+        padding: 0;
+        margin: 30px 0;
+    }
+}

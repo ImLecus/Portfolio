@@ -12,6 +12,9 @@ header{
     margin-left: 40px;
     width: 50px;
 }
+#logo img{
+    filter: none !important;
+}
 header nav{
     display: inherit;
     justify-content: inherit;

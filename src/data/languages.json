@@ -33,6 +33,9 @@
         "ca":["Tecnologies que control·le"],
         "fr":["Technologies que je controlle"]
     },
+    "card":{
+        
+    },
     "form":{
         "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV","También puedes contactar conmigo mediante los siguientes métodos:"],
         "en":["Name","Email","Write here your message...","Submit","Download CV","You can also contact me through the following methods:"],
