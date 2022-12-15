@@ -15,8 +15,6 @@ Para este proyecto he utilizado las siguientes tecnologías:
 * **React**
 * **Vite**
 
-Como curiosidad, este portafolio estaba hecho usando Bootstrap, pero posteriormente decidí usar [Astra](https://github.com/ImLecus/Astra), mi propio framework de CSS.
-
 ## ¿Quieres mandarme un mensaje?
 Te dejo estos enlaces por si quieres contactar conmigo sin acceder desde el portafolio:
 
