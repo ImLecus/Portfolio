@@ -11,7 +11,6 @@ function getLang(actualLanguage:string){
     switch(actualLanguage){
         case "es": return "es";
         case "en": return "en";
-        case "ca": return "ca";
         case "fr": return "fr";
         default: return "es";
     }

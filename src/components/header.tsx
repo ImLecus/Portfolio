@@ -9,7 +9,6 @@ function getLang(actualLanguage:string){
     switch(actualLanguage){
         case "es": return "es";
         case "en": return "en";
-        case "ca": return "ca";
         case "fr": return "fr";
         default: return "es";
     }
@@ -56,7 +55,6 @@ function Header(props:any){
             <select onChange={(e) => {props.event(e.target.value)}}>
                 <option value="es">Español</option>
                 <option value="en">English</option>
-                <option value="ca">Català</option>
                 <option value="fr">Français</option>
             </select>
             <button id="navDropdown" onClick={toggleActive}> 
