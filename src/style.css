@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Anton;
+    src: url(../font/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: Bebas Neue;
+    src: url(../font/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Kanit;
+    src: url(../font/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../font/Nunito-VariableFont_wght.ttf);
+}
+
+@-webkit-keyframes title {
+    0% {
+        transform: scaleY(-1);
+        text-shadow: none;
+    }
+
+    50% {
+        transform: scaleY(1);
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
+    }
+}
+
+@keyframes title {
+    0% {
+        transform: scaleY(-1);
+        text-shadow: none;
+    }
+
+    50% {
+        transform: scaleY(1);
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
+    }
+}
+
+:root{
+    --primary: #008ee6
+}

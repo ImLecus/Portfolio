@@ -1,5 +1,5 @@
 import "./card.css"
-import language from "../data/languages.json"
+import language from "../../../data/languages.json"
 
 function Card(props:any){
     return(

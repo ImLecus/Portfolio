@@ -1,7 +1,7 @@
 import {createContext, useState} from 'react'
-import Header from './header'
-import Main from './main'
-import Footer from './footer'
+import Header from './header/header'
+import Main from './main/main'
+import Footer from './footer/footer'
 
 export const userContext = createContext("");
 function App(){

@@ -1,9 +1,9 @@
 import {useContext} from "react";
 import "./main.css"
-import Slide from "./slide";
-import Card from "./card";
-import language from "../data/languages.json";
-import { userContext } from "./app";
+import Slide from "../slide";
+import Card from "./card/card";
+import language from "../../data/languages.json";
+import { userContext } from "../app";
 
 
 

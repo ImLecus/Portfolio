@@ -1,22 +1,8 @@
-@font-face {
-    font-family: Bebas Neue;
-    src: url(../font/BebasNeue-Regular.ttf);
-}
-@font-face {
-    font-family: Anton;
-    src: url(../font/Anton-Regular.ttf);
-}
-@font-face {
-    font-family: Nunito;
-    src: url(../font/Nunito-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: Kanit;
-    src: url(../font/Kanit-Regular.ttf);
-}
-:root{
-    --primary: #008ee6
-}
+
+
+
+
+
 ::-webkit-scrollbar {
     background: #242427;
 }
@@ -143,14 +129,7 @@
 textarea {
     height: 250px;
 }
-h2 {
-    font: 500 60px Kanit !important;
-    color: var(--primary);
-}
 
-h3{
-    font-size: 28px !important;
-}
 p {
     font-size: 20px;
 }
@@ -159,12 +138,7 @@ a {
     margin: 0 14px;
     color: var(--primary) !important;
 }
-section {
-    margin: 10%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
+
 
 .text {
     border-radius: 10px;
@@ -174,67 +148,13 @@ section {
     padding: 20px;
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    height: 50px;
-    margin: 5px !important;
-    transition: ease-in, 0.5s;
-}
 
-.primary {
-    background-color: var(--primary) !important;
-    color: #e5ebf0;
-}
 
-.secondary {
-    border: 2px solid var(--primary) !important;
-    color: var(--primary) !important;
-    background-color: transparent;
-}
+
 .bottom {
     height: 25%;
     font-size: 18px;
     margin-top: 25px;
 }
-@-webkit-keyframes title {
-    0% {
-        transform: scaleY(-1);
-        text-shadow: none;
-    }
 
-    50% {
-        transform: scaleY(1);
-        text-shadow: none;
-    }
 
-    100% {
-        text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
-    }
-}
-
-@keyframes title {
-    0% {
-        transform: scaleY(-1);
-        text-shadow: none;
-    }
-
-    50% {
-        transform: scaleY(1);
-        text-shadow: none;
-    }
-
-    100% {
-        text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353);
-    }
-}
-
-#pfp{
-    opacity: 0;
-    width: 50%;
-    height: 60%;
-    position: absolute;
-    right: 10%;
-    top: 20%;
-    z-index: -1;
-}
