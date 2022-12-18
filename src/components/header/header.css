@@ -14,6 +14,7 @@ header{
 }
 #logo img{
     filter: none !important;
+    width: inherit;
 }
 header nav{
     display: inherit;

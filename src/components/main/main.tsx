@@ -1,8 +1,8 @@
 import {useContext} from "react";
 import "./main.css"
-import Slide from "../slide";
+import Slide from "./slide/slide";
 import Card from "./card/card";
-import language from "../../data/languages.json";
+import language from "../../data/languages.json"
 import { userContext } from "../app";
 
 
@@ -21,14 +21,14 @@ function Main(){
     const lang = useContext(userContext);
         return(
             <main>
-                <div className="h-28"></div>
+                <div className="space"></div>
                 <section id={language.header[getLang(lang)][0]}>
                     <h3 className="text-zinc-400">{language.presentation[getLang(lang)][0]}</h3>
                     <h1 className="my-5">Marcos González</h1>
                     <h3 className="text-zinc-400">Frontend Developer</h3>
                     <img id="pfp"/>
                 </section>
-                <div className="h-28"></div>
+                <div className="space"></div>
                 <section id={language.header[getLang(lang)][1]}>    
                     <div className="flex justify-center">
                         <div className="justify-center items-center">

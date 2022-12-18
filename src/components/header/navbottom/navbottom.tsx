@@ -1,9 +1,9 @@
 import "./navbottom.css";
 import { Link } from "react-scroll";
-import language from "../data/languages.json";
+import language from "../../../data/languages.json";
 import { useContext } from "react";
-import { userContext } from "./app";
-import { navbarContext } from "./header";
+import { userContext } from "../../app";
+import { navbarContext } from "../header";
 
 function getLang(actualLanguage:string){
     switch(actualLanguage){

@@ -9,6 +9,9 @@
 }
 .bottom{
     margin: 15px 0 !important;
+    height: 25%;
+    font-size: 18px;
+    margin-top: 25px;
 }
 .bottomActive{
     transform: translateY(0) !important;

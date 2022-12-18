@@ -15,9 +15,12 @@ h2 {
     color: var(--primary);
 }
 /* H3 : Subtitle */
+
 h3{
     font-size: 28px !important;
+    font-weight: normal;
 }
+
 /* PARAGRAPHS */
 
 p,
@@ -52,6 +55,8 @@ button {
     height: 50px;
     margin: 5px !important;
     transition: ease-in, 0.5s;
+    background-color: transparent;
+    cursor: pointer;
 }
 .primary {
     background-color: var(--primary) !important;
@@ -72,4 +77,129 @@ button {
     right: 10%;
     top: 20%;
     z-index: -1;
+}
+textarea {
+    height: 250px;
+}
+
+.text {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    transition: ease-in, 0.5s;
+    padding: 20px;
+    border: none;
+}
+
+img {
+    filter: drop-shadow(0 5px 15px #121212);
+}
+
+a {
+    margin: 0 14px;
+    color: var(--primary) !important;
+}
+
+@media (max-width: 700px){
+    #navBottom{
+        display: block;
+    }
+    #pfp{
+        display: none;
+    }
+}    
+@media (min-width: 700px){
+    #navBottom{
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    form div {
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+    form input,
+    form textarea {
+        margin: 5px;
+        width: 80%;
+    }
+    form input {
+        transform: translateX(-5px);
+    }
+    form button {
+        width: 50%;
+        margin: 10px;
+    }
+    #contact a {
+        margin: 5px auto;
+    }
+    h1 {
+        font-size: 76px !important;
+    }
+    .card {
+        width: 75% !important;
+    }
+}
+@media (min-width: 500px) and (max-width: 768px) {
+    .wrapper {
+        opacity: 0;
+    }
+    form div {
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+    form input,
+    form textarea {
+        margin: 5px;
+        width: 80%;
+    }
+    form input {
+        transform: translateX(-5px);
+    }
+    form button {
+        width: 50%;
+    }
+    .card {
+        width: 75% !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1140px) {
+    form input {
+        width: 40%;
+        margin: 0 2px 3px 0;
+    }
+
+    button {
+        width: 30%;
+    }
+    .card{
+        width: 45% !important;
+    }
+    textarea{
+        width: 80%;
+    }
+}
+@media (min-width: 1140px) {
+    form input {
+        width: 30%;
+        height: 50px;
+        box-sizing: border-box;
+        margin: 5px 2.5px;
+    }
+
+    form div {
+        flex-wrap: wrap;
+    }
+
+    form button {
+        width: 20%;
+    }
+
+    textarea {
+        width: 60% !important;
+    }
+
+    #contact a {
+        margin: 10px 50px;
+    }
 }
