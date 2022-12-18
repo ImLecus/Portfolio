@@ -2,17 +2,9 @@ import "./header.css"
 import language from "../../data/languages.json";
 import { useContext, useState, createContext } from "react";
 import { Link } from "react-scroll";
-import { userContext } from "../app";
+import { userContext } from "../../main";
 import NavBottom from "./navbottom/navbottom";
-
-function getLang(actualLanguage:string){
-    switch(actualLanguage){
-        case "es": return "es";
-        case "en": return "en";
-        case "fr": return "fr";
-        default: return "es";
-    }
-}
+import getLang from "../../main";
 
 export const navbarContext = createContext(true);
 

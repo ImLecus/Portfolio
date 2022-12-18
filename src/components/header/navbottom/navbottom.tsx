@@ -2,34 +2,25 @@ import "./navbottom.css";
 import { Link } from "react-scroll";
 import language from "../../../data/languages.json";
 import { useContext } from "react";
-import { userContext } from "../../app";
+import { userContext } from "../../../main";
 import { navbarContext } from "../header";
-
-function getLang(actualLanguage:string){
-    switch(actualLanguage){
-        case "es": return "es";
-        case "en": return "en";
-        case "ca": return "ca";
-        case "fr": return "fr";
-        default: return "es";
-    }
-}
+import getLang from "../../../main";
 
 function NavBottom (props:any){
-    const lang = useContext(userContext);
+    const lang = getLang(useContext(userContext));
     const active = useContext(navbarContext);
     const menuItems = [
         {
-            id:5, content: language.header[getLang(lang)][0]
+            id:5, content: language.header[lang][0]
         },
         {
-            id:6, content: language.header[getLang(lang)][1]
+            id:6, content: language.header[lang][1]
         },
         {
-            id:7, content: language.header[getLang(lang)][2]
+            id:7, content: language.header[lang][2]
         },
         {
-            id:8, content: language.header[getLang(lang)][3]
+            id:8, content: language.header[lang][3]
         }
         ];
     return(
