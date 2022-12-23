@@ -147,6 +147,10 @@ a {
         display: flex;
         flex-direction: column;
     }
+    p{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 @media (min-width: 500px) and (max-width: 768px) {
     .wrapper {
