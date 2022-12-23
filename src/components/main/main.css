@@ -136,8 +136,16 @@ a {
     h1 {
         font-size: 76px !important;
     }
-    .card {
-        width: 75% !important;
+    .card{
+        flex-direction: column-reverse;
+    }
+    .card div{
+        width: auto !important;
+        margin: 20px 0;
+    }
+    .card div div{
+        display: flex;
+        flex-direction: column;
     }
 }
 @media (min-width: 500px) and (max-width: 768px) {
@@ -159,8 +167,12 @@ a {
     form button {
         width: 50%;
     }
-    .card {
-        width: 75% !important;
+    .card{
+        flex-direction: column-reverse;
+    }
+    .card div{
+        width: auto !important;
+        margin: 20px 0;
     }
 }
 @media (min-width: 768px) and (max-width: 1140px) {
@@ -169,14 +181,18 @@ a {
         margin: 0 2px 3px 0;
     }
 
-    button {
+    #contact button {
         width: 30%;
-    }
-    .card{
-        width: 45% !important;
     }
     textarea{
         width: 80%;
+    }
+    .card{
+        flex-direction: column-reverse;
+    }
+    .card div{
+        width: auto !important;
+        margin: 20px 0;
     }
 }
 @media (min-width: 1140px) {

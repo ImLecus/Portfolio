@@ -4,7 +4,9 @@ import language from "../../../data/languages.json"
 function Card(props:any){
     return(
         <div className="card">
-            <img alt="cardImage" src={"/img/"+ props.src +".jpg"}></img>
+            <div  className="justify-center">
+                <img alt="cardImage" src={"/img/"+ props.src +".jpg"}></img>
+            </div>
             <div>
                 <h2 className="text-zinc-300">Hyassets Web</h2>
                 <p className="text-zinc-300">Se trata de una colección de modelos 3D hechos por Powerbyte7. Hice esta página a modo de regalo ya que anteriormente se descargaban directamente desde GitHub sin tener un sitio web de referencia.</p>
