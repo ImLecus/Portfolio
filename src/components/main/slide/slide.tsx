@@ -1,5 +1,5 @@
 import "./slide.css"
-function Slide(props:any){
+export default function Slide(props:any){
     let dir = `./img/${props.name.toString().toLowerCase()}.png`
     return(
         <div className="slide text-container">
@@ -10,4 +10,3 @@ function Slide(props:any){
         </div>
     );
 }
-export default Slide;

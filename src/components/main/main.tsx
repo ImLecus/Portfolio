@@ -5,6 +5,7 @@ import Card from "./card/card";
 import language from "../../data/languages.json"
 import { userContext } from "../../main";
 import getLang from "../../main";
+import Tech from "./tech/tech";
 
 function Main(){
     const slides = ["HTML","CSS","Javascript","Tailwind","Bootstrap","Git","GitHub","Sass","Pug","NodeJS","Typescript","React"];
@@ -34,10 +35,11 @@ function Main(){
                         </div>
                     </div>
                     <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
-                    <div id="root" className="slides flex flex-wrap">
-                        {slides.map(slide => (
-                            <Slide name={slide} key={slides.indexOf(slide)}/>
-                        ))}
+                    <div id="root" className="slides flex flex-wrap justify-center">
+                        <Tech name="Control de versiones" src="./img/github.svg"></Tech>
+                        <Tech name="Framework" src="./img/react.svg"></Tech>
+                        <Tech name="Preprocesadores" src="./img/sass.svg"></Tech>
+                        <Tech name="Backend" src="./img/nodejs.svg"></Tech>
                     </div>
                 </section>
                 <section id={language.header[lang][2]}>
