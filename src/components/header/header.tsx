@@ -30,7 +30,7 @@ function Header(props:any){
     
     return(
         <navbarContext.Provider value={isBottomActive}>
-        <header className="bg-zinc-900 shadow-xl" id="nav">
+        <header className="shadow-xl" id="nav">
             <a href="/" id="logo">
                 <img src="./img/logo.png"/>
             </a>

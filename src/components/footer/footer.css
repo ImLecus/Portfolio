@@ -3,6 +3,7 @@ footer{
     justify-content: center;
     width: 100%;
     border-top: 1px solid;
+    background-color: var(--bg-dark);
 }
 p{
     width: 100%;

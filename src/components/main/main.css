@@ -28,6 +28,10 @@ textarea::placeholder,
 input::placeholder{
     font-family: Nunito, sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
 @media(max-width: 500px){
     h1{
         font-size: 90px !important;
@@ -47,6 +51,8 @@ section {
     height: -moz-fit-content;
     height: fit-content;
 }
+
+
 /* BUTTONS */
 
 button {
@@ -108,11 +114,7 @@ a {
         display: none;
     }
 }    
-@media (min-width: 700px){
-    #navBottom{
-        display: none;
-    }
-}
+
 @media (max-width: 500px) {
     form div {
         flex-wrap: wrap;
@@ -152,6 +154,30 @@ a {
         padding-right: 0 !important;
     }
 }
+@media (min-width: 768px){
+    #navBottom{
+        display: none;
+    }
+    form input {
+        width: 40%;
+        margin: 0 2px 3px 0;
+    }
+
+    #contact button {
+        width: 30%;
+    }
+    textarea{
+        width: 80%;
+    }
+    .card{
+        flex-direction: column-reverse;
+    }
+    .card div{
+        width: auto !important;
+        margin: 20px 0;
+    }
+}
+
 @media (min-width: 500px) and (max-width: 768px) {
     .wrapper {
         opacity: 0;
@@ -179,32 +205,12 @@ a {
         margin: 20px 0;
     }
 }
-@media (min-width: 768px) and (max-width: 1140px) {
-    form input {
-        width: 40%;
-        margin: 0 2px 3px 0;
-    }
-
-    #contact button {
-        width: 30%;
-    }
-    textarea{
-        width: 80%;
-    }
-    .card{
-        flex-direction: column-reverse;
-    }
-    .card div{
-        width: auto !important;
-        margin: 20px 0;
-    }
-}
 @media (min-width: 1140px) {
     form input {
         width: 30%;
         height: 50px;
         box-sizing: border-box;
-        margin: 5px 2.5px;
+        margin: 5px;
     }
 
     form div {

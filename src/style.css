@@ -49,6 +49,12 @@
 
 :root{
     --primary: #008ee6;
+    --light: #3fb1f8;
+    --bg-dark: #1c1c21;
+    --bg-light: #26262c;
+}
+body{
+  background-color:var(--bg-light);
 }
 
 * {
@@ -57,7 +63,7 @@
 }
 
 ::-webkit-scrollbar {
-    background: #242427;
+    background: var(--bg-light);
 }
 ::-webkit-scrollbar-thumb {
     background: var(--primary);

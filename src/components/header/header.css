@@ -5,6 +5,7 @@ header{
     z-index: 30;
     padding: 6px 0;
     justify-content: space-between;
+    background-color: var(--bg-dark);
 }
 #logo{
     display: flex;
@@ -31,6 +32,7 @@ header nav{
 }
 .navLink:hover{
     transform: translateY(-3px);
+    color: var(--light) !important;
 }
 #navDropdown {
     display: none;
