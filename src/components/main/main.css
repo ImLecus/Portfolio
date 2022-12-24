@@ -134,15 +134,13 @@ a {
     #navBottom{
         display: none;
     }
+    
+}
+@media (min-width: 1140px){
     .card{
-        flex-direction: column-reverse;
-    }
-    .card div{
-        width: auto !important;
-        margin: 20px 0;
+        flex-direction: row !important;
     }
 }
-
 @media (min-width: 500px) and (max-width: 768px) {
     .wrapper {
         opacity: 0;
@@ -150,8 +148,5 @@ a {
     .card{
         flex-direction: column-reverse;
     }
-    .card div{
-        width: auto !important;
-        margin: 20px 0;
-    }
+    
 }
