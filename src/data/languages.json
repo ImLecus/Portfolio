@@ -27,12 +27,32 @@
         "en":["Technologies that i know:"],
         "fr":["Technologies que je controlle"]
     },
+    "version_control":{
+        "es": ["Utilizo Git y GitHub para el control de versiones de mis proyectos."],
+        "en": ["I use Git & GitHub for the version control of my projects."],
+        "fr": ["J'utilise Git et GitHub pour le control du versiones de mes projets."]
+    },
+    "framework":{
+        "es": ["Para CSS utilizo los frameworks Bootstrap y Tailwind, y para Javascript uso React JS. También uso Typescript para mis proyectos."],
+        "en": ["For CSS i use the frameworks Bootstrap & Tailwind, and for Javascript i use React JS. I use Typescript for my projects too."],
+        "fr": ["Pour CSS j'utilise les frameworks Bootstrap et Tailwind, et pour Javascript j'utilise React JS. J'utilise Typescript aussi pour mes projets."]
+    },
+    "preprocessor":{
+        "es": ["Tengo conocimiento en Sass para CSS y Pug para plantillas de código HTML."],
+        "en": ["I have knowledge in Sass for CSS and Pug for HTML code templates."],
+        "fr": ["J'ai connaissance en Sass pour CSS et Pug pour modèles de code HTML."]
+    },
+    "backend":{
+        "es": ["Me manejo con Node JS y tengo conocimiento en PHP y C#."],
+        "en": ["I manage with Node JS and i have knowledge in PHP and C#."],
+        "fr": ["Je gère avec Node JS et j'ai connaissance en PHP et C#."]
+    },
     "card":{
         
     },
     "form":{
-        "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV","También puedes contactar conmigo mediante los siguientes métodos:"],
-        "en":["Name","Email","Write here your message...","Submit","Download CV","You can also contact me through the following methods:"],
-        "fr":["Nom","Email","Écrivez votre message...","Envoyer","Télécharger CV","Vous pouvez également me contacter via les méthodes suivantes :"]
+        "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV"],
+        "en":["Name","Email","Write here your message...","Submit","Download CV"],
+        "fr":["Nom","Email","Écrivez votre message...","Envoyer","Télécharger CV"]
     }
 }

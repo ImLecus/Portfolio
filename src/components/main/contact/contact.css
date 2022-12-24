@@ -1,0 +1,54 @@
+form input, form textarea{
+    background-color: var(--bg-dark);
+    color: var(--primary);
+    resize: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    transition: ease-in, 0.5s;
+    padding: 20px;
+    border: none;
+}
+form input:focus, form textarea:focus{
+    border: none;
+    outline: none;
+}
+form input:focus::placeholder, form textarea:focus::placeholder{
+    opacity: 0;
+}
+textarea {
+    height: 250px;
+    width: calc(60% - 30px) !important;
+}
+form input{
+    width: 30%;
+    margin: 5px;
+    height: 50px;
+    box-sizing: border-box;
+}
+form button {
+    width: 20%;
+}
+form div {
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    textarea{
+        width: calc(80% - 30px) !important;
+    }
+    form input{
+        width: 80%;
+        transform: translateX(-5px);
+    }
+    form div{
+        margin: 5px;
+    }
+    form button {
+        width: 50%;
+    }
+}
+@media (max-width: 500px){
+    form button{
+        margin: 10px;
+    }
+}

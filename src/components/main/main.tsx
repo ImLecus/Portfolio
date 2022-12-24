@@ -1,14 +1,19 @@
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import "./main.css"
-import Slide from "./slide/slide";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Card from "./card/card";
 import language from "../../data/languages.json"
 import { userContext } from "../../main";
 import getLang from "../../main";
 import Tech from "./tech/tech";
+import Contact from "./contact/contact";
 
 function Main(){
-    const slides = ["HTML","CSS","Javascript","Tailwind","Bootstrap","Git","GitHub","Sass","Pug","NodeJS","Typescript","React"];
+    useEffect( ( ) => {
+        AOS.init({duration:2000});
+    },[]);
+
     const lang = getLang(useContext(userContext));
         return(
             <main>
@@ -24,7 +29,7 @@ function Main(){
                     <div className="flex justify-center">
                         <div className="justify-center items-center">
                             <h2>{language.header[lang][1]}</h2>
-                            <p className="items-center text-zinc-300">
+                            <p className="items-center text-zinc-300"  data-aos="fade-right">
                                 <br /><br />
                                 {language.about[lang][0]}
                                 <br /><br />
@@ -36,10 +41,10 @@ function Main(){
                     </div>
                     <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
                     <div id="root" className="slides flex flex-wrap justify-center">
-                        <Tech name="Control de versiones" src="./img/github.svg"></Tech>
-                        <Tech name="Framework" src="./img/react.svg"></Tech>
-                        <Tech name="Preprocesadores" src="./img/sass.svg"></Tech>
-                        <Tech name="Backend" src="./img/nodejs.svg"></Tech>
+                        <Tech name="Control de versiones" src="./img/github.svg" description={language.version_control[lang][0]}></Tech>
+                        <Tech name="Framework" src="./img/react.svg" description={language.framework[lang][0]}></Tech>
+                        <Tech name="Preprocesadores" src="./img/sass.svg" description={language.preprocessor[lang][0]}></Tech>
+                        <Tech name="Backend" src="./img/nodejs.svg" description={language.backend[lang][0]}></Tech>
                     </div>
                 </section>
                 <section id={language.header[lang][2]}>
@@ -49,46 +54,7 @@ function Main(){
                 <section id={language.header[lang][3]}>
                     <h2>{language.header[lang][3]}</h2>
                     <div className="h-16"></div>
-                    <form 
-                        method="POST" 
-                        id="form" 
-                        name="contactForm" 
-                        action="./success.html"
-                        >                
-                        <div className="flex justify-center items-center w-full">
-                            <input 
-                                type="text"
-                                placeholder={language.form[lang][0]}
-                                name = "name"
-                                autoComplete="off"
-                                className="text bg-zinc-900 text-primary"
-                                required />
-                            <input 
-                                type="email" 
-                                placeholder={language.form[lang][1]}
-                                name = "mail"
-                                autoComplete="off"
-                                className="text bg-zinc-900 text-primary"
-                                required />
-                        </div>
-                        <div className="flex justify-center">
-                            <textarea 
-                                placeholder={language.form[lang][2]}
-                                name = "message"
-                                className="text bg-zinc-900 text-primary resize-none"
-                                required></textarea>
-                        </div>
-                        <div className="flex justify-center items-center w-full my-5">
-                            <button className="primary h-12 transition-all hover:-translate-y-1 mx-8" type="submit">{language.form[lang][3]}</button>
-                            <button className="secondary h-12 transition-all hover:-translate-y-1 mx-8" onClick={()=>(window.location.href = '/docs/cv.pdf')}>{language.form[lang][4]}</button>
-                        </div>
-                    </form>
-                    <p className="m-8 text-center text-zinc-300" id="cont">{language.form[lang][5]}</p>
-                    <div className="flex justify-center">
-                        <a href="https://www.twitter.com/ImLecus" className="text-xl transition-all hover:text-blue-300">Twitter</a>
-                        <a href="https://github.com/ImLecus" className="text-xl transition-all hover:text-blue-300">GitHub</a>
-                        <a href="https://www.linkedin.com/in/marcosgf" className="text-xl transition-all hover:text-blue-300">LinkedIn</a> 
-                    </div>
+                    <Contact />
                 </section>
             </main>
         );

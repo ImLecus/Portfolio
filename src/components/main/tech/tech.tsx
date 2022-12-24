@@ -1,10 +1,10 @@
 import "./tech.css";
 function Tech(props:any){
     return(
-    <div className="tech">
+    <div className="tech shadow-xl" data-aos="flip-left">
         <img src={props.src}></img>
         <h3>{props.name}</h3>
-        <p>Manejo sistemas de control de versiones tales como Git y GitHub.</p>
+        <p>{props.description}</p>
     </div>)
 }
 export default Tech;

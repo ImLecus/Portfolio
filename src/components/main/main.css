@@ -66,14 +66,21 @@ button {
 }
 .primary {
     background-color: var(--primary) !important;
-    color: #e5ebf0;
+    color: rgb(212 212 216);
+    font-weight: bold;
+}
+.primary:hover, .primary:focus{
+    background-color: var(--light) !important;
 }
 .secondary {
     border: 2px solid var(--primary) !important;
     color: var(--primary) !important;
     background-color: transparent;
 }
-
+.secondary:hover, .secondary:focus{
+    color: var(--light) !important;
+    border-color: var(--light) !important;
+}
 
 #pfp{
     opacity: 0;
@@ -83,18 +90,6 @@ button {
     right: 10%;
     top: 20%;
     z-index: -1;
-}
-textarea {
-    height: 250px;
-}
-
-.text {
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    transition: ease-in, 0.5s;
-    padding: 20px;
-    border: none;
 }
 
 img {
@@ -116,25 +111,6 @@ a {
 }    
 
 @media (max-width: 500px) {
-    form div {
-        flex-wrap: wrap;
-        margin: 5px;
-    }
-    form input,
-    form textarea {
-        margin: 5px;
-        width: 80%;
-    }
-    form input {
-        transform: translateX(-5px);
-    }
-    form button {
-        width: 50%;
-        margin: 10px;
-    }
-    #contact a {
-        margin: 5px auto;
-    }
     h1 {
         font-size: 76px !important;
     }
@@ -158,17 +134,6 @@ a {
     #navBottom{
         display: none;
     }
-    form input {
-        width: 40%;
-        margin: 0 2px 3px 0;
-    }
-
-    #contact button {
-        width: 30%;
-    }
-    textarea{
-        width: 80%;
-    }
     .card{
         flex-direction: column-reverse;
     }
@@ -182,50 +147,11 @@ a {
     .wrapper {
         opacity: 0;
     }
-    form div {
-        flex-wrap: wrap;
-        margin: 5px;
-    }
-    form input,
-    form textarea {
-        margin: 5px;
-        width: 80%;
-    }
-    form input {
-        transform: translateX(-5px);
-    }
-    form button {
-        width: 50%;
-    }
     .card{
         flex-direction: column-reverse;
     }
     .card div{
         width: auto !important;
         margin: 20px 0;
-    }
-}
-@media (min-width: 1140px) {
-    form input {
-        width: 30%;
-        height: 50px;
-        box-sizing: border-box;
-        margin: 5px;
-    }
-
-    form div {
-        flex-wrap: wrap;
-    }
-
-    form button {
-        width: 20%;
-    }
-
-    textarea {
-        width: 60% !important;
-    }
-
-    #contact a {
-        margin: 10px 50px;
     }
 }
