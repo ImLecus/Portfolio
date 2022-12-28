@@ -49,7 +49,10 @@ function Main(){
                 </section>
                 <section id={language.header[lang][2]}>
                     <h2>{language.header[lang][2]}</h2>
-                    <Card src="hyassets" site="hyassets.netlify.app" repo="HyAssetsWeb" cardId={1}/>
+                    <div className="flex justify-around flex-wrap">
+                      <Card src="hyassets" site="hyassets.netlify.app"/>
+                        <Card src="astra" site="astracss.netlify.app"/>  
+                    </div>
                 </section>
                 <section id={language.header[lang][3]}>
                     <h2>{language.header[lang][3]}</h2>

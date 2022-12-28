@@ -190,6 +190,9 @@ body{
   .justify-between {
     justify-content: space-between;
   }
+  .justify-around {
+    justify-content: space-around;
+  }
   
   .border-t {
     border-top-width: 1px;
