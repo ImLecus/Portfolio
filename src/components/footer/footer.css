@@ -27,6 +27,15 @@ p{
     padding: 25px;
     color: #d4d4d8;
 }
+footer a{
+    display: flex;
+    align-items: center;
+    transition: 0.1s linear;
+}
+footer a:hover{
+    transform: translateY(-3px);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
 @media (max-width: 500px){
     footer div img{
         margin: 0;

@@ -12,6 +12,7 @@ form input, form textarea{
 form input:focus, form textarea:focus{
     border: none;
     outline: none;
+    text-shadow: 0 2px 30px var(--primary);
 }
 form input:focus::placeholder, form textarea:focus::placeholder{
     opacity: 0;

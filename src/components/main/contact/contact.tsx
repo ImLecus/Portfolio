@@ -6,7 +6,11 @@ import "./contact.css";
 export default function Contact(){
     const lang = getLang(useContext(userContext));
     return(
-        <form method="POST" id="form" name="contactForm" action="./success.html" data-netlify="true" >                
+        <form method="POST" id="form" name="contactForm" action="./success.html" data-netlify="true" >   
+            <input 
+            type='hidden'
+            name='form-name'
+            value='contactForm' />             
             <div className="flex justify-center items-center w-full">
                 <input type="text" placeholder={language.form[lang][0]} name="name" autoComplete="off" required />
                 <input type="email" placeholder={language.form[lang][1]} name="mail" autoComplete="off" required />
