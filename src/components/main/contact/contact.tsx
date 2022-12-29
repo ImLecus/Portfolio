@@ -6,7 +6,7 @@ import "./contact.css";
 export default function Contact(){
     const lang = getLang(useContext(userContext));
     return(
-        <form method="POST" id="form" name="contactForm" action="#" data-netlify="true" onSubmit={(e) => {e.preventDefault();}}>   
+        <form method="POST" id="form" name="contactForm" data-netlify="true" action="./index.html">   
             <input 
             type='hidden'
             name='form-name'
