@@ -4,7 +4,9 @@ h1{
     animation: title 1s;
 }
 h1 div span{
-    font: 500 120px Bebas Neue !important;
+    font-family: Bebas Neue !important;
+    font-weight: 500;
+    font-size: 120px;
     color: var(--primary);
     text-transform: uppercase;
     text-shadow: 0 2px 50px rgba(69, 184, 225, 0.4705882353), 0 5px 15px rgba(0,0,0);
@@ -102,7 +104,12 @@ textarea::placeholder,
 input::placeholder{
     font-family: Nunito, sans-serif;
 }
-
+p{
+    text-align: left;
+    font-size: 19px !important;
+    padding: 25px;
+    color: #d4d4d8;
+}
 a{
     text-decoration: none;
 }
@@ -177,16 +184,19 @@ a {
 
 @media (max-width: 700px){
     #navBottom{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     #pfp{
         display: none;
     }
 }    
 
+
 @media (max-width: 500px) {
     h1 span{
-        font-size: 76px !important;
+        font-size: 90px !important;
     }
     h1 > :nth-child(2){
         display: none;
@@ -226,4 +236,13 @@ a {
         flex-direction: column-reverse;
     }
     
+}
+@media (max-width: 400px){
+    h1 span{
+        font-size: 76px !important;
+    }
+    h2{
+        font-size: 60%;
+        margin-bottom: 0 !important;
+    }
 }

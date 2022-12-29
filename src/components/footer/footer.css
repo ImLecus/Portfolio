@@ -11,7 +11,7 @@ footer div{
     display: flex;
     width: 80%;
     justify-content: center;
-    margin: 20px;
+    margin: 30px 20px;
 }
 footer div img {
     width: 40px;
@@ -19,7 +19,7 @@ footer div img {
     margin: 0 10px;
     fill: #d4d4d8;
 }
-p{
+footer p{
     width: fit-content;
     margin: 5px 0;
     text-align: center;
@@ -39,5 +39,8 @@ footer a:hover{
 @media (max-width: 500px){
     footer div img{
         margin: 0;
+    }
+    footer p{
+        margin: 5px 20px;
     }
 }

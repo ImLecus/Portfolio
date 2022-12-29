@@ -64,6 +64,10 @@ body{
 
 ::-webkit-scrollbar {
     background: var(--bg-light);
+    width: 5px;
+}
+::-webkit-scrollbar:hover{
+  width: 18px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
