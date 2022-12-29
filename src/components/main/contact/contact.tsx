@@ -13,7 +13,7 @@ export default function Contact(){
             value='contactForm' />             
             <div className="flex justify-center items-center w-full">
                 <input type="text" placeholder={language.form[lang][0]} name="name" autoComplete="off" required />
-                <input type="email" placeholder={language.form[lang][1]} name="mail" autoComplete="off" required />
+                <input type="email" placeholder={language.form[lang][1]} name="email" autoComplete="off" required />
             </div>
             <div className="flex justify-center">
                 <textarea placeholder={language.form[lang][2]} name="message" required></textarea>
