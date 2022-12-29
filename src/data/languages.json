@@ -17,7 +17,7 @@
             "I consider myself a resolutive person, creative, independent and with a great learning capacity. I love to cook and travel too.",
             "Actually, I'm interested in continue learning and create better and better projects."
         ],
-    "fr":["Je suis un développeur Frontend espagnol et je suis un lycéen. J'adore dévéloper ma créativité et mettre ces idées en pratique grâce à la programmation. En plus d'être mon hobby, je veux prendre le développement front-end dans le domaine professionnel et en faire mon métier.",
+        "fr":["Je suis un développeur Frontend espagnol et je suis un lycéen. J'adore dévéloper ma créativité et mettre ces idées en pratique grâce à la programmation. En plus d'être mon hobby, je veux prendre le développement front-end dans le domaine professionnel et en faire mon métier.",
             "Je me considère une personne résolutive, créative, independant et avec une bonne capacitée d'apprentissage. En plus de programmer, j'adore cuisiner et voyager.",
             "Je suis interesé en continue d'apprendre et créer des projets toujours meilleurs."
     ]   
@@ -28,27 +28,24 @@
         "fr":["Technologies que je controlle"]
     },
     "version_control":{
-        "es": ["Utilizo Git y GitHub para el control de versiones de mis proyectos."],
-        "en": ["I use Git & GitHub for the version control of my projects."],
-        "fr": ["J'utilise Git et GitHub pour le control du versiones de mes projets."]
+        "es": ["Control de versiones","Utilizo Git y GitHub para el control de versiones de mis proyectos."],
+        "en": ["Version control","I use Git & GitHub for the version control of my projects."],
+        "fr": ["Contrôle de version","J'utilise Git et GitHub pour le control du versiones de mes projets."]
     },
     "framework":{
-        "es": ["Para CSS utilizo los frameworks Bootstrap y Tailwind, y para Javascript uso React JS. También uso Typescript para mis proyectos."],
-        "en": ["For CSS i use the frameworks Bootstrap & Tailwind, and for Javascript i use React JS. I use Typescript for my projects too."],
-        "fr": ["Pour CSS j'utilise les frameworks Bootstrap et Tailwind, et pour Javascript j'utilise React JS. J'utilise Typescript aussi pour mes projets."]
+        "es": ["Framework","Para CSS utilizo los frameworks Bootstrap y Tailwind, y para Javascript uso React JS. También uso Typescript para mis proyectos."],
+        "en": ["Framework","For CSS i use the frameworks Bootstrap & Tailwind, and for Javascript i use React JS. I use Typescript for my projects too."],
+        "fr": ["Framework","Pour CSS j'utilise les frameworks Bootstrap et Tailwind, et pour Javascript j'utilise React JS. J'utilise Typescript aussi pour mes projets."]
     },
     "preprocessor":{
-        "es": ["Tengo conocimiento en Sass para CSS y Pug para plantillas de código HTML."],
-        "en": ["I have knowledge in Sass for CSS and Pug for HTML code templates."],
-        "fr": ["J'ai connaissance en Sass pour CSS et Pug pour modèles de code HTML."]
+        "es": ["Preprocesadores","Tengo conocimiento en Sass para CSS y Pug para plantillas de código HTML."],
+        "en": ["Preprocessors","I have knowledge in Sass for CSS and Pug for HTML code templates."],
+        "fr": ["Préprocesseurs","J'ai connaissance en Sass pour CSS et Pug pour modèles de code HTML."]
     },
     "backend":{
-        "es": ["Me manejo con Node JS y tengo conocimiento en PHP y C#."],
-        "en": ["I manage with Node JS and i have knowledge in PHP and C#."],
-        "fr": ["Je gère avec Node JS et j'ai connaissance en PHP et C#."]
-    },
-    "card":{
-        
+        "es": ["Backend","Me manejo con Node JS y tengo conocimiento en PHP y C#."],
+        "en": ["Backend","I manage with Node JS and i have knowledge in PHP and C#."],
+        "fr": ["Backend","Je gère avec Node JS et j'ai connaissance en PHP et C#."]
     },
     "form":{
         "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV"],
