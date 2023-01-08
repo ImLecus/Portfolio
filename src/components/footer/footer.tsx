@@ -4,7 +4,6 @@ function Footer(){
         <footer  className="border-zinc-700">
             <div>
                 <a href="https://instagram.com/imlecus"><img src="./img/instagram.svg" alt="" /></a>
-                <a href="https://twitter.com/ImLecus"><img src="./img/twitter.svg" alt="" /></a>
                 <a href="https://github.com/ImLecus"><img src="./img/github-white.svg" alt="" /></a>
                 <a href="https://www.linkedin.com/in/marcosgf"><img src="./img/linkedin.svg" alt="" /></a>
             </div>
