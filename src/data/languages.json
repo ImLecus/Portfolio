@@ -10,16 +10,16 @@
         "fr":["Salut, mon nom est"]
     },
     "about":{
-        "es":["Soy un desarrollador Frontend de España y estudiante de bachillerato. Me encanta desarrollar mi creatividad y llevar esas ideas a la práctica gracias a la programación. Además de ser mi hobby, quiero llevar el desarrollo front-end al ámbito profesional y convertirlo en mi profesión.",
+        "es":["Soy un desarrollador Frontend de España y estudiante de bachillerato. Me encanta desarrollar mi creatividad y llevar esas ideas a la práctica gracias a la programación. Además de ser mi hobby, me gustaría llevar el desarrollo front-end al ámbito profesional y convertirlo en mi profesión.",
             "Me considero resolutivo, creativo, independiente y con una gran capacidad de aprendizaje. Además de programar, amo cocinar y viajar.",
             "Estoy interesado en seguir aprendiendo y crear proyectos cada vez mejores."],
         "en":["I'm a Frontend developer from Spain and a high school student. I love to develop my creativity and take that ideas to the practice by programming. Besides being my hobby, i want to take the front-end developement to the professional ambit and take it my profession.",
             "I consider myself a resolutive person, creative, independent and with a great learning capacity. I love to cook and travel too.",
             "Actually, I'm interested in continue learning and create better and better projects."
         ],
-        "fr":["Je suis un développeur Frontend espagnol et je suis un lycéen. J'adore dévéloper ma créativité et mettre ces idées en pratique grâce à la programmation. En plus d'être mon hobby, je veux prendre le développement front-end dans le domaine professionnel et en faire mon métier.",
-            "Je me considère une personne résolutive, créative, independant et avec une bonne capacitée d'apprentissage. En plus de programmer, j'adore cuisiner et voyager.",
-            "Je suis interesé en continue d'apprendre et créer des projets toujours meilleurs."
+        "fr":["Je suis un lycéen espagnol et développeur Frontend. J'adore faire croître ma créativité et mettre en pratique ces idées à travers la programmation. En plus d'être mon hobby, je voudrais consacrer le développement front-end dans le domaine professionnel et en faire mon métier.",
+            "Je me considère une personne résolutive, créative, independante et avec une bonne capacitée d'apprentissage. En plus de programmer, j'adore cuisiner et voyager.",
+            "L'apprentissage continue et la creation des projets toujours meilleurs sont mes referents."
     ]   
     },
     "tech":{
@@ -30,22 +30,22 @@
     "version_control":{
         "es": ["Control de versiones","Utilizo Git y GitHub para el control de versiones de mis proyectos."],
         "en": ["Version control","I use Git & GitHub for the version control of my projects."],
-        "fr": ["Contrôle de version","J'utilise Git et GitHub pour le control du versiones de mes projets."]
+        "fr": ["Contrôle des versions","J'emploi Git et GitHub pour le contrôle des versions de mes projets."]
     },
     "framework":{
         "es": ["Framework","Para CSS utilizo los frameworks Bootstrap y Tailwind, y para Javascript uso React JS. También uso Typescript para mis proyectos."],
         "en": ["Framework","For CSS i use the frameworks Bootstrap & Tailwind, and for Javascript i use React JS. I use Typescript for my projects too."],
-        "fr": ["Framework","Pour CSS j'utilise les frameworks Bootstrap et Tailwind, et pour Javascript j'utilise React JS. J'utilise Typescript aussi pour mes projets."]
+        "fr": ["Framework","Pour CSS je fais usage des frameworks Bootstrap et Tailwind, et pour Javascript j'utilise React JS. J'utilise aussi Typescript pour mes projets."]
     },
     "preprocessor":{
         "es": ["Preprocesadores","Tengo conocimiento en Sass para CSS y Pug para plantillas de código HTML."],
         "en": ["Preprocessors","I have knowledge in Sass for CSS and Pug for HTML code templates."],
-        "fr": ["Préprocesseurs","J'ai connaissance en Sass pour CSS et Pug pour modèles de code HTML."]
+        "fr": ["Préprocesseurs","J'ai des connaissances en Sass pour CSS et Pug pour modèles de code HTML."]
     },
     "backend":{
         "es": ["Backend","Me manejo con Node JS y tengo conocimiento en PHP y C#."],
         "en": ["Backend","I manage with Node JS and i have knowledge in PHP and C#."],
-        "fr": ["Backend","Je gère avec Node JS et j'ai connaissance en PHP et C#."]
+        "fr": ["Backend","Je gère avec Node JS et j'ai des connaissances en PHP et C#."]
     },
     "form":{
         "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV"],
