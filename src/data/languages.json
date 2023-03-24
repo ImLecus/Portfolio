@@ -47,6 +47,11 @@
         "en": ["Backend","I manage with Node JS and i have knowledge in PHP and C#."],
         "fr": ["Backend","Je gère avec Node JS et j'ai connaissance en PHP et C#."]
     },
+    "mobile":{
+        "es": ["Aplicaciones móbiles", "Utilizo React Native para desarrollar este tipo de apps. También tengo experiencia con Expo."],
+        "en": ["Mobile apps", "I use React Native to develop this type of apps. I have experience with Expo too."],
+        "fr": ["Applications mobiles", "J' utilise React Native pour devlopper ce type d'apps. J'ai aussi experience avec Expo."]
+    },
     "form":{
         "es":["Nombre","Correo electrónico","Escribe aquí tu mensaje...","Enviar","Descargar CV"],
         "en":["Name","Email","Write here your message...","Submit","Download CV"],

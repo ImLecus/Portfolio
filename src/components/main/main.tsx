@@ -31,7 +31,7 @@ function Main(){
                         </div>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>  
                         <div>
-                           <span>G</span>
+                            <span>G</span>
                             <span>o</span>
                             <span>n</span>
                             <span>z</span>
@@ -65,6 +65,7 @@ function Main(){
                         <Tech name={language.framework[lang][0]} src="./img/react.svg" description={language.framework[lang][1]}></Tech>
                         <Tech name={language.preprocessor[lang][0]} src="./img/sass.svg" description={language.preprocessor[lang][1]}></Tech>
                         <Tech name={language.backend[lang][0]} src="./img/nodejs.svg" description={language.backend[lang][1]}></Tech>
+                        <Tech name={language.mobile[lang][0]} src="./img/android.svg" description={language.mobile[lang][1]}></Tech>
                     </div>
                 </section>
                 <section id={language.header[lang][2]}>
