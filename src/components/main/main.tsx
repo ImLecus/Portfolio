@@ -61,11 +61,11 @@ function Main(){
                     </div>
                     <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
                     <div id="root" className="slides flex flex-wrap justify-center">
-                        <Tech name={language.version_control[lang][0]} src="./img/github.svg" description={language.version_control[lang][1]}></Tech>
-                        <Tech name={language.framework[lang][0]} src="./img/react.svg" description={language.framework[lang][1]}></Tech>
-                        <Tech name={language.preprocessor[lang][0]} src="./img/sass.svg" description={language.preprocessor[lang][1]}></Tech>
-                        <Tech name={language.backend[lang][0]} src="./img/nodejs.svg" description={language.backend[lang][1]}></Tech>
-                        <Tech name={language.mobile[lang][0]} src="./img/android.svg" description={language.mobile[lang][1]}></Tech>
+                        <Tech name={language.version_control[lang][0]} src="./img/github.svg" description={language.version_control[lang][1]}/>
+                        <Tech name={language.framework[lang][0]} src="./img/react.svg" description={language.framework[lang][1]}/>
+                        <Tech name={language.preprocessor[lang][0]} src="./img/sass.svg" description={language.preprocessor[lang][1]}/>
+                        <Tech name={language.backend[lang][0]} src="./img/nodejs.svg" description={language.backend[lang][1]}/>
+                        <Tech name={language.mobile[lang][0]} src="./img/android.svg" description={language.mobile[lang][1]}/>
                     </div>
                 </section>
                 <section id={language.header[lang][2]}>

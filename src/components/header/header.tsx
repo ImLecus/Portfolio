@@ -8,25 +8,12 @@ import getLang from "../../main";
 
 export const navbarContext = createContext(true);
 
-function Header(props:any){
+function Header({event}:any){
     
     const lang = getLang(useContext(userContext));
     const [isBottomActive, setBottomActive] = useState(false);
     const toggleActive = () => {setBottomActive(!isBottomActive);}
-    const menuItems = [
-    {
-        id:1, content: language.header[lang][0]
-    },
-    {
-        id:2, content: language.header[lang][1]
-    },
-    {
-        id:3, content: language.header[lang][2]
-    },
-    {
-        id:4, content: language.header[lang][3]
-    }
-    ];
+    const menuItems = language.header[lang]
     
     return(
         <navbarContext.Provider value={isBottomActive}>
@@ -37,14 +24,14 @@ function Header(props:any){
             <nav className="nav">
                 {menuItems.map(item => (
                     <Link className="navLink hover:text-light" 
-                          to={item.content} 
+                          to={item} 
                           smooth={true}
                           offset={-250}
                           duration={500}
-                          key={item.id}>{item.content}</Link>
+                          key={menuItems.indexOf(item) + 1}>{item}</Link>
                 ))}
             </nav>
-            <select onChange={(e) => {props.event(e.target.value)}}>
+            <select onChange={(e) => {event(e.target.value)}}>
                 <option value="es">Español</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>

@@ -1,10 +1,9 @@
 import "./tech.css";
-function Tech(props:any){
+export default function Tech({src,name,description}:any){
     return(
     <div className="tech shadow-xl" data-aos="flip-left">
-        <img src={props.src}></img>
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
+        <img src={src}></img>
+        <h3>{name}</h3>
+        <p>{description}</p>
     </div>)
 }
-export default Tech;

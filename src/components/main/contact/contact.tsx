@@ -23,5 +23,5 @@ export default function Contact(){
                 <button className="secondary h-12 transition-all hover:-translate-y-1 mx-8" onClick={()=>(window.location.href = '/docs/cv.pdf')}>{language.form[lang][4]}</button>
             </div>
         </form>
-    );
+    )
 }
