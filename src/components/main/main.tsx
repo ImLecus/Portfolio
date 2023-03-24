@@ -41,7 +41,7 @@ function Main(){
                             <span>z</span> 
                         </div>  
                     </h1>
-                    <h3 className="text-zinc-400">Frontend Developer</h3>
+                    <h3 className="text-zinc-400">Frontend + React Native Developer</h3>
                     <img id="pfp"/>
                 </section>
                 <div className="space"></div>
