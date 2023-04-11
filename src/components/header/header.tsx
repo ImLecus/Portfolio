@@ -30,12 +30,16 @@ function Header({event}:any){
                           duration={500}
                           key={menuItems.indexOf(item) + 1}>{item}</Link>
                 ))}
-            </nav>
-            <select onChange={(e) => {event(e.target.value)}}>
+                </nav>
+                
+            {/* <select onChange={(e) => {event(e.target.value)}}>
                 <option value="es">Español</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
-            </select>
+            </select> */}
+            <button>
+                <img src="github.svg"/>
+            </button>
             <button id="navDropdown" onClick={toggleActive}> 
                 <span id="icon"></span>
             </button>  
