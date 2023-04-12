@@ -128,6 +128,13 @@ img {
   --bg-light: #f0f0f0;
   --text: #03045e
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-dark: #21252b;
+    --bg-light: #333537;
+    --text: #f0f0f0;
+  }
+}
 
 body {
   background-color: var(--bg-light)
@@ -674,6 +681,9 @@ form textarea {
 .secondary:hover {
   color: var(--light) !important;
   border-color: var(--light) !important
+}
+.tech{
+  border-radius: 5px;
 }
 
 #pfp {
