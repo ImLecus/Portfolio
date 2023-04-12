@@ -1,11 +1,45 @@
-import language from "../../data/languages.json";
+import language from "../data/languages.json";
 import { useContext, useState, createContext } from "react";
 import { Link } from "react-scroll";
-import { userContext } from "../../main";
-import NavBottom from "./navbottom/navbottom";
-import getLang from "../../main";
+import { userContext } from "../main";
+import getLang from "../main";
 
 export const navbarContext = createContext(true);
+
+function NavBottom (props:any){
+    const lang = getLang(useContext(userContext));
+    const active = useContext(navbarContext);
+    const menuItems = [
+        {
+            id:5, content: language.header[lang][0]
+        },
+        {
+            id:6, content: language.header[lang][1]
+        },
+        {
+            id:7, content: language.header[lang][2]
+        },
+        {
+            id:8, content: language.header[lang][3]
+        }
+        ];
+    return(
+        <div id="navBottom" className={"w-full sticky top-0 bg-zinc-900 " + (active? "bottomActive":"")}>
+            {menuItems.map(item => (
+                <div className="flex justify-center" key={item.id}>
+                    <Link className="navLink bottom" 
+                          to={item.content} 
+                          smooth={true}
+                          offset={-250}
+                          duration={500}
+                          onClick={props.event}
+                          >{item.content}</Link>
+                </div>
+                    
+                ))}      
+        </div>
+    );
+}
 
 function Header({event}:any){
     

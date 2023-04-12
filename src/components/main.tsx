@@ -1,14 +1,53 @@
 import {useContext, useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Card from "./card/card";
-import language from "../../data/languages.json"
-import { userContext } from "../../main";
-import getLang from "../../main";
-import Tech from "./tech/tech";
-import Contact from "./contact/contact";
+import language from "../data/languages.json"
+import { userContext } from "../main";
+import getLang from "../main";
 
-function Main(){
+function Tech({src,name,description}:any){
+    return(
+    <div className="tech shadow-xl" data-aos="flip-left">
+        <img src={src}></img>
+        <h3>{name}</h3>
+        <p>{description}</p>
+    </div>)
+}
+
+function Card({site,src}:any){
+    return(
+        <div className="card">
+            <button onClick={ () => {window.location.href = "https://" + site}}>
+                <img alt="cardImage" src={"/img/"+ src +".jpg"}></img>
+            </button>
+        </div>
+    );
+}
+
+function Contact(){
+    const lang = getLang(useContext(userContext));
+    return(
+        <form method="POST" id="form" name="contactForm" data-netlify="true" action="./index.html">   
+            <input 
+            type='hidden'
+            name='form-name'
+            value='contactForm' />             
+            <div className="flex justify-center items-center w-full">
+                <input type="text" placeholder={language.form[lang][0]} name="name" autoComplete="off" required />
+                <input type="email" placeholder={language.form[lang][1]} name="email" autoComplete="off" required />
+            </div>
+            <div className="flex justify-center">
+                <textarea placeholder={language.form[lang][2]} name="message" required></textarea>
+            </div>
+            <div className="flex justify-center items-center w-full my-5">
+                <button className="primary h-12 transition-all hover:-translate-y-1 mx-8" type="submit">{language.form[lang][3]}</button>
+                <button className="secondary h-12 transition-all hover:-translate-y-1 mx-8" onClick={()=>(window.location.href = '/docs/cv.pdf')}>{language.form[lang][4]}</button>
+            </div>
+        </form>
+    )
+}
+
+export default function Main(){
     useEffect( ( ) => {
         AOS.init({duration:2000});
     },[]);
@@ -82,4 +121,3 @@ function Main(){
             </main>
         );
 }
-export default Main;
