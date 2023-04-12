@@ -520,14 +520,14 @@ h1 div span {
   font-family: Bebas Neue !important;
   font-weight: 500;
   font-size: 120px;
-  text-shadow: 0 2px 50px rgba(69, 184, 225, .4705882353), 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 50px #45b8e178, 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: .2s linear;
   animation: 6s infinite jump
 }
 
 h1 span:hover {
   filter: brightness(160%);
-  text-shadow: 0 2px 40px #0ecbff99, 0 5px 15px rgba(0, 0, 0, 0.2)
+  text-shadow: 0 2px 40px #0ecbff99, 0 5px 15px rgba(0, 0, 0, 0.1)
 }
 
 h1 :first-child :nth-child(1) {
@@ -916,5 +916,5 @@ form button {
   }
 }
 #nav{
-  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
 }

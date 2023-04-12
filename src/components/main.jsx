@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import language from "../data/languages.json";
 import { userContext } from "../App";
-import getLang from "../App";
 
 function Tech({ src, name, description }) {
   return (
@@ -30,7 +29,7 @@ function Card({ site, src }) {
 }
 
 function Contact() {
-  const lang = getLang(useContext(userContext));
+  const lang = useContext(userContext);
   return (
     <form
       method="POST"
@@ -86,7 +85,7 @@ export default function Main() {
     AOS.init({ duration: 2000 });
   }, []);
 
-  const lang = getLang(useContext(userContext));
+  const lang = useContext(userContext);
   return (
     <main>
       <div className="space"></div>
@@ -117,10 +116,10 @@ export default function Main() {
         <img id="pfp" />
       </section>
       <div className="space"></div>
-      <section id={language.header[lang][1]}>
+      <section id={language.header[lang][0]}>
         <div className="flex justify-center">
           <div className="justify-center items-center">
-            <h2>{language.header[lang][1]}</h2>
+            <h2>{language.header[lang][0]}</h2>
             <p className="items-center" data-aos="fade-right">
               <br />
               <br />
@@ -163,15 +162,15 @@ export default function Main() {
           />
         </div>
       </section>
-      <section id={language.header[lang][2]}>
-        <h2>{language.header[lang][2]}</h2>
+      <section id={language.header[lang][1]}>
+        <h2>{language.header[lang][1]}</h2>
         <div className="flex justify-around flex-wrap">
           <Card src="hyassets" site="hyassets.netlify.app" />
           <Card src="astra" site="astracss.netlify.app" />
         </div>
       </section>
-      <section id={language.header[lang][3]}>
-        <h2>{language.header[lang][3]}</h2>
+      <section id={language.header[lang][2]}>
+        <h2>{language.header[lang][2]}</h2>
         <div className="h-16"></div>
         <Contact />
       </section>

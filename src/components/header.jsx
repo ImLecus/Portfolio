@@ -2,12 +2,11 @@ import language from "../data/languages.json";
 import { useContext, useState, createContext } from "react";
 import { Link } from "react-scroll";
 import { userContext } from "../App";
-import getLang from "../App";
 
 export const navbarContext = createContext(true);
 
 function NavBottom(props) {
-  const lang = getLang(useContext(userContext));
+  const lang = useContext(userContext);
   const active = useContext(navbarContext);
   const menuItems = [
     {
@@ -49,7 +48,7 @@ function NavBottom(props) {
 }
 
 function Header({ event }) {
-  const lang = getLang(useContext(userContext));
+  const lang = useContext(userContext);
   const [isBottomActive, setBottomActive] = useState(false);
   const toggleActive = () => {
     setBottomActive(!isBottomActive);
@@ -75,7 +74,7 @@ function Header({ event }) {
               {item}
             </Link>
           ))}
-          <a id="logo" className="github">
+          <a id="logo" className="github" href="https://github.com/ImLecus">
             <img src="github.svg" />
           </a>
         </nav>
@@ -87,7 +86,7 @@ function Header({ event }) {
             </select> */}
 
         <button id="navDropdown" onClick={toggleActive}>
-          <span id="icon"></span>
+          <span id="icon" />
         </button>
       </header>
       <NavBottom event={toggleActive} />

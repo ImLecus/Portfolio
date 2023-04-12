@@ -22,17 +22,4 @@ function App() {
   );
 }
 
-export default function getLang(lang) {
-  switch (lang) {
-    case "es":
-      return "es";
-    case "en":
-      return "en";
-    case "fr":
-      return "fr";
-    default:
-      return "es";
-  }
-}
-
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
