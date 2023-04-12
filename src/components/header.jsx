@@ -25,23 +25,20 @@ function NavBottom(props) {
   return (
     <div
       id="navBottom"
-      className={
-        "w-full sticky top-0 bg-zinc-900 " + (active ? "bottomActive" : "")
-      }
+      className={"w-full sticky top-0 " + (active ? "bottomActive" : "")}
     >
       {menuItems.map((item) => (
-        <div className="flex justify-center" key={item.id}>
-          <Link
-            className="navLink bottom"
-            to={item.content}
-            smooth={true}
-            offset={-250}
-            duration={500}
-            onClick={props.event}
-          >
-            {item.content}
-          </Link>
-        </div>
+        <Link
+          className="navLink bottom"
+          to={item.content}
+          smooth={true}
+          offset={-250}
+          duration={500}
+          onClick={props.event}
+          key={item.id}
+        >
+          {item.content}
+        </Link>
       ))}
     </div>
   );
