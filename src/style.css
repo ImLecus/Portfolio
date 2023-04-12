@@ -49,12 +49,6 @@ h1 div span {
   display: inline-block
 }
 
-footer p,
-p {
-  padding: 25px;
-  color: #d4d4d8
-}
-
 a,
 select {
   color: var(--primary) !important
@@ -480,35 +474,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid
-}
-
-footer div {
-  width: 80%;
-  justify-content: center;
-  margin: 30px 20px
-}
-
-footer div img {
-  width: 40px;
-  filter: none;
-  margin: 0 10px;
-  fill: #d4d4d8
+  border-top: 1px solid rgba(0,0,0,0.2)
 }
 
 footer p {
   width: fit-content;
   margin: 5px 0;
   font-size: 19px !important
-}
-
-footer a {
-  align-items: center
-}
-
-footer a:hover {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .4))
 }
 
 h1 {
@@ -608,13 +580,14 @@ h1 :nth-child(3) :nth-child(8) {
 h2 {
   font: 500 60px Kanit !important;
   color: var(--text);
+  opacity: 0.8;
 }
 
 h3 {
   font-size: 28px !important;
   font-weight: 400;
   color: var(--text)!important;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 input::placeholder,
@@ -627,7 +600,8 @@ p {
   text-align: left;
   font-size: 19px !important;
   color: var(--text);
-  opacity: 0.5 !important;
+  opacity: 0.6 !important;
+  padding: 25px 0;
 }
 
 a {
@@ -721,9 +695,6 @@ form textarea {
 }
 
 @media (max-width:500px) {
-  footer div img {
-    margin: 0
-  }
 
   footer p {
     margin: 5px 20px

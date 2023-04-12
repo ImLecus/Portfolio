@@ -42,11 +42,6 @@
         "en": ["Preprocessors","I have knowledge in Sass for CSS and Pug for HTML code templates."],
         "fr": ["Préprocesseurs","J'ai des connaissances en Sass pour CSS et Pug pour modèles de code HTML."]
     },
-    "backend":{
-        "es": ["Backend","Me manejo con Node JS y tengo conocimiento en PHP y C#."],
-        "en": ["Backend","I manage with Node JS and i have knowledge in PHP and C#."],
-        "fr": ["Backend","Je gère avec Node JS et j'ai des connaissances en PHP et C#."]
-    },
     "mobile":{
         "es": ["Aplicaciones móbiles", "Utilizo React Native para desarrollar este tipo de apps. También tengo experiencia con Expo."],
         "en": ["Mobile apps", "I use React Native to develop this type of apps. I have experience with Expo too."],

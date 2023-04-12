@@ -151,11 +151,6 @@ export default function Main() {
             description={language.preprocessor[lang][1]}
           />
           <Tech
-            name={language.backend[lang][0]}
-            src="./img/nodejs.svg"
-            description={language.backend[lang][1]}
-          />
-          <Tech
             name={language.mobile[lang][0]}
             src="./img/android.svg"
             description={language.mobile[lang][1]}
