@@ -22,10 +22,6 @@ function NavBottom(props) {
       id: 7,
       content: language.header[lang][2],
     },
-    {
-      id: 8,
-      content: language.header[lang][3],
-    },
   ];
   return (
     <div
@@ -62,7 +58,7 @@ function Header({ event }) {
 
   return (
     <navbarContext.Provider value={isBottomActive}>
-      <header className="shadow-xl" id="nav">
+      <header id="nav">
         <a href="/" id="logo">
           <img src="./img/logo.png" />
         </a>
@@ -79,6 +75,9 @@ function Header({ event }) {
               {item}
             </Link>
           ))}
+          <a id="logo" className="github">
+            <img src="github.svg" />
+          </a>
         </nav>
 
         {/* <select onChange={(e) => {event(e.target.value)}}>
@@ -86,9 +85,7 @@ function Header({ event }) {
                 <option value="en">English</option>
                 <option value="fr">Français</option>
             </select> */}
-        <button id="github">
-          <img src="github.svg" />
-        </button>
+
         <button id="navDropdown" onClick={toggleActive}>
           <span id="icon"></span>
         </button>

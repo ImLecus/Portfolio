@@ -1,8 +1,8 @@
 {
     "header":{
-        "es":["Inicio","Sobre mí","Proyectos","Contacto"],
-        "en":["Home","About","Portfolio","Contact"],
-        "fr":["Début","Sur moi","Projets","Contact"]
+        "es":["Sobre mí","Proyectos","Contacto"],
+        "en":["About","Portfolio","Contact"],
+        "fr":["Sur moi","Projets","Contact"]
     },
     "presentation":{
         "es":["Hola, mi nombre es"],

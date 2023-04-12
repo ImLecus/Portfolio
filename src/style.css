@@ -72,7 +72,7 @@ h2 {
 
 .card,
 img {
-  filter: drop-shadow(0 5px 15px #121212)
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1))
 }
 
 @font-face {
@@ -128,10 +128,11 @@ img {
 }
 
 :root {
-  --primary: #008ee6;
-  --light: #3fb1f8;
-  --bg-dark: #1c1c21;
-  --bg-light: #26262c
+  --primary: #00b4db;
+  --light: #0ecbff;
+  --bg-dark: rgb(234, 234, 242);
+  --bg-light: #f0f0f0;
+  --text: #03045e
 }
 
 body {
@@ -145,11 +146,7 @@ body {
 
 ::-webkit-scrollbar {
   background: var(--bg-light);
-  width: 5px
-}
-
-::-webkit-scrollbar:hover {
-  width: 18px
+  width: 12px
 }
 
 ::-webkit-scrollbar-thumb {
@@ -157,7 +154,7 @@ body {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  box-shadow: 0 20px 20px #151515;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.1);
   width: 12px
 }
 
@@ -365,12 +362,28 @@ header {
 #logo {
   align-items: center;
   margin-left: 40px;
-  width: 50px
+  width: 40px
 }
 
 #logo img {
   filter: none !important;
   width: inherit
+}
+
+.github{
+  margin: 0 50px 0 32px !important;
+}
+.github img {
+  width: 80% !important;
+}
+
+header img{
+  transition: all 0.1s ease-in-out;
+}
+
+header img:hover{
+  filter: brightness(1) !important;
+  transform: rotateZ(10deg) scale(1.05);
 }
 
 header nav {
@@ -381,7 +394,7 @@ header nav {
 }
 
 .navLink {
-  margin: 0 32px !important;
+  margin-left: 32px !important;
   font-family: Kanit, sans-serif;
   cursor: pointer
 }
@@ -431,7 +444,7 @@ select {
 }
 
 .active {
-  color: #97bcdc !important
+  color: var(--light) !important
 }
 
 #icon {
@@ -507,14 +520,14 @@ h1 div span {
   font-family: Bebas Neue !important;
   font-weight: 500;
   font-size: 120px;
-  text-shadow: 0 2px 50px rgba(69, 184, 225, .4705882353), 0 5px 15px rgba(0, 0, 0);
+  text-shadow: 0 2px 50px rgba(69, 184, 225, .4705882353), 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: .2s linear;
   animation: 6s infinite jump
 }
 
 h1 span:hover {
   filter: brightness(160%);
-  text-shadow: 0 2px 40px rgba(14, 203, 255, .6), 0 5px 15px rgba(0, 0, 0)
+  text-shadow: 0 2px 40px #0ecbff99, 0 5px 15px rgba(0, 0, 0, 0.2)
 }
 
 h1 :first-child :nth-child(1) {
@@ -593,12 +606,15 @@ h1 :nth-child(3) :nth-child(8) {
 }
 
 h2 {
-  font: 500 60px Kanit !important
+  font: 500 60px Kanit !important;
+  color: var(--text);
 }
 
 h3 {
   font-size: 28px !important;
-  font-weight: 400
+  font-weight: 400;
+  color: var(--text)!important;
+  opacity: 0.6;
 }
 
 input::placeholder,
@@ -609,7 +625,9 @@ textarea::placeholder {
 
 p {
   text-align: left;
-  font-size: 19px !important
+  font-size: 19px !important;
+  color: var(--text);
+  opacity: 0.5 !important;
 }
 
 a {
@@ -896,4 +914,7 @@ form button {
   .card {
     width: 500px !important
   }
+}
+#nav{
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
 }

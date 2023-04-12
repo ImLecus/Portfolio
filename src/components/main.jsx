@@ -91,7 +91,7 @@ export default function Main() {
     <main>
       <div className="space"></div>
       <section id={language.header[lang][0]}>
-        <h3 className="text-zinc-400">{language.presentation[lang][0]}</h3>
+        <h3>{language.presentation[lang][0]}</h3>
         <h1 className="my-5">
           <div>
             <span>M</span>
@@ -113,7 +113,7 @@ export default function Main() {
             <span>z</span>
           </div>
         </h1>
-        <h3 className="text-zinc-400">Frontend + React Native Developer</h3>
+        <h3>Frontend + React Native Developer</h3>
         <img id="pfp" />
       </section>
       <div className="space"></div>
@@ -121,7 +121,7 @@ export default function Main() {
         <div className="flex justify-center">
           <div className="justify-center items-center">
             <h2>{language.header[lang][1]}</h2>
-            <p className="items-center text-zinc-300" data-aos="fade-right">
+            <p className="items-center" data-aos="fade-right">
               <br />
               <br />
               {language.about[lang][0]}
