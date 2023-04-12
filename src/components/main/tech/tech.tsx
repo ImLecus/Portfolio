@@ -1,4 +1,3 @@
-import "./tech.css";
 export default function Tech({src,name,description}:any){
     return(
     <div className="tech shadow-xl" data-aos="flip-left">

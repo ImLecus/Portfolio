@@ -1,4 +1,3 @@
-import "./header.css"
 import language from "../../data/languages.json";
 import { useContext, useState, createContext } from "react";
 import { Link } from "react-scroll";
@@ -37,7 +36,7 @@ function Header({event}:any){
                 <option value="en">English</option>
                 <option value="fr">Français</option>
             </select> */}
-            <button>
+            <button id="github">
                 <img src="github.svg"/>
             </button>
             <button id="navDropdown" onClick={toggleActive}> 

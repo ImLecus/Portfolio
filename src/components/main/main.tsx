@@ -1,5 +1,4 @@
 import {useContext, useEffect} from "react";
-import "./main.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Card from "./card/card";

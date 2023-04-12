@@ -2,7 +2,6 @@ import language from "../../../data/languages.json";
 import getLang from "../../../main";
 import { userContext } from "../../../main";
 import { useContext } from "react";
-import "./contact.css";
 export default function Contact(){
     const lang = getLang(useContext(userContext));
     return(

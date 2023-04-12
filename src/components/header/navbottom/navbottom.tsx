@@ -1,4 +1,3 @@
-import "./navbottom.css";
 import { Link } from "react-scroll";
 import language from "../../../data/languages.json";
 import { useContext } from "react";

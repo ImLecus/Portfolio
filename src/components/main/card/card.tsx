@@ -1,4 +1,3 @@
-import "./card.css"
 export default function Card({site,src}:any){
     return(
         <div className="card">
