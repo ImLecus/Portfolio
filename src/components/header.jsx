@@ -56,7 +56,7 @@ function Header({ event }) {
     <navbarContext.Provider value={isBottomActive}>
       <header id="nav">
         <a href="/" id="logo">
-          <img src="./img/logo.png" />
+          <img src="./logo.png" />
         </a>
         <nav className="nav">
           {menuItems.map((item) => (

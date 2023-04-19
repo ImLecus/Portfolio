@@ -22,7 +22,7 @@ function Card({ site, src }) {
           window.location.href = "https://" + site;
         }}
       >
-        <img alt="cardImage" src={"/img/" + src + ".jpg"}></img>
+        <img alt="cardImage" src={"/" + src + ".jpg"}></img>
       </button>
     </div>
   );
@@ -138,22 +138,22 @@ export default function Main() {
           <div id="root" className="slides flex flex-wrap justify-center">
             <Tech
               name={language.version_control[lang][0]}
-              src="./img/github.svg"
+              src="./github.svg"
               description={language.version_control[lang][1]}
             />
             <Tech
               name={language.framework[lang][0]}
-              src="./img/react.svg"
+              src="./react.svg"
               description={language.framework[lang][1]}
             />
             <Tech
               name={language.preprocessor[lang][0]}
-              src="./img/sass.svg"
+              src="./sass.svg"
               description={language.preprocessor[lang][1]}
             />
             <Tech
               name={language.mobile[lang][0]}
-              src="./img/android.svg"
+              src="./android.svg"
               description={language.mobile[lang][1]}
             />
           </div>
