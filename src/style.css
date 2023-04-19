@@ -68,12 +68,6 @@ h2 {
 img {
   filter: drop-shadow(0 5px 15px var(--shadow))
 }
-
-@font-face {
-  font-family: Anton;
-  src: url(../font/Anton-Regular.ttf)
-}
-
 @font-face {
   font-family: Bebas Neue;
   src: url(../font/BebasNeue-Regular.ttf)
@@ -133,7 +127,7 @@ img {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-dark: #21252b;
-    --bg-light: #333537;
+    --bg-light: #202224;
     --text: #f0f0f0;
   }
 }
