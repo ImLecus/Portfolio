@@ -162,7 +162,6 @@ export default function Main() {
           <h2>{language.header[lang][1]}</h2>
           <div className="flex justify-around flex-wrap">
             <Card src="hyassets" site="hyassets.netlify.app" />
-            <Card src="astra" site="astracss.netlify.app" />
             <Card src="platinum" site="platinum-theme.netlify.app" />
           </div>
         </section>
