@@ -1,20 +1,8 @@
 # ¡Hola! Soy Marcos González y este es mi portafolio
 
 ## ¿Qué puedes encontrar aquí?
- En mi portafolio encontrarás algo de información sobre mí, las tecnologías que controlo y una sección en la que podrás contactar conmigo.
-
-## ¿Qué tecnologías he usado en este proyecto?
-
-Para este proyecto he utilizado las siguientes tecnologías: 
-
-* **HTML**
-* **CSS**
-* **SASS**
-* **Tailwind**
-* **Typescript**
-* **React**
-* **Vite**
-
+En mi portafolio encontrarás algo de información sobre mí, las tecnologías que controlo y una sección en la que podrás contactar conmigo. Además puedes encontrar algunos de mis trabajos más recientes o en proceso.
+ 
 ## ¿Quieres mandarme un mensaje?
 Te dejo estos enlaces por si quieres contactar conmigo sin acceder desde el portafolio:
 
