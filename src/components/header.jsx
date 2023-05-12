@@ -44,7 +44,7 @@ function NavBottom(props) {
   );
 }
 
-function Header({ event }) {
+function Header() {
   const lang = useContext(userContext);
   const [isBottomActive, setBottomActive] = useState(false);
   const toggleActive = () => {
@@ -56,7 +56,7 @@ function Header({ event }) {
     <navbarContext.Provider value={isBottomActive}>
       <header id="nav">
         <a href="/" id="logo">
-          <img src="./logo.png" />
+          <img src="./logo.png" alt="logo" />
         </a>
         <nav className="nav">
           {menuItems.map((item) => (
@@ -72,7 +72,7 @@ function Header({ event }) {
             </Link>
           ))}
           <a id="logo" className="github" href="https://github.com/ImLecus">
-            <img src="github.svg" />
+            <img src="github.svg" alt="github" />
           </a>
         </nav>
 

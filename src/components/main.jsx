@@ -7,7 +7,7 @@ import { userContext } from "../App";
 function Tech({ src, name, description }) {
   return (
     <div className="tech shadow-xl" data-aos="flip-left">
-      <img src={src}></img>
+      <img src={src} alt={name}></img>
       <h3>{name}</h3>
       <p>{description}</p>
     </div>
@@ -114,7 +114,6 @@ export default function Main() {
             </div>
           </h1>
           <h3>Frontend + React Native Developer</h3>
-          <img id="pfp" />
         </section>
         <div className="space"></div>
         <section id={language.header[lang][0]}>
