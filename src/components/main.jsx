@@ -22,7 +22,7 @@ function Card({ site, src }) {
           window.location.href = "https://" + site;
         }}
       >
-        <img alt="cardImage" src={"/" + src + ".jpg"}></img>
+        <img alt="cardImage" src={"/" + src + ".webp"}></img>
       </button>
     </div>
   );
