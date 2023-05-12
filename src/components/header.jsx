@@ -71,7 +71,7 @@ function Header() {
               {item}
             </Link>
           ))}
-          <a id="logo" className="github" href="https://github.com/ImLecus">
+          <a className="github" href="https://github.com/ImLecus">
             <img src="github.svg" alt="github" />
           </a>
         </nav>
