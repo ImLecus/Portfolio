@@ -5,7 +5,7 @@ import { userContext } from "../App";
 
 export const navbarContext = createContext(true);
 
-function NavBottom(props) {
+function NavBottom({ event }) {
   const lang = useContext(userContext);
   const active = useContext(navbarContext);
   const menuItems = [
@@ -34,7 +34,7 @@ function NavBottom(props) {
           smooth={true}
           offset={-250}
           duration={500}
-          onClick={props.event}
+          onClick={event}
           key={item.id}
         >
           {item.content}
