@@ -1,12 +1,17 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import language from "../data/languages.json";
 import { userContext } from "../App";
 
 function Tech({ src, name, description }) {
+  const [active, setActive] = useState(0);
   return (
-    <div className="tech shadow-xl" data-aos="flip-left">
+    <div
+      className={`tech shadow-xl ${!active ? "red" : ""}`}
+      data-aos="flip-left"
+      onClick={setActive}
+    >
       <img src={src} alt={name}></img>
       <h3>{name}</h3>
       <p>{description}</p>
@@ -144,11 +149,6 @@ export default function Main() {
               name={language.framework[lang][0]}
               src="./react.svg"
               description={language.framework[lang][1]}
-            />
-            <Tech
-              name={language.preprocessor[lang][0]}
-              src="./sass.svg"
-              description={language.preprocessor[lang][1]}
             />
             <Tech
               name={language.mobile[lang][0]}

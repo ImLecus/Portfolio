@@ -862,10 +862,10 @@ form textarea {
 
 .tech {
     border-radius: 5px;
-    width: 40%;
+    width: 25%;
     color: rgb(212 212 216);
-    padding: 30px;
-    margin: 30px 15px 0
+    padding: 50px 30px;
+    margin: 30px 10px 0
 }
 
 #pfp {
@@ -959,19 +959,25 @@ form textarea {
         margin-bottom: 0 !important
     }
 }
-
 .tech img {
-    width: 70px;
-    filter: none
+    filter: none;
+    width: 100%;
+    height: 100px;
 }
 
 .tech h3 {
-    text-align: left !important
+    text-align: center !important;
+    color: var(--bg-dark) !important;
+    opacity: 1;
 }
 
 .tech p {
     padding: 0;
-    text-align: left
+    text-align: left;
+    display: none;
+}
+.tech.red{
+    background-color: #f25c54;
 }
 
 @media(max-width:1140px) {
