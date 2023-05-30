@@ -3,15 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import language from "../data/languages.json";
 import { userContext } from "../App";
+import { Link } from "react-scroll";
 
-function Tech({ src, name, description }) {
+function Tech({ src, name, description, color }) {
   const [active, setActive] = useState(0);
   return (
-    <div
-      className={`tech shadow-xl ${!active ? "red" : ""}`}
-      data-aos="flip-left"
-      onClick={setActive}
-    >
+    <div className={`tech shadow-xl ${color}`} onClick={setActive}>
       <img src={src} alt={name}></img>
       <h3>{name}</h3>
       <p>{description}</p>
@@ -95,68 +92,58 @@ export default function Main() {
     <>
       <main>
         <div className="space"></div>
-        <section id={language.header[lang][0]}>
-          <h3>{language.presentation[lang][0]}</h3>
-          <h1 className="my-5">
-            <div>
-              <span>M</span>
-              <span>a</span>
-              <span>r</span>
-              <span>c</span>
-              <span>o</span>
-              <span>s</span>
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div>
-              <span>G</span>
-              <span>o</span>
-              <span>n</span>
-              <span>z</span>
-              <span>á</span>
-              <span>l</span>
-              <span>e</span>
-              <span>z</span>
-            </div>
-          </h1>
-          <h3>Frontend + React Native Developer</h3>
+        <section id={language.header[lang][0]} className="flex">
+          <div className="title">
+            <h1>Make it easier, faster and better.</h1>
+            <p>Marcos González - Frontend & React Native developer</p>
+            <Link to={language.header[lang][2]} smooth>
+              <button>LET'S TALK</button>
+            </Link>
+          </div>
+          <img src="./logobg.png" id="logobg" />
         </section>
         <div className="space"></div>
-        <section id={language.header[lang][0]}>
-          <div className="flex justify-center">
-            <div className="justify-center items-center">
-              <h2>{language.header[lang][0]}</h2>
-              <p className="items-center" data-aos="fade-right">
-                <br />
-                <br />
-                {language.about[lang][0]}
-                <br />
-                <br />
-                {language.about[lang][1]}
-                <br />
-                <br />
-                {language.about[lang][2]}
-              </p>
-            </div>
+        <section id={language.header[lang][0]} className="whitebg">
+          <img src="./logoblue.png" alt="" />
+          <div>
+            <h2>Who am i?</h2>
+            <p className="items-center" data-aos="fade-right">
+              <br />
+              <br />
+              {language.about[lang][0]}
+              <br />
+              <br />
+              {language.about[lang][1]}
+              <br />
+              <br />
+              {language.about[lang][2]}
+            </p>
           </div>
-          <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
+        </section>
+        <section>
+          <h2>What i do:</h2>
           <div id="root" className="slides flex flex-wrap justify-center">
             <Tech
               name={language.version_control[lang][0]}
               src="./github.svg"
               description={language.version_control[lang][1]}
+              color={"red"}
             />
             <Tech
               name={language.framework[lang][0]}
               src="./react.svg"
               description={language.framework[lang][1]}
+              color={"blue"}
             />
             <Tech
               name={language.mobile[lang][0]}
               src="./android.svg"
               description={language.mobile[lang][1]}
+              color={"green"}
             />
           </div>
         </section>
+
         <section id={language.header[lang][1]}>
           <h2>{language.header[lang][1]}</h2>
           <div className="flex justify-around flex-wrap">

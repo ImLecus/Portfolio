@@ -25,13 +25,13 @@ function NavBottom({ event }) {
   return (
     <div
       id="navBottom"
-      className={"w-full sticky top-0 " + (active ? "bottomActive" : "")}
+      className={"w-full sticky top-0 py-5 " + (active ? "bottomActive" : "")}
     >
       {menuItems.map((item) => (
         <Link
           className="navLink bottom"
           to={item.content}
-          smooth={true}
+          smooth
           offset={-250}
           duration={500}
           onClick={event}
@@ -63,7 +63,7 @@ function Header() {
             <Link
               className="navLink hover:text-light"
               to={item}
-              smooth={true}
+              smooth
               offset={-250}
               duration={500}
               key={menuItems.indexOf(item) + 1}
