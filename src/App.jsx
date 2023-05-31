@@ -8,7 +8,7 @@ import "./style.css";
 
 export const userContext = createContext("");
 function App() {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState("en");
   const changeLang = (e) => {
     setLang(e);
   };

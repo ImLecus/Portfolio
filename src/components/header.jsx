@@ -64,8 +64,7 @@ function Header() {
               className="navLink hover:text-light"
               to={item}
               smooth
-              offset={-250}
-              duration={500}
+              duration={800}
               key={menuItems.indexOf(item) + 1}
             >
               {item}

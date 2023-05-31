@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import language from "../data/languages.json";
@@ -6,11 +6,13 @@ import { userContext } from "../App";
 import { Link } from "react-scroll";
 
 function Tech({ src, name, description, color }) {
-  const [active, setActive] = useState(0);
   return (
-    <div className={`tech shadow-xl ${color}`} onClick={setActive}>
-      <img src={src} alt={name}></img>
-      <h3>{name}</h3>
+    <div className={`tech shadow-xl ${color}`}>
+      <div className="flex align-center justify-between">
+        <h3>{name}</h3>
+        <img src={src} alt={name}></img>
+      </div>
+
       <p>{description}</p>
     </div>
   );
@@ -94,17 +96,24 @@ export default function Main() {
         <div className="space"></div>
         <section id={language.header[lang][0]} className="flex">
           <div className="title">
-            <h1>Make it easier, faster and better.</h1>
-            <p>Marcos González - Frontend & React Native developer</p>
+            <h1 data-aos="fade-right">Make it easier, faster and better.</h1>
+            <p className="text-primary" data-aos="fade-right">
+              Marcos González - Frontend & React Native developer
+            </p>
             <Link to={language.header[lang][2]} smooth>
-              <button>LET'S TALK</button>
+              <button className="titlebutton">LET'S TALK</button>
             </Link>
           </div>
-          <img src="./logobg.png" id="logobg" />
+          <img
+            src="./logobg.png"
+            id="logobg"
+            alt="logobg"
+            data-aos="fade-left"
+          />
         </section>
         <div className="space"></div>
         <section id={language.header[lang][0]} className="whitebg">
-          <img src="./logoblue.png" alt="" />
+          <img src="./me.jpg" alt="logoblue" className="borderBlack" />
           <div>
             <h2>Who am i?</h2>
             <p className="items-center" data-aos="fade-right">
@@ -121,11 +130,11 @@ export default function Main() {
           </div>
         </section>
         <section>
-          <h2>What i do:</h2>
+          <h2>What do i do:</h2>
           <div id="root" className="slides flex flex-wrap justify-center">
             <Tech
               name={language.version_control[lang][0]}
-              src="./github.svg"
+              src="./githubblack.svg"
               description={language.version_control[lang][1]}
               color={"red"}
             />
@@ -158,7 +167,7 @@ export default function Main() {
         </section>
       </main>
       <footer>
-        <p>
+        <p className="text-primary">
           &copy; Marcos González 2023-2024 All rights reserved. <br />
           <br />
           Frontend Developer
