@@ -96,7 +96,11 @@ export default function Main() {
         <div className="space"></div>
         <section id={language.header[lang][0]} className="flex">
           <div className="title">
-            <h1 data-aos="fade-right">Make it easier, faster and better.</h1>
+            <h1 data-aos="fade-right">
+              Make it <span id="easier">easier</span>,{" "}
+              <span id="faster">faster</span> and{" "}
+              <span id="better">better</span>.
+            </h1>
             <p className="text-primary" data-aos="fade-right">
               Marcos González - Frontend & React Native developer
             </p>

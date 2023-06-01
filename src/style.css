@@ -70,6 +70,7 @@ h1 {
     color: var(--primary);
     font-weight: 700;
     font-family: Inter;
+    z-index: 10;
 }
 
 hr {
@@ -997,4 +998,57 @@ form button {
 }
 .borderBlack{
     border: 15px solid black;
+}
+#faster,#better,#easier{
+    transition: .5s all ease-in-out;
+    display: inline-block;
+}
+#faster:hover{
+   color: #2a827d;
+   transform: skewX(-20deg);
+}
+#easier{
+    position: relative;
+}
+#easier::after{
+    color: #2a827d;
+    content: 'easier';
+    position: absolute;
+    left: -3px;
+    top: 3px;
+    z-index: -1;
+    transform: translateX(3px) translateY(-3px);
+    opacity: 0;
+    transition: .2s all ease-in-out;
+}
+#easier::before {
+    color: black;
+    content: 'easier';
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    z-index: -2;
+    transform: translateX(6px) translateY(-6px);
+    opacity: 0;
+    transition: .2s all ease-in-out;
+}
+#easier:hover::before,#easier:hover::after{
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+}
+#better:hover{
+    transform: scale(1.1) translateY(-10px) rotateX(20deg);
+}
+#better::after{
+    content: ' ';
+    width: 0%;
+    height: 3px;
+    background-color: #f0f0f0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .2s all ease-in-out;
+}
+#better:hover::after{
+    width: 95%;
 }
