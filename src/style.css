@@ -24,7 +24,7 @@ sup {
 #navBottom,
 footer,
 header {
-
+    background-color: var(--bg-dark);
     display: flex
 }
 
@@ -44,6 +44,11 @@ template {
     display: none
 }
 
+h2,
+h3 {
+    opacity: .8
+}
+
 form input,
 legend {
     box-sizing: border-box
@@ -56,7 +61,7 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(-45deg,#0077b6aa,#00b4d8aa)
+    background-color: var(--bg-light)
 }
 
 details,
@@ -65,55 +70,17 @@ main {
 }
 
 h1 {
-    font-size: 4rem;
-    margin: 0;
-    color: var(--primary);
-    font-weight: 700;
-    font-family: Inter;
-    z-index: 10;
+    font-size: 2em;
+    margin: .67em 0;
+    -webkit-animation: 1s title;
+    animation: 1s title
 }
 
 hr {
     box-sizing: content-box;
     height: 0
 }
-.titlebutton{
-    text-transform: uppercase;
-    color: var(--primary);
-    border: solid 1px var(--primary) !important;
-    border-radius: 5px !important;
-    padding: 10px 40px !important;
-    margin: 20px 0 !important;
-    font-size: 18px;
-    width: 200px;
-    transform: translateX(150px);
-    font-weight: 500;
-    height: 50px;
-    z-index: 2;
-}
-.titlebutton::after{
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    width: 0px;
-    font-size: 18px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    content: "";
-    padding: 10px 0 !important;
-    height: 30px;
-    transition: 0.2s ease-in-out;
-    z-index: -1;
-}
-.titlebutton:hover::after{
-    width: 100%;
-    left: 0;
-    content: "";
-    z-index: -1;
-}
-.titlebutton:hover{
-    color: #00b4db;
-}
+
 code,
 kbd,
 pre,
@@ -191,6 +158,13 @@ button {
 button::-moz-focus-inner {
     border-style: none;
     padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: ButtonText dotted 1px
 }
 
 fieldset {
@@ -284,7 +258,7 @@ h2 {
 
 h2,
 p {
-    color: var(--primary)
+    color: var(--text)
 }
 
 .card,
@@ -312,12 +286,54 @@ img {
     src: url(../font/Inter.ttf)
 }
 
+@-webkit-keyframes title {
+    0% {
+        transform: scaleY(-1);
+        text-shadow: none
+    }
+
+    50% {
+        transform: scaleY(1);
+        text-shadow: none
+    }
+
+    100% {
+        text-shadow: 0 2px 50px var(--title-shadow)
+    }
+}
+
+@keyframes title {
+    0% {
+        transform: scaleY(-1);
+        text-shadow: none
+    }
+
+    50% {
+        transform: scaleY(1);
+        text-shadow: none
+    }
+
+    100% {
+        text-shadow: 0 2px 50px var(--title-shadow)
+    }
+}
+
 :root {
-    --primary: #f0f0f0;
+    --primary: #00b4db;
     --light: #0ecbff;
+    --bg-dark: #eaeaf2;
+    --bg-light: #f0f0f0;
     --text: #03045e;
     --title-shadow: #45b8e178;
     --shadow: rgba(0, 0, 0, 0.1)
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --bg-dark: #121212;
+        --bg-light: #191a1c;
+        --text: #f0f0f0
+    }
 }
 
 * {
@@ -325,6 +341,10 @@ img {
     font-feature-settings: normal
 }
 
+::-webkit-scrollbar {
+    background: var(--bg-light);
+    width: 12px
+}
 
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
@@ -336,7 +356,7 @@ img {
 }
 
 .space {
-    height: 150px !important
+    height: 28px !important
 }
 
 .sticky,
@@ -344,9 +364,6 @@ header {
     position: sticky
 }
 
-.align-center{
-    align-items: center;
-}
 .top-0 {
     top: 0
 }
@@ -500,7 +517,7 @@ form div {
 
 .text-primary {
     --tw-text-opacity: 1;
-    color: #f0f0f0
+    color: rgb(0 142 230 / var(--tw-text-opacity))
 }
 
 .shadow-xl {
@@ -528,6 +545,11 @@ footer a {
 .hover\:text-blue-300:hover {
     --tw-text-opacity: 1;
     color: rgb(147 197 253 / var(--tw-text-opacity))
+}
+
+.active,
+.navLink:hover {
+    color: var(--light) !important
 }
 
 header {
@@ -640,12 +662,10 @@ select {
     justify-content: center;
     align-items: center
 }
-.title{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
+
+.bottom {
+    margin: 20px 0 !important;
+    font-size: 18px
 }
 
 .bottomActive {
@@ -665,6 +685,95 @@ footer p {
     font-size: 19px !important
 }
 
+h1 div span {
+    font-family: Bebas Neue !important;
+    font-weight: 500;
+    font-size: 120px;
+    text-shadow: 0 2px 50px var(--title-shadow), 0 5px 15px var(--shadow);
+    transition: .2s linear;
+    animation: 6s infinite jump
+}
+
+h1 span:hover {
+    filter: brightness(160%);
+    text-shadow: 0 2px 40px #0ecbff99, 0 5px 15px var(--shadow)
+}
+
+h1 :first-child :first-child {
+    animation-delay: 1s
+}
+
+h1 :first-child :nth-child(2) {
+    animation-delay: 1.2s
+}
+
+h1 :first-child :nth-child(3) {
+    animation-delay: 1.3s
+}
+
+h1 :first-child :nth-child(4) {
+    animation-delay: 1.4s
+}
+
+h1 :first-child :nth-child(5) {
+    animation-delay: 1.5s
+}
+
+h1 :first-child :nth-child(6) {
+    animation-delay: 1.6s
+}
+
+h1 :nth-child(3) :first-child {
+    animation-delay: 1.8s
+}
+
+h1 :nth-child(3) :nth-child(2) {
+    animation-delay: 1.9s
+}
+
+h1 :nth-child(3) :nth-child(3) {
+    animation-delay: 2s
+}
+
+h1 :nth-child(3) :nth-child(4) {
+    animation-delay: 2.1s
+}
+
+h1 :nth-child(3) :nth-child(5) {
+    animation-delay: 2.2s
+}
+
+h1 :nth-child(3) :nth-child(6) {
+    animation-delay: 2.3s
+}
+
+h1 :nth-child(3) :nth-child(7) {
+    animation-delay: 2.4s
+}
+
+h1 :nth-child(3) :nth-child(8) {
+    animation-delay: 2.5s
+}
+
+@keyframes jump {
+
+    0%,
+    100%,
+    25% {
+        transform: translateY(0)
+    }
+
+    8% {
+        transform: translateY(-20px) rotateX(20deg);
+        filter: brightness(130%)
+    }
+
+    15% {
+        transform: translateY(20px) rotateX(-20deg);
+        filter: brightness(100%)
+    }
+}
+
 h2 {
     font: 500 60px Kanit !important
 }
@@ -672,7 +781,7 @@ h2 {
 h3 {
     font-size: 28px !important;
     font-weight: 400;
-    color: var(--primary) !important
+    color: var(--text) !important
 }
 
 input::placeholder,
@@ -684,7 +793,7 @@ textarea::placeholder {
 p {
     text-align: left;
     font-size: 19px !important;
-    opacity: .9 !important;
+    opacity: .6 !important;
     padding: 25px 0
 }
 
@@ -724,13 +833,13 @@ button {
 
 .primary {
     background-color: var(--primary) !important;
-    color: #2f2f34;
+    color: rgb(212 212 216);
     font-weight: 700
 }
 
 .primary:focus,
 .primary:hover {
-    background-color: var(--light) !important;
+    background-color: var(--light) !important
 }
 
 .secondary {
@@ -742,7 +851,7 @@ button {
 .tech,
 form input,
 form textarea {
-    background-color: var(--primary)
+    background-color: var(--bg-dark)
 }
 
 .secondary:focus,
@@ -753,11 +862,10 @@ form textarea {
 
 .tech {
     border-radius: 5px;
-    width: 25%;
+    width: 40%;
     color: rgb(212 212 216);
-    padding: 30px 50px;
-    margin: 30px 10px 0;
-    transition: 0.1s ease-in-out;
+    padding: 30px;
+    margin: 30px 15px 0
 }
 
 #pfp {
@@ -851,29 +959,19 @@ form textarea {
         margin-bottom: 0 !important
     }
 }
+
 .tech img {
-    height: 50px;
+    width: 70px;
+    filter: none
 }
 
 .tech h3 {
-    color: #2f2f34 !important;
-    font-weight: 600;
-    opacity: 1;
+    text-align: left !important
 }
-.tech::after{
-    content: "_________________";
-    width: 100%;
-    height: 100%;
-    color: #00000060;
-    display: flex;
-    justify-content: center !important;
-}
-
 
 .tech p {
     padding: 0;
-    text-align: left;
-    color: #18181b;
+    text-align: left
 }
 
 @media(max-width:1140px) {
@@ -974,81 +1072,4 @@ form button {
 
 #nav {
     filter: drop-shadow(0 5px 10px var(--shadow))
-}
-.whitebg{
-    background-color: #f0f0f0;
-    margin: auto 0;
-    padding: 10%;
-    display: flex;
-    justify-content: space-between;
-}
-.whitebg *{
-    color: #191a1c !important;
-    max-width: 40vw;
-}
-#logobg{
-    width: 40vw;
-    aspect-ratio: auto;
-    position: absolute;
-    left: 40%;
-    transform: scale(1.6) translateY(-100px);
-    user-select: none;
-    -webkit-user-drag: none;
-    user-zoom: none;
-}
-.borderBlack{
-    border: 15px solid black;
-}
-#faster,#better,#easier{
-    transition: .5s all ease-in-out;
-    display: inline-block;
-}
-#faster:hover{
-   color: #2a827d;
-   transform: skewX(-20deg);
-}
-#easier{
-    position: relative;
-}
-#easier::after{
-    color: #2a827d;
-    content: 'easier';
-    position: absolute;
-    left: -3px;
-    top: 3px;
-    z-index: -1;
-    transform: translateX(3px) translateY(-3px);
-    opacity: 0;
-    transition: .2s all ease-in-out;
-}
-#easier::before {
-    color: black;
-    content: 'easier';
-    position: absolute;
-    left: -6px;
-    top: 6px;
-    z-index: -2;
-    transform: translateX(6px) translateY(-6px);
-    opacity: 0;
-    transition: .2s all ease-in-out;
-}
-#easier:hover::before,#easier:hover::after{
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-}
-#better:hover{
-    transform: scale(1.1) translateY(-10px) rotateX(20deg);
-}
-#better::after{
-    content: ' ';
-    width: 0%;
-    height: 3px;
-    background-color: #f0f0f0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: .2s all ease-in-out;
-}
-#better:hover::after{
-    width: 95%;
 }

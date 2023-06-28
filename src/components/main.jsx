@@ -3,16 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import language from "../data/languages.json";
 import { userContext } from "../App";
-import { Link } from "react-scroll";
 
-function Tech({ src, name, description, color }) {
+function Tech({ src, name, description }) {
   return (
-    <div className={`tech shadow-xl ${color}`}>
-      <div className="flex align-center justify-between">
-        <h3>{name}</h3>
-        <img src={src} alt={name}></img>
-      </div>
-
+    <div className="tech shadow-xl" data-aos="flip-left">
+      <img src={src} alt={name}></img>
+      <h3>{name}</h3>
       <p>{description}</p>
     </div>
   );
@@ -94,69 +90,73 @@ export default function Main() {
     <>
       <main>
         <div className="space"></div>
-        <section id={language.header[lang][0]} className="flex">
-          <div className="title">
-            <h1 data-aos="fade-right">
-              Make it <span id="easier">easier</span>,{" "}
-              <span id="faster">faster</span> and{" "}
-              <span id="better">better</span>.
-            </h1>
-            <p className="text-primary" data-aos="fade-right">
-              Marcos González - Frontend & React Native developer
-            </p>
-            <Link to={language.header[lang][2]} smooth>
-              <button className="titlebutton">LET'S TALK</button>
-            </Link>
-          </div>
-          <img
-            src="./logobg.png"
-            id="logobg"
-            alt="logobg"
-            data-aos="fade-left"
-          />
+        <section id={language.header[lang][0]}>
+          <h3>{language.presentation[lang][0]}</h3>
+          <h1 className="my-5">
+            <div>
+              <span>M</span>
+              <span>a</span>
+              <span>r</span>
+              <span>c</span>
+              <span>o</span>
+              <span>s</span>
+            </div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div>
+              <span>G</span>
+              <span>o</span>
+              <span>n</span>
+              <span>z</span>
+              <span>á</span>
+              <span>l</span>
+              <span>e</span>
+              <span>z</span>
+            </div>
+          </h1>
+          <h3>Frontend + React Native Developer</h3>
         </section>
         <div className="space"></div>
-        <section id={language.header[lang][0]} className="whitebg">
-          <img src="./me.jpg" alt="logoblue" className="borderBlack" />
-          <div>
-            <h2>Who am i?</h2>
-            <p className="items-center" data-aos="fade-right">
-              <br />
-              <br />
-              {language.about[lang][0]}
-              <br />
-              <br />
-              {language.about[lang][1]}
-              <br />
-              <br />
-              {language.about[lang][2]}
-            </p>
+        <section id={language.header[lang][0]}>
+          <div className="flex justify-center">
+            <div className="justify-center items-center">
+              <h2>{language.header[lang][0]}</h2>
+              <p className="items-center" data-aos="fade-right">
+                <br />
+                <br />
+                {language.about[lang][0]}
+                <br />
+                <br />
+                {language.about[lang][1]}
+                <br />
+                <br />
+                {language.about[lang][2]}
+              </p>
+            </div>
           </div>
-        </section>
-        <section>
-          <h2>What do i do:</h2>
+          <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
           <div id="root" className="slides flex flex-wrap justify-center">
             <Tech
               name={language.version_control[lang][0]}
-              src="./githubblack.svg"
+              src="./github.svg"
               description={language.version_control[lang][1]}
-              color={"red"}
             />
             <Tech
               name={language.framework[lang][0]}
               src="./react.svg"
               description={language.framework[lang][1]}
-              color={"blue"}
+            />
+            <Tech
+              name={language.preprocessor[lang][0]}
+              src="./sass.svg"
+              description={language.preprocessor[lang][1]}
             />
             <Tech
               name={language.mobile[lang][0]}
               src="./android.svg"
               description={language.mobile[lang][1]}
-              color={"green"}
             />
           </div>
         </section>
-
         <section id={language.header[lang][1]}>
           <h2>{language.header[lang][1]}</h2>
           <div className="flex justify-around flex-wrap">
@@ -171,7 +171,7 @@ export default function Main() {
         </section>
       </main>
       <footer>
-        <p className="text-primary">
+        <p>
           &copy; Marcos González 2023-2024 All rights reserved. <br />
           <br />
           Frontend Developer
