@@ -686,7 +686,7 @@ footer p {
 }
 
 h1 div span {
-    font-family: Bebas Neue !important;
+    font-family: Bebas Neue, none !important;
     font-weight: 500;
     font-size: 120px;
     text-shadow: 0 2px 50px var(--title-shadow), 0 5px 15px var(--shadow);

@@ -14,7 +14,7 @@ function App() {
   };
   return (
     <userContext.Provider value={lang}>
-      <Header event={changeLang} />
+      <Header action={changeLang} />
       <Main />
     </userContext.Provider>
   );

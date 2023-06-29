@@ -5,7 +5,7 @@ import { userContext } from "../App";
 
 export const navbarContext = createContext(true);
 
-function NavBottom({ event }) {
+function NavBottom({ action }) {
   const lang = useContext(userContext);
   const active = useContext(navbarContext);
   const menuItems = [
@@ -34,7 +34,7 @@ function NavBottom({ event }) {
           smooth={true}
           offset={-250}
           duration={500}
-          onClick={event}
+          onClick={action}
           key={item.id}
         >
           {item.content}
@@ -44,7 +44,7 @@ function NavBottom({ event }) {
   );
 }
 
-function Header() {
+function Header({ action }) {
   const lang = useContext(userContext);
   const [isBottomActive, setBottomActive] = useState(false);
   const toggleActive = () => {
@@ -55,9 +55,21 @@ function Header() {
   return (
     <navbarContext.Provider value={isBottomActive}>
       <header id="nav">
-        <a href="/" id="logo">
-          <img src="./logo.png" alt="logo" />
-        </a>
+        <div className="flex">
+          <a href="/" id="logo">
+            <img src="./logo.png" alt="logo" />
+          </a>
+          <select
+            onChange={(e) => {
+              action(e.target.value);
+            }}
+          >
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
         <nav className="nav">
           {menuItems.map((item) => (
             <Link
@@ -75,12 +87,6 @@ function Header() {
             <img src="github.svg" alt="github" />
           </a>
         </nav>
-
-        {/* <select onChange={(e) => {event(e.target.value)}}>
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-            </select> */}
 
         <button id="navDropdown" onClick={toggleActive}>
           <span id="icon" />
