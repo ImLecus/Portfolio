@@ -239,7 +239,7 @@ h1 div span {
     text-transform: uppercase
 }
 
-#icon,
+#navDropdown span,
 h1 div,
 h1 div span {
     display: inline-block
@@ -547,74 +547,7 @@ footer a {
     color: rgb(147 197 253 / var(--tw-text-opacity))
 }
 
-.active,
-.navLink:hover {
-    color: var(--light) !important
-}
 
-header {
-    top: 0;
-    padding: 6px 0;
-    justify-content: space-between
-}
-
-#logo {
-    margin-left: 40px;
-    width: 40px
-}
-
-#logo img {
-    filter: none !important;
-    width: inherit
-}
-
-.github {
-    margin: 0 50px 0 32px !important;
-    align-items: center;
-    width: 40px
-}
-
-.github img {
-    width: 80% !important
-}
-
-header img {
-    transition: .1s ease-in-out
-}
-
-header img:hover {
-    filter: brightness(1) !important;
-    transform: rotateZ(10deg) scale(1.05)
-}
-
-header nav {
-    display: inherit;
-    justify-content: inherit;
-    margin-right: 10px;
-    align-items: center !important
-}
-
-.navLink {
-    margin-left: 32px !important;
-    font-family: Kanit, sans-serif;
-    cursor: pointer
-}
-
-.navLink:hover {
-    transform: translateY(-3px)
-}
-
-#navDropdown {
-    width: 50px;
-    height: 50px;
-    margin: 5px 20px 0 0 !important;
-    padding: 0
-}
-
-#navDropdown:active {
-    background-color: transparent !important;
-    transform: translateY(-10px)
-}
 
 @media(max-width:768px) {
     #navDropdown {
@@ -642,35 +575,7 @@ select {
     outline: 0
 }
 
-#icon {
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    background-image: url("../public/menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120%
-}
 
-#navBottom {
-    height: 200px;
-    top: 67px !important;
-    z-index: 2;
-    transform: translateY(-200%);
-    transition: .5s ease-in-out;
-    border-bottom: 3px solid var(--primary);
-    justify-content: center;
-    align-items: center
-}
-
-.bottom {
-    margin: 20px 0 !important;
-    font-size: 18px
-}
-
-.bottomActive {
-    transform: translateY(0) !important
-}
 
 footer {
     flex-direction: column;
@@ -1070,6 +975,97 @@ form button {
     }
 }
 
-#nav {
+header {
+    top: 0;
+    padding: 6px 0;
+    justify-content: space-between;
     filter: drop-shadow(0 5px 10px var(--shadow))
 }
+
+header > div a {
+    margin-left: 40px;
+    width: 40px
+}
+
+header > div a img {
+    filter: none !important;
+    width: inherit;
+    transition: .1s ease-in-out
+}
+header>div a img:hover {
+    filter: brightness(1) !important;
+    transform: rotateZ(10deg) scale(1.05)
+}
+
+.github {
+    margin: 0 50px 0 32px !important;
+    align-items: center;
+    width: 40px;
+}
+.github img {
+    width: 80% !important;
+    transition: .1s ease-in-out;
+}
+
+
+
+header nav {
+    display: inherit;
+    justify-content: inherit;
+    margin-right: 10px;
+    align-items: center !important
+}
+
+#navDropdown {
+    width: 50px;
+    height: 50px;
+    margin: 5px 20px 0 0 !important;
+    padding: 0
+}
+
+#navDropdown:active {
+    background-color: transparent !important;
+    transform: translateY(-10px)
+}
+
+#navDropdown::after{
+    display: inline-block;
+    width: 25px !important;
+    height: 25px !important;
+    color: transparent !important;
+    content: "_";
+    background: url("../public/menu.svg") no-repeat center;
+}
+
+#navBottom {
+    height: 200px;
+    top: 67px !important;
+    z-index: 2;
+    transform: translateY(-200%);
+    transition: .5s ease-in-out;
+    border-bottom: 3px solid var(--primary);
+    justify-content: center;
+    align-items: center
+}
+
+.bottom {
+    margin: 20px 0 !important;
+    font-size: 18px
+}
+.bottomActive {
+    transform: translateY(0) !important
+}
+.active,
+.navLink:hover {
+    color: var(--light) !important
+}
+
+.navLink {
+    margin-left: 32px !important;
+    font-family: Kanit, sans-serif;
+    cursor: pointer
+}
+:is(.navLink, .github img):hover {
+    transform: translateY(-3px)
+}
+

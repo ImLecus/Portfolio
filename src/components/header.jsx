@@ -54,9 +54,9 @@ function Header({ action }) {
 
   return (
     <navbarContext.Provider value={isBottomActive}>
-      <header id="nav">
+      <header>
         <div className="flex">
-          <a href="/" id="logo">
+          <a href="/">
             <img src="./logo.png" alt="logo" />
           </a>
           <select
@@ -70,10 +70,10 @@ function Header({ action }) {
           </select>
         </div>
 
-        <nav className="nav">
+        <nav>
           {menuItems.map((item) => (
             <Link
-              className="navLink hover:text-light"
+              className="navLink"
               to={item}
               smooth={true}
               offset={-250}
@@ -88,9 +88,7 @@ function Header({ action }) {
           </a>
         </nav>
 
-        <button id="navDropdown" onClick={toggleActive}>
-          <span id="icon" />
-        </button>
+        <button id="navDropdown" onClick={toggleActive} />
       </header>
       <NavBottom event={toggleActive} />
     </navbarContext.Provider>
