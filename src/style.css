@@ -28,7 +28,7 @@ header {
     display: flex
 }
 
-#logo,
+header > div a,
 #navBottom,
 .flex,
 footer,
@@ -38,7 +38,7 @@ header {
     display: flex
 }
 
-#navDropdown,
+header button,
 [hidden],
 template {
     display: none
@@ -94,36 +94,6 @@ a {
     margin: 0 14px
 }
 
-abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted
-}
-
-b,
-strong {
-    font-weight: bolder
-}
-
-small {
-    font-size: 80%
-}
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative
-}
-
-sub {
-    bottom: -.25em
-}
-
-sup {
-    top: -.5em
-}
-
 img {
     border-style: none
 }
@@ -150,63 +120,6 @@ select {
 button {
     appearance: button;
     -webkit-appearance: button
-}
-
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
-    border-style: none;
-    padding: 0
-}
-
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring,
-button:-moz-focusring {
-    outline: ButtonText dotted 1px
-}
-
-fieldset {
-    padding: .35em .75em .625em
-}
-
-legend {
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal
-}
-
-[type=checkbox],
-[type=radio] {
-    box-sizing: border-box;
-    padding: 0
-}
-
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-    height: auto
-}
-
-[type=search] {
-    appearance: textfield;
-    -webkit-appearance: textfield;
-    outline-offset: -2px
-}
-
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
-}
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit
-}
-
-summary {
-    display: list-item
 }
 
 .z-30,
@@ -239,7 +152,7 @@ h1 div span {
     text-transform: uppercase
 }
 
-#navDropdown span,
+
 h1 div,
 h1 div span {
     display: inline-block
@@ -440,7 +353,7 @@ form div {
     flex-wrap: wrap
 }
 
-#logo,
+header>div a,
 .items-center {
     align-items: center
 }
@@ -550,7 +463,7 @@ footer a {
 
 
 @media(max-width:768px) {
-    #navDropdown {
+    header button {
         display: block !important
     }
 
@@ -975,13 +888,13 @@ form button {
     }
 }
 
+/* HEADER */
 header {
     top: 0;
     padding: 6px 0;
     justify-content: space-between;
     filter: drop-shadow(0 5px 10px var(--shadow))
 }
-
 header > div a {
     margin-left: 40px;
     width: 40px
@@ -996,7 +909,6 @@ header>div a img:hover {
     filter: brightness(1) !important;
     transform: rotateZ(10deg) scale(1.05)
 }
-
 .github {
     margin: 0 50px 0 32px !important;
     align-items: center;
@@ -1006,29 +918,22 @@ header>div a img:hover {
     width: 80% !important;
     transition: .1s ease-in-out;
 }
-
-
-
 header nav {
     display: inherit;
     justify-content: inherit;
     margin-right: 10px;
     align-items: center !important
 }
-
-#navDropdown {
+header button {
     width: 50px;
     height: 50px;
     margin: 5px 20px 0 0 !important;
     padding: 0
 }
-
-#navDropdown:active {
-    background-color: transparent !important;
+header button:active {
     transform: translateY(-10px)
 }
-
-#navDropdown::after{
+header button::after{
     display: inline-block;
     width: 25px !important;
     height: 25px !important;
@@ -1036,7 +941,6 @@ header nav {
     content: "_";
     background: url("../public/menu.svg") no-repeat center;
 }
-
 #navBottom {
     height: 200px;
     top: 67px !important;
@@ -1047,7 +951,6 @@ header nav {
     justify-content: center;
     align-items: center
 }
-
 .bottom {
     margin: 20px 0 !important;
     font-size: 18px
@@ -1059,7 +962,6 @@ header nav {
 .navLink:hover {
     color: var(--light) !important
 }
-
 .navLink {
     margin-left: 32px !important;
     font-family: Kanit, sans-serif;
@@ -1068,4 +970,3 @@ header nav {
 :is(.navLink, .github img):hover {
     transform: translateY(-3px)
 }
-

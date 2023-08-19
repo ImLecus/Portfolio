@@ -47,9 +47,6 @@ function NavBottom({ action }) {
 function Header({ action }) {
   const lang = useContext(userContext);
   const [isBottomActive, setBottomActive] = useState(false);
-  const toggleActive = () => {
-    setBottomActive(!isBottomActive);
-  };
   const menuItems = language.header[lang];
 
   return (
@@ -88,9 +85,9 @@ function Header({ action }) {
           </a>
         </nav>
 
-        <button id="navDropdown" onClick={toggleActive} />
+        <button onClick={() => setBottomActive(!isBottomActive)} />
       </header>
-      <NavBottom event={toggleActive} />
+      <NavBottom event={() => setBottomActive(!isBottomActive)} />
     </navbarContext.Provider>
   );
 }
