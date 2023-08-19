@@ -12,8 +12,7 @@ select {
     flex-direction: column
 }
 #navBottom,
-footer,
-header {
+footer {
     background-color: var(--bg-dark);
     display: flex
 }
@@ -44,7 +43,7 @@ html {
 }
 body {
     margin: 0;
-    background-color: var(--bg-light)
+    background: linear-gradient(var(--bg-light), var(--bg-dark)) 
 }
 main {
     display: block
@@ -494,23 +493,11 @@ form textarea {
     padding: 30px;
     margin: 30px 15px 0
 }
-#pfp {
-    opacity: 0;
-    width: 50%;
-    height: 60%;
-    position: absolute;
-    right: 10%;
-    top: 20%;
-    z-index: -1
-}
 @media (max-width:700px) {
     #navBottom {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly
-    }
-    #pfp {
-        display: none
     }
 }
 @media (max-width:500px) {
@@ -668,15 +655,16 @@ form button {
 /* HEADER */
 header {
     top: 0;
-    padding: 6px 0;
+    padding: 12px 0;
     justify-content: space-between;
-    filter: drop-shadow(0 5px 10px var(--shadow))
+    filter: drop-shadow(0 5px 10px var(--shadow));
+    background: linear-gradient(#00000088, #00000000) ;
+    backdrop-filter: blur(2px);
 }
 header > div a {
     margin-left: 40px;
     width: 40px
 }
-
 header > div a img {
     filter: none !important;
     width: inherit;
