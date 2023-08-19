@@ -89,10 +89,10 @@ export default function Main() {
   return (
     <>
       <main>
-        <div className="space"></div>
+        <div className="space" />
         <section id={language.header[lang][0]}>
           <h3>{language.presentation[lang][0]}</h3>
-          <h1 className="my-5">
+          <h1>
             <div>
               <span>M</span>
               <span>a</span>
