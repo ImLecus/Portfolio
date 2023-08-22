@@ -127,16 +127,19 @@ img {
     filter: drop-shadow(0 5px 15px var(--shadow))
 }
 
+@font-face {
+    font-family: BricolageGrotesque;
+    src: url(../font/BricolageGrotesque.ttf)
+}
 
+h3,
+p {
+    font-family: BricolageGrotesque;
+}
 
 @font-face {
     font-family: Kanit;
     src: url(../font/Kanit-Regular.ttf)
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url(../font/Nunito-VariableFont_wght.ttf)
 }
 
 @font-face {
@@ -410,7 +413,6 @@ h3 {
 }
 
 input::placeholder,
-p,
 textarea::placeholder {
     font-family: Inter, sans-serif
 }
@@ -474,7 +476,6 @@ button {
     background-color: transparent
 }
 
-.tech,
 form input,
 form textarea {
     background-color: var(--bg-dark)
@@ -484,14 +485,6 @@ form textarea {
 .secondary:hover {
     color: var(--light) !important;
     border-color: var(--light) !important
-}
-
-.tech {
-    border-radius: 5px;
-    width: 40%;
-    color: rgb(212 212 216);
-    padding: 30px;
-    margin: 30px 15px 0
 }
 
 @media (max-width:700px) {
@@ -569,26 +562,6 @@ form textarea {
     h2 {
         font-size: 60%;
         margin-bottom: 0 !important
-    }
-}
-
-.tech img {
-    width: 70px;
-    filter: none
-}
-
-.tech h3 {
-    text-align: left !important
-}
-
-.tech p {
-    padding: 0;
-    text-align: left
-}
-
-@media(max-width:1140px) {
-    .tech {
-        width: 80%
     }
 }
 

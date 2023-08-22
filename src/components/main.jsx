@@ -2,16 +2,6 @@ import { useContext } from "react";
 import language from "../data/languages.json";
 import { userContext } from "../App";
 
-function Tech({ src, name, description }) {
-  return (
-    <div className="tech shadow-xl">
-      <img src={src} alt={name}></img>
-      <h3>{name}</h3>
-      <p>{description}</p>
-    </div>
-  );
-}
-
 function Card({ site, src }) {
   return (
     <div className="card">
@@ -128,28 +118,9 @@ export default function Main() {
               </p>
             </div>
           </div>
-          <h3 className="mt-9 text-zinc-400">{language.tech[lang][0]}</h3>
-          <div id="root" className="slides flex flex-wrap justify-center">
-            <Tech
-              name={language.version_control[lang][0]}
-              src="./github.svg"
-              description={language.version_control[lang][1]}
-            />
-            <Tech
-              name={language.framework[lang][0]}
-              src="./react.svg"
-              description={language.framework[lang][1]}
-            />
-            <Tech
-              name={language.preprocessor[lang][0]}
-              src="./sass.svg"
-              description={language.preprocessor[lang][1]}
-            />
-            <Tech
-              name={language.mobile[lang][0]}
-              src="./android.svg"
-              description={language.mobile[lang][1]}
-            />
+          <h3 className="mt-9">{language.tech[lang][0]}</h3>
+          <div id="root">
+
           </div>
         </section>
         <section id={language.header[lang][1]}>
