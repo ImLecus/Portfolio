@@ -172,9 +172,7 @@ export default function Main() {
       </main>
       <footer>
         <p>
-          &copy; Marcos González 2023-2024 All rights reserved. <br />
-          <br />
-          Frontend Developer
+          Made with 💙 by Marcos González
         </p>
       </footer>
     </>

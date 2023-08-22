@@ -4,8 +4,9 @@ header {
     padding: 12px 0;
     justify-content: space-between;
     filter: drop-shadow(0 5px 10px var(--shadow));
-    background: linear-gradient(#00000088, #00000000);
+    background-color: #00000077;
     backdrop-filter: blur(2px);
+    border-bottom: 1px solid var(--primary);
 }
 
 header>div a {

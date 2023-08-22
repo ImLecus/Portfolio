@@ -5,7 +5,8 @@ import Header from "./components/header";
 import Main from "./components/main";
 
 import "./styles/style.css";
-import "./styles/header.css"
+import "./styles/header.css";
+import "./styles/title.css"
 
 export const userContext = createContext("");
 function App() {
