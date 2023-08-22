@@ -38,11 +38,6 @@ h3 {
     opacity: .8
 }
 
-form input,
-form textarea {
-    box-sizing: border-box
-}
-
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
@@ -71,7 +66,6 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -147,31 +141,8 @@ header {
     top: 0
 }
 
-.mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem
-}
-
-.my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem
-}
-
-.my-2 {
-    margin-top: .5rem;
-    margin-bottom: .5rem
-}
-
-.h-screen {
-    height: 100vh
-}
-
 .w-screen {
     width: 100vw
-}
-
-.resize-none {
-    resize: none
 }
 
 .flex-wrap {
@@ -187,29 +158,14 @@ header>div a,
     justify-content: center
 }
 
-.justify-between {
-    justify-content: space-between
-}
-
 .justify-around {
     justify-content: space-around
 }
 
-.text-light {
-    --tw-text-opacity: 1;
-    color: rgb(70 162 204 / var(--tw-text-opacity))
-}
-
 .text-primary {
-    --tw-text-opacity: 1;
-    color: rgb(0 142 230 / var(--tw-text-opacity))
+    color: rgb(0 142 230)
 }
 
-.shadow-xl {
-    --tw-shadow: 0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow);
-    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-}
 
 .transition-all {
     transition-property: all;
@@ -255,24 +211,6 @@ footer p {
     font-size: 19px !important
 }
 
-@keyframes jump {
-
-    0%,
-    100%,
-    25% {
-        transform: translateY(0)
-    }
-
-    8% {
-        transform: translateY(-20px) rotateX(20deg);
-        filter: brightness(130%)
-    }
-
-    15% {
-        transform: translateY(20px) rotateX(-20deg);
-        filter: brightness(100%)
-    }
-}
 
 h2 {
     font: 700 50px BricolageGrotesque !important;
@@ -293,20 +231,6 @@ p {
     opacity: .9 !important;
     padding: 25px 0;
     margin: 0;
-}
-
-@media(max-width:500px) {
-
-    h1,
-    h2,
-    h3 {
-        text-align: center
-    }
-
-    h1 {
-        font-size: 90px !important
-    }
-
 }
 
 section {
@@ -362,36 +286,23 @@ button {
     }
 
     .card {
-        flex-direction: column-reverse
+        width: 500px !important
     }
 
-    .card div {
-        width: auto !important;
-        margin: 20px 0
+    h1,
+    h2,
+    h3 {
+        text-align: center
     }
 
-    .card div div {
-        display: flex;
-        flex-direction: column
+    h1 {
+        font-size: 90px !important
     }
-
 }
 
 @media (min-width:768px) {
     #navBottom {
         display: none
-    }
-}
-
-@media (min-width:1140px) {
-    .card {
-        flex-direction: row !important
-    }
-}
-
-@media (min-width:500px) and (max-width:768px) {
-    .card {
-        flex-direction: column-reverse
     }
 }
 
@@ -406,8 +317,8 @@ button {
     }
 }
 
-form input,
-form textarea {
+form :is(input, textarea) {
+    box-sizing: border-box;
     resize: none;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -422,8 +333,11 @@ form textarea {
     color: var(--text) !important;
 }
 
-form input:focus,
-form textarea:focus {
+form :is(input, textarea)::placeholder {
+    transition: all 0.2s ease-in;
+}
+
+form :is(input, textarea):focus {
     border: none;
     outline: 0;
     color: var(--light)
@@ -437,13 +351,7 @@ form div {
     margin-top: 80px;
 }
 
-.card,
-.card img {
-    border-radius: 15px
-}
-
-form input:focus::placeholder,
-form textarea:focus::placeholder {
+form :is(input, textarea):focus::placeholder {
     opacity: 0
 }
 
@@ -461,29 +369,21 @@ form button {
 }
 
 .card {
-    width: 40%
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .card img {
     width: 100%;
     filter: none;
-    transition: -webkit-filter .3s ease-in-out, filter .3s ease-in-out
+    transition: -webkit-filter .3s ease-in-out, filter .3s ease-in-out;
+    border-radius: 15px
 }
 
 .card img:hover {
     filter: grayscale(100%) brightness(70%);
     cursor: pointer
-}
-
-.card button {
-    width: 100% !important;
-    height: 100% !important
-}
-
-@media (max-width:900px) {
-    .card {
-        width: 500px !important
-    }
 }
 
 .sectionAbout,

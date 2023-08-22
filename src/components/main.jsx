@@ -4,15 +4,9 @@ import { userContext } from "../App";
 
 function Card({ site, src }) {
   return (
-    <div className="card">
-      <button
-        onClick={() => {
-          window.location.href = "https://" + site;
-        }}
-      >
+      <button className="card" onClick={() => window.location.href = "https://" + site}>
         <img alt="cardImage" src={"/" + src + ".webp"}></img>
       </button>
-    </div>
   );
 }
 
@@ -57,7 +51,7 @@ function Contact() {
           required
         ></textarea>
         <button
-          className="primary transition-all mx-8"
+          className="primary transition-all"
           type="submit"
         >
           {language.form[lang][3]}
@@ -103,10 +97,9 @@ export default function Main() {
         <div className="spaceXL" />
         <section id={language.header[lang][0]} className="sectionAbout">
           <div className="space" />
-          <div className="flex justify-center">
-            <div className="justify-center items-center">
+          <div className="flex-col">
               <h2>{language.header[lang][0]}</h2>
-              <p className="items-center">
+              <p>
                 <br />
                 <br />
                 {language.about[lang][0]}
@@ -114,10 +107,9 @@ export default function Main() {
                 <br />
                 {language.about[lang][1]} 
               </p>
-            </div>
           </div>
           <h3>{language.tech[lang][0]}</h3>
-          <div id="root" className="flex flex-wrap">
+          <div className="flex flex-wrap">
             <Tech title={"HTML"} />
             <Tech title={"CSS"} />
             <Tech title={"JavaScript"} />
@@ -138,7 +130,9 @@ export default function Main() {
         </section>
         <section id={language.header[lang][2]} className="contactSection">
           <h2>{language.header[lang][2]}</h2>
-          <Contact />
+          <div className="flex justify-center">
+            <Contact />
+          </div>  
         </section>
       </main>
       <footer>

@@ -26,7 +26,7 @@
     src: url(../font/BricolageGrotesque.ttf)
 }
 
-@-webkit-keyframes title {
+@keyframes title {
     0% {
         transform: scaleY(-1);
         text-shadow: none
@@ -42,19 +42,22 @@
     }
 }
 
-@keyframes title {
-    0% {
-        transform: scaleY(-1);
-        text-shadow: none
+@keyframes jump {
+
+    0%,
+    100%,
+    25% {
+        transform: translateY(0)
     }
 
-    50% {
-        transform: scaleY(1);
-        text-shadow: none
+    8% {
+        transform: translateY(-20px) rotateX(20deg);
+        filter: brightness(130%)
     }
 
-    100% {
-        text-shadow: 0 2px 50px var(--title-shadow)
+    15% {
+        transform: translateY(20px) rotateX(-20deg);
+        filter: brightness(100%)
     }
 }
 
