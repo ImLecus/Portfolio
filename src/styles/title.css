@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url(../font/BebasNeue-Regular.ttf)
+}
+
 h1 {
     font-size: 2em;
     margin: 1.25rem 0;

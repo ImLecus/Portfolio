@@ -1,12 +1,10 @@
-import { useContext, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useContext } from "react";
 import language from "../data/languages.json";
 import { userContext } from "../App";
 
 function Tech({ src, name, description }) {
   return (
-    <div className="tech shadow-xl" data-aos="flip-left">
+    <div className="tech shadow-xl">
       <img src={src} alt={name}></img>
       <h3>{name}</h3>
       <p>{description}</p>
@@ -81,9 +79,6 @@ function Contact() {
 }
 
 export default function Main() {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
 
   const lang = useContext(userContext);
   return (
@@ -116,11 +111,11 @@ export default function Main() {
           <h3>Frontend Developer</h3>
         </section>
         <div className="space"></div>
-        <section id={language.header[lang][0]}>
+        <section id={language.header[lang][0]} className="sectionAbout">
           <div className="flex justify-center">
             <div className="justify-center items-center">
               <h2>{language.header[lang][0]}</h2>
-              <p className="items-center" data-aos="fade-right">
+              <p className="items-center">
                 <br />
                 <br />
                 {language.about[lang][0]}

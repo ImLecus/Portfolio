@@ -127,10 +127,7 @@ img {
     filter: drop-shadow(0 5px 15px var(--shadow))
 }
 
-@font-face {
-    font-family: Bebas Neue;
-    src: url(../font/BebasNeue-Regular.ttf)
-}
+
 
 @font-face {
     font-family: Kanit;
@@ -401,7 +398,8 @@ footer p {
 }
 
 h2 {
-    font: 500 60px Kanit !important
+    font: 500 60px Kanit !important;
+    margin: 0;
 }
 
 h3 {
@@ -421,7 +419,8 @@ p {
     text-align: left;
     font-size: 19px !important;
     opacity: .8 !important;
-    padding: 25px 0
+    padding: 25px 0;
+    margin: 0;
 }
 
 @media(max-width:500px) {
@@ -681,4 +680,8 @@ form button {
     .card {
         width: 500px !important
     }
+}
+
+.sectionAbout {
+    background-color: #00b4db44;
 }
