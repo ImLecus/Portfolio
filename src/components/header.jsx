@@ -73,7 +73,7 @@ function Header({ action }) {
               className="navLink"
               to={item}
               smooth={true}
-              offset={-250}
+              offset={0}
               duration={500}
               key={menuItems.indexOf(item) + 1}
             >

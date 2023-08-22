@@ -81,10 +81,6 @@ header button::after {
     flex-direction: column;
 }
 
-.bottom {
-    margin: 20px 0 !important;
-    font-size: 18px
-}
 
 .bottomActive {
     transform: translateY(0) !important
@@ -104,4 +100,9 @@ header button::after {
 
 :is(.navLink, .github img):hover {
     transform: translateY(-3px)
+}
+
+.bottom {
+    margin: 20px 0 !important;
+    font-size: 18px
 }

@@ -22,5 +22,6 @@ function App() {
     </userContext.Provider>
   );
 }
+let root = ReactDOM.createRoot(document.getElementById("root"))
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+root.render(<App />);

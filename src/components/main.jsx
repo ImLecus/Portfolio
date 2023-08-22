@@ -68,7 +68,7 @@ export default function Main() {
   return (
     <>
       <main>
-        <section id={language.header[lang][0]}>
+        <section>
           <h3>{language.presentation[lang][0]}</h3>
           <h1>
             <div>
