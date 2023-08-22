@@ -117,7 +117,7 @@ export default function Main() {
             </div>
           </div>
           <h3>{language.tech[lang][0]}</h3>
-          <div id="root" className="flex">
+          <div id="root" className="flex flex-wrap">
             <Tech title={"HTML"} />
             <Tech title={"CSS"} />
             <Tech title={"JavaScript"} />

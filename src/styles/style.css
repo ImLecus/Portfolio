@@ -307,10 +307,6 @@ p {
         font-size: 90px !important
     }
 
-    #cont {
-        padding: 0;
-        margin: 30px 0
-    }
 }
 
 section {
@@ -349,6 +345,10 @@ button {
 }
 
 @media (max-width:500px) {
+    form div {
+        width: 60vw !important;
+    }
+
     footer p {
         margin: 5px 20px
     }
@@ -375,14 +375,6 @@ button {
         flex-direction: column
     }
 
-    p {
-        padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-
-    form button {
-        margin: 10px
-    }
 }
 
 @media (min-width:768px) {
@@ -398,10 +390,6 @@ button {
 }
 
 @media (min-width:500px) and (max-width:768px) {
-    .wrapper {
-        opacity: 0
-    }
-
     .card {
         flex-direction: column-reverse
     }
@@ -470,25 +458,6 @@ form input {
 
 form button {
     width: 100%
-}
-
-@media (max-width:768px) {
-    textarea {
-        width: calc(80% - 30px) !important
-    }
-
-    form input {
-        width: 80%;
-        transform: translateX(-5px)
-    }
-
-    form div {
-        margin: 5px
-    }
-
-    form button {
-        width: 50%
-    }
 }
 
 .card {
