@@ -137,7 +137,7 @@ p {
 
 
 .space {
-    height: 28px !important
+    height: 150px !important
 }
 
 .sticky,
@@ -547,4 +547,30 @@ form button {
 
 .sectionAbout {
     background-color: #00b4db33;
+}
+
+.sectionAbout h2 {
+    color: var(--text);
+
+}
+
+.tech {
+    position: relative;
+    height: 120px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 50px;
+    margin: 0 20px;
+}
+
+.tech img {
+    width: 50px !important;
+}
+
+.tech p {
+    position: absolute;
+    bottom: 0;
 }

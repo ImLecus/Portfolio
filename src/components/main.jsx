@@ -16,6 +16,15 @@ function Card({ site, src }) {
   );
 }
 
+function Tech({title}) {
+  return (
+    <div className="tech">
+      <img src={`./${title.toLowerCase()}.svg`} />
+      <p>{title}</p>
+    </div>
+  )
+}
+
 function Contact() {
   const lang = useContext(userContext);
   return (
@@ -100,7 +109,9 @@ export default function Main() {
           </h1>
           <h3>Frontend Developer</h3>
         </section>
-        <div className="space"></div>
+        <div className="space"/>
+        <div className="space" />
+        <div className="space" />
         <section id={language.header[lang][0]} className="sectionAbout">
           <div className="flex justify-center">
             <div className="justify-center items-center">
@@ -116,8 +127,15 @@ export default function Main() {
             </div>
           </div>
           <h3>{language.tech[lang][0]}</h3>
-          <div id="root">
-
+          <div id="root" className="flex">
+            <Tech title={"HTML"} />
+            <Tech title={"CSS"} />
+            <Tech title={"JavaScript"} />
+            <Tech title={"React"} />
+            <Tech title={"Sass"} />
+            <Tech title={"Git"} />
+            <Tech title={"Tailwind"} />
+            <Tech title={"Bootstrap"}/>
           </div>
         </section>
         <section id={language.header[lang][1]}>
