@@ -52,13 +52,13 @@ function Contact() {
       </div>
       <div className="flex justify-center items-center w-full my-5">
         <button
-          className="primary h-12 transition-all hover:-translate-y-1 mx-8"
+          className="primary h-12 transition-all mx-8"
           type="submit"
         >
           {language.form[lang][3]}
         </button>
         <button
-          className="secondary h-12 transition-all hover:-translate-y-1 mx-8"
+          className="secondary h-12 transition-all mx-8"
           onClick={() => (window.location.href = "/docs/cv.pdf")}
         >
           {language.form[lang][4]}
@@ -111,14 +111,11 @@ export default function Main() {
                 {language.about[lang][0]}
                 <br />
                 <br />
-                {language.about[lang][1]}
-                <br />
-                <br />
-                {language.about[lang][2]}
+                {language.about[lang][1]} 
               </p>
             </div>
           </div>
-          <h3 className="mt-9">{language.tech[lang][0]}</h3>
+          <h3>{language.tech[lang][0]}</h3>
           <div id="root">
 
           </div>

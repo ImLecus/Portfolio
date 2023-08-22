@@ -153,18 +153,6 @@ header {
     top: .125rem
 }
 
-.top-full {
-    top: 100%
-}
-
-.m-2 {
-    margin: .5rem
-}
-
-.m-8 {
-    margin: 2rem
-}
-
 .mx-8 {
     margin-left: 2rem;
     margin-right: 2rem
@@ -178,10 +166,6 @@ header {
 .my-2 {
     margin-top: .5rem;
     margin-bottom: .5rem
-}
-
-.mt-9 {
-    margin-top: 2.25rem
 }
 
 .h-16 {
@@ -226,7 +210,6 @@ header>div a,
     justify-content: space-around
 }
 
-.hover\:text-light:hover,
 .text-light {
     --tw-text-opacity: 1;
     color: rgb(70 162 204 / var(--tw-text-opacity))
@@ -307,8 +290,9 @@ footer p {
 }
 
 h2 {
-    font: 500 60px Kanit !important;
+    font: 700 50px BricolageGrotesque !important;
     margin: 0;
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -562,5 +546,5 @@ form button {
 }
 
 .sectionAbout {
-    background-color: #00b4db44;
+    background-color: #00b4db33;
 }
