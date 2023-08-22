@@ -36,7 +36,7 @@ function Contact() {
       action="./index.html"
     >
       <input type="hidden" name="form-name" value="contactForm" />
-      <div className="flex justify-center items-center w-full">
+      <div className="flex-col justify-center items-center">
         <input
           type="text"
           placeholder={language.form[lang][0]}
@@ -51,28 +51,19 @@ function Contact() {
           autoComplete="off"
           required
         />
-      </div>
-      <div className="flex justify-center">
         <textarea
           placeholder={language.form[lang][2]}
           name="message"
           required
         ></textarea>
-      </div>
-      <div className="flex justify-center items-center w-full my-5">
         <button
-          className="primary h-12 transition-all mx-8"
+          className="primary transition-all mx-8"
           type="submit"
         >
           {language.form[lang][3]}
         </button>
-        <button
-          className="secondary h-12 transition-all mx-8"
-          onClick={() => (window.location.href = "/docs/cv.pdf")}
-        >
-          {language.form[lang][4]}
-        </button>
       </div>
+      
     </form>
   );
 }
@@ -83,7 +74,6 @@ export default function Main() {
   return (
     <>
       <main>
-        <div className="space" />
         <section id={language.header[lang][0]}>
           <h3>{language.presentation[lang][0]}</h3>
           <h1>
@@ -109,10 +99,10 @@ export default function Main() {
           </h1>
           <h3>Frontend Developer</h3>
         </section>
-        <div className="space"/>
-        <div className="space" />
-        <div className="space" />
+        <div className="spaceXL" />
+        <div className="spaceXL" />
         <section id={language.header[lang][0]} className="sectionAbout">
+          <div className="space" />
           <div className="flex justify-center">
             <div className="justify-center items-center">
               <h2>{language.header[lang][0]}</h2>
@@ -140,14 +130,14 @@ export default function Main() {
         </section>
         <section id={language.header[lang][1]}>
           <h2>{language.header[lang][1]}</h2>
+          <div className="space" />
           <div className="flex justify-around flex-wrap">
             <Card src="hyassets" site="hyassets.netlify.app" />
             <Card src="platinum" site="platinum-theme.netlify.app" />
           </div>
         </section>
-        <section id={language.header[lang][2]}>
+        <section id={language.header[lang][2]} className="contactSection">
           <h2>{language.header[lang][2]}</h2>
-          <div className="h-16"></div>
           <Contact />
         </section>
       </main>

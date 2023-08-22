@@ -57,22 +57,19 @@
             "Nombre",
             "Correo electrónico",
             "Escribe aquí tu mensaje...",
-            "Enviar",
-            "Descargar CV"
+            "Enviar"
         ],
         "en": [
             "Name",
             "Email",
             "Write here your message...",
-            "Submit",
-            "Download CV"
+            "Send"
         ],
         "fr": [
             "Nom",
             "Email",
             "Écrivez votre message...",
-            "Envoyer",
-            "Télécharger CV"
+            "Envoyer"
         ]
     }
 }
