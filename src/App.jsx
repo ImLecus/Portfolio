@@ -4,11 +4,12 @@ import { createContext, useState } from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 
-import "./style.css";
+import "./styles/style.css";
+import "./styles/header.css"
 
 export const userContext = createContext("");
 function App() {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState("en");
   const changeLang = (e) => {
     setLang(e);
   };

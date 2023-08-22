@@ -113,7 +113,7 @@ export default function Main() {
               <span>z</span>
             </div>
           </h1>
-          <h3>Frontend + React Native Developer</h3>
+          <h3>Frontend Developer</h3>
         </section>
         <div className="space"></div>
         <section id={language.header[lang][0]}>

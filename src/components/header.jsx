@@ -61,8 +61,8 @@ function Header({ action }) {
               action(e.target.value);
             }}
           >
-            <option value="es">Español</option>
             <option value="en">English</option>
+            <option value="es">Español</option>
             <option value="fr">Français</option>
           </select>
         </div>
