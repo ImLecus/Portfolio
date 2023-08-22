@@ -25,7 +25,7 @@ function NavBottom({ action }) {
   return (
     <div
       id="navBottom"
-      className={"w-full sticky top-0 " + (active ? "bottomActive" : "")}
+      className={"w-full sticky " + (active ? "bottomActive" : "")}
     >
       {menuItems.map((item) => (
         <Link
@@ -54,7 +54,7 @@ function Header({ action }) {
       <header>
         <div className="flex">
           <a href="/">
-            <img src="./logo.png" alt="logo" />
+            <img src="./images/logo.png" alt="logo" />
           </a>
           <select
             onChange={(e) => {
@@ -81,7 +81,7 @@ function Header({ action }) {
             </Link>
           ))}
           <a className="github" href="https://github.com/ImLecus">
-            <img src="github.svg" alt="github" />
+            <img src="./images/github.svg" alt="github" />
           </a>
         </nav>
 

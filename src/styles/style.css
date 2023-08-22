@@ -86,10 +86,6 @@ select {
     padding: 5px 10px !important
 }
 
-.fixed {
-    position: fixed
-}
-
 .w-full {
     width: 100%
 }
@@ -101,17 +97,10 @@ footer p {
 
 .important,
 a,
-select {
-    color: var(--primary) !important
-}
-
+select,
 h1 div span,
 h2 {
-    color: var(--primary)
-}
-
-p {
-    color: var(--text)
+    color: var(--primary) !important
 }
 
 .card,
@@ -122,23 +111,17 @@ img {
 h3,
 p {
     font-family: BricolageGrotesque;
+    color: var(--text)
 }
 
 .space {
     height: 75px !important
 }
 
-.spaceXL {
-    height: 150px !important;
-}
-
-.sticky,
+#navBottom,
 header {
-    position: sticky
-}
-
-.top-0 {
-    top: 0
+    position: sticky;
+    top: 0;
 }
 
 .w-screen {
@@ -166,11 +149,8 @@ header>div a,
     color: rgb(0 142 230)
 }
 
-
 .transition-all {
     transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms
 }
 
 @media(max-width:768px) {
@@ -202,15 +182,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid var(--shadow)
+    border-top: 1px solid var(--shadow);
+    font-size: 19px !important;
+    padding: 5px 0;
 }
-
-footer p {
-    width: fit-content;
-    margin: 5px 0;
-    font-size: 19px !important
-}
-
 
 h2 {
     font: 700 50px BricolageGrotesque !important;
@@ -397,6 +372,11 @@ form button {
 
 }
 
+.sectionAbout {
+    padding-top: 225px;
+    margin-top: 300px;
+}
+
 .tech {
     position: relative;
     height: 120px !important;
@@ -404,7 +384,6 @@ form button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     width: 50px;
     margin: 0 20px;
 }

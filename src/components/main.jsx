@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import language from "../data/languages.json";
 import { userContext } from "../App";
+import Title from "./title";
+import Contact from "./contact";
 
 function Card({ site, src }) {
   return (
       <button className="card" onClick={() => window.location.href = "https://" + site}>
-        <img alt="cardImage" src={"/" + src + ".webp"}></img>
+        <img alt="cardImage" src={"./images/" + src + ".webp"}></img>
       </button>
   );
 }
@@ -13,53 +15,10 @@ function Card({ site, src }) {
 function Tech({title}) {
   return (
     <div className="tech">
-      <img src={`./${title.toLowerCase()}.svg`} />
+      <img src={`./images/${title.toLowerCase()}.svg`} />
       <p>{title}</p>
     </div>
   )
-}
-
-function Contact() {
-  const lang = useContext(userContext);
-  return (
-    <form
-      method="POST"
-      id="form"
-      name="contactForm"
-      data-netlify="true"
-      action="./index.html"
-    >
-      <input type="hidden" name="form-name" value="contactForm" />
-      <div className="flex-col justify-center items-center">
-        <input
-          type="text"
-          placeholder={language.form[lang][0]}
-          name="name"
-          autoComplete="off"
-          required
-        />
-        <input
-          type="email"
-          placeholder={language.form[lang][1]}
-          name="email"
-          autoComplete="off"
-          required
-        />
-        <textarea
-          placeholder={language.form[lang][2]}
-          name="message"
-          required
-        ></textarea>
-        <button
-          className="primary transition-all"
-          type="submit"
-        >
-          {language.form[lang][3]}
-        </button>
-      </div>
-      
-    </form>
-  );
 }
 
 export default function Main() {
@@ -67,36 +26,15 @@ export default function Main() {
   const lang = useContext(userContext);
   return (
     <>
+      
       <main>
+
         <section>
           <h3>{language.presentation[lang][0]}</h3>
-          <h1>
-            <div>
-              <span>M</span>
-              <span>a</span>
-              <span>r</span>
-              <span>c</span>
-              <span>o</span>
-              <span>s</span>
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div>
-              <span>G</span>
-              <span>o</span>
-              <span>n</span>
-              <span>z</span>
-              <span>á</span>
-              <span>l</span>
-              <span>e</span>
-              <span>z</span>
-            </div>
-          </h1>
-          <h3>Frontend Developer</h3>
+          <Title />
         </section>
-        <div className="spaceXL" />
-        <div className="spaceXL" />
+
         <section id={language.header[lang][0]} className="sectionAbout">
-          <div className="space" />
           <div className="flex-col">
               <h2>{language.header[lang][0]}</h2>
               <p>
@@ -120,6 +58,7 @@ export default function Main() {
             <Tech title={"Bootstrap"}/>
           </div>
         </section>
+
         <section id={language.header[lang][1]}>
           <h2>{language.header[lang][1]}</h2>
           <div className="space" />
@@ -128,17 +67,18 @@ export default function Main() {
             <Card src="platinum" site="platinum-theme.netlify.app" />
           </div>
         </section>
+
         <section id={language.header[lang][2]} className="contactSection">
           <h2>{language.header[lang][2]}</h2>
           <div className="flex justify-center">
             <Contact />
           </div>  
         </section>
+
       </main>
+
       <footer>
-        <p>
-          Made with 💙 by Marcos González
-        </p>
+        <p>Made with 💙 by Marcos González</p>
       </footer>
     </>
   );
