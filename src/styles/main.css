@@ -1,19 +1,11 @@
 :root {
     --primary: #00b4db;
     --light: #0ecbff;
-    --bg-dark: #eaeaf2;
-    --bg-light: #f0f0f0;
-    --text: #03045e;
+    --bg-dark: #141417;
+    --bg-light: #14181d;
+    --text: #f0f0f0;
     --title-shadow: #45b8e178;
     --shadow: rgba(0, 0, 0, 0.1)
-}
-
-@media (prefers-color-scheme:dark) {
-    :root {
-        --bg-dark: #141417;
-        --bg-light: #14181d;
-        --text: #f0f0f0
-    }
 }
 
 @font-face {

@@ -7,7 +7,8 @@ import Main from "./components/main";
 import "./styles/style.css";
 import "./styles/header.css";
 import "./styles/title.css";
-import "./styles/main.css"
+import "./styles/main.css";
+import "./styles/light-theme.css"
 
 export const userContext = createContext("");
 function App() {
