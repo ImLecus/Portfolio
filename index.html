@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="./images/logo.png" />
   <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="¡Hola! Mi nombre es Marcos González y soy desarrollador web front-end. Aquí podrás encontrar más información sobre mi y algunos de mis trabajos más recientes.">
@@ -16,13 +17,96 @@
 </head>
 
 <body>
-  <form name='contactForm' netlify hidden>
-    <input type='text' name='name' />
-    <input type='email' name='email' />
-    <textarea name='message'></textarea>
-  </form>
-  <div id="root"></div>
-  <script type="module" src="/src/App.jsx"></script>
+  <div id="root">
+    <header>
+      <div class="flex"><a href="/"><img src="./images/logo.png" alt="logo"></a></div>
+      <nav>
+        <!--<a class="navLink">Sobre mí</a><a class="navLink">Proyectos</a><a class="navLink">Contacto</a>--><a
+          class="github" href="https://github.com/ImLecus"><img src="./images/github.svg" alt="github"></a>
+      </nav>
+      <button></button>
+    </header>
+    <!--<div id="navBottom" class="w-full sticky ">
+      <a class="navLink bottom">Sobre mí</a>
+      <a class="navLink bottom">Proyectos</a>
+      <a class="navLink bottom">Contacto</a>
+    </div>-->
+    <main>
+      <section>
+        <h3>Hola 👋, mi nombre es</h3>
+        <h1>
+          <div><span>M</span><span>a</span><span>r</span><span>c</span><span>o</span><span>s</span></div>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <div>
+            <span>G</span><span>o</span><span>n</span><span>z</span><span>á</span><span>l</span><span>e</span><span>z</span>
+          </div>
+        </h1>
+        <h3>Frontend Developer</h3>
+      </section>
+      <section id="Sobre mí" class="sectionAbout">
+        <div class="flex-col">
+          <h2>Sobre mí</h2>
+          <p><br><br>Soy un desarrollador Frontend de España y estudiante de ingeniería informática en la UAH.
+            Me
+            encanta desarrollar mi creatividad y llevar esas ideas a la práctica gracias a la programación.
+            Además de ser mi hobby, me gustaría llevar el desarrollo front-end al ámbito profesional y
+            convertirlo en mi profesión.<br><br>Me considero resolutivo, creativo, independiente y con una
+            gran
+            capacidad de aprendizaje. Además de programar, amo cocinar y viajar. Estoy interesado en seguir
+            aprendiendo y crear proyectos cada vez mejores.</p>
+        </div>
+        <h3>Tecnologías que manejo:</h3>
+        <div class="flex flex-wrap">
+          <div class="tech"><img src="./images/html.svg">
+            <p>HTML</p>
+          </div>
+          <div class="tech"><img src="./images/css.svg">
+            <p>CSS</p>
+          </div>
+          <div class="tech"><img src="./images/javascript.svg">
+            <p>JavaScript</p>
+          </div>
+          <div class="tech"><img src="./images/react.svg">
+            <p>React</p>
+          </div>
+          <div class="tech"><img src="./images/sass.svg">
+            <p>Sass</p>
+          </div>
+          <div class="tech"><img src="./images/git.svg">
+            <p>Git</p>
+          </div>
+          <div class="tech"><img src="./images/tailwind.svg">
+            <p>Tailwind</p>
+          </div>
+          <div class="tech"><img src="./images/bootstrap.svg">
+            <p>Bootstrap</p>
+          </div>
+        </div>
+      </section>
+      <section id="Proyectos">
+        <h2>Proyectos</h2>
+        <div class="space"></div>
+        <div class="flex justify-around flex-wrap"><button class="card"><img alt="cardImage"
+              src="./images/hyassets.webp"></button><button class="card"><img alt="cardImage"
+              src="./images/platinum.webp"></button></div>
+      </section>
+      <section id="Contacto" class="contactSection">
+        <h2>Contacto</h2>
+        <div class="flex justify-center">
+          <form method="POST" id="form" name="contactForm" data-netlify="true" action="./index.html"><input
+              type="hidden" name="form-name" value="contactForm">
+            <div class="flex-col justify-center items-center"><input type="text" placeholder="Nombre" name="name"
+                autocomplete="off" required=""><input type="email" placeholder="Correo electrónico" name="email"
+                autocomplete="off" required=""><textarea placeholder="Escribe aquí tu mensaje..." name="message"
+                required=""></textarea><button class="primary transition-all" type="submit">Enviar</button></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Hecho con 💙 por Marcos González</p>
+    </footer>
+  </div>
 </body>
 
 </html>
